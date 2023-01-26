@@ -23,7 +23,6 @@
   <scenario name="Browser - Video2.xml" scenariotype="Process" />
   <scenario name="Close_App_Name.xml" scenariotype="Snippet" />
   <scenario name="Browser_Cyber.xml" scenariotype="Process" />
-  <scenario name="AI MAIN.xml" scenariotype="Flow" />
   <scenario name="Office Sign In Box.xml" scenariotype="Process" />
   <scenario name="Browser_PDF.xml" scenariotype="Process" />
   <scenario name="Browser_Base.xml" scenariotype="Process" />
@@ -36,4 +35,5 @@
   <scenario name="MS Excel.xml" scenariotype="Process" />
   <scenario name="Initiation.xml" scenariotype="Process" />
   <scenario name="MS Outlook - New.xml" scenariotype="Process" />
+  <scenario name="AI MAIN.xml" scenariotype="Flow" />
 </project>
