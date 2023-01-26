@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Browser - Folio.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="ssun" creationdate="8/20/2020 01:44:49 PM" lastmodifiedby="ScriptingBot" lastmodifieddate="11/5/2022 10:48:26 AM" lastusedid="16354219635710013" scenarioid="1635421963571" sbversion="22.09.7" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979310897890039" scenariosection="" step="1">
+		<text>file://c:/users/%user_name%/Automai/content/folio/index.html</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979310897890040" scenariosection="" step="2">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="transaction" name="Open Folio" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="15979310897890036" scenariosection="" step="3">
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="HTML - Folio_Open Folio_Img2" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="20" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710001" step="4" scenariosection="">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="22" ypos="421" relative_xpos="21" relative_ypos="420" xsize="183" ysize="23">HTML - Folio_Open Folio_Img2(1).bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710002" step="5" scenariosection="">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="transaction" name="Open Folio" end="1" referencetime="" report="" uflag="U" commentedout="0" id="15979310897890029" scenariosection="" step="6">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="15979310897890002" scenariosection="" step="7">
+	
+	</command>
+	<command type="Wait" millisecs="10000" commentedout="0" id="15979310897890030" scenariosection="" step="8">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="15979310897890003" scenariosection="" step="9">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="15979310897890004" scenariosection="" step="10">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="2" commentedout="0" id="15979310897890005" scenariosection="" step="11">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="15979310897890006" scenariosection="" step="12">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="2" commentedout="0" id="15979310897890007" scenariosection="" step="13">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="15979310897890008" scenariosection="" step="14">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="15979310897890009" scenariosection="" step="15">
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Mockups" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710003" scenariosection="Mockups" step="16">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="348" ypos="350" relative_xpos="347" relative_ypos="349" xsize="72" ysize="22">Mockups(1).bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710004" step="17" scenariosection="">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Ui Kits" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710005" scenariosection="Ui Kits" step="18">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="454" ypos="349" relative_xpos="453" relative_ypos="348" xsize="52" ysize="20">Ui Kits(1).bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710006" scenariosection="" step="19">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Web Design" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710007" scenariosection="Web Design" step="20">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="541" ypos="348" relative_xpos="540" relative_ypos="347" xsize="90" ysize="22">Web Design.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710008" scenariosection="" step="21">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Photography" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710009" scenariosection="Photography" step="22">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="662" ypos="348" relative_xpos="661" relative_ypos="347" xsize="107" ysize="23">Photography.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710010" scenariosection="" step="23">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="All" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710011" scenariosection="All" step="24">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="188" ypos="349" relative_xpos="187" relative_ypos="348" xsize="22" ysize="20">All.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710012" scenariosection="" step="25">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="4" commentedout="0" id="15979310897890020" scenariosection="" step="26">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="4" commentedout="0" id="15979310897890021" scenariosection="" step="27">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="4" commentedout="0" id="15979310897890022" scenariosection="" step="28">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="4" commentedout="0" id="15979310897890023" scenariosection="" step="29">
+	
+	</command>
+	<command type="mousewheel" scrollup="32" scrolldown="0" commentedout="0" id="15979310897890024" scenariosection="" step="30">
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Browser - Folio.xml"><command type="findbitmap"><bitmapname>MS Wprd_Img1.bmp</bitmapname><bitmapname>MS Wprd_Img1_alt1.bmp</bitmapname><bitmapname>MS Wprd_Img1_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>HTML - Folio_Open Folio_Img1.bmp</bitmapname></command><command type="findbitmap"><bitmapname>HTML - Folio_Img1.bmp</bitmapname><bitmapname>HTML - Folio_Img1_alt1.bmp</bitmapname><bitmapname>HTML - Folio_Img1_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>HTML - Folio_Img2.bmp</bitmapname><bitmapname>HTML - Folio_Img2_alt1.bmp</bitmapname><bitmapname>HTML - Folio_Img2_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>HTML - Folio_Img3.bmp</bitmapname><bitmapname>HTML - Folio_Img3_alt1.bmp</bitmapname><bitmapname>HTML - Folio_Img3_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>HTML - Folio_Img4.bmp</bitmapname><bitmapname>HTML - Folio_Img4_alt1.bmp</bitmapname><bitmapname>HTML - Folio_Img4_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>HTML - Folio_Img5.bmp</bitmapname><bitmapname>HTML - Folio_Img5_alt1.bmp</bitmapname><bitmapname>HTML - Folio_Img5_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Close_Chrome_Img1_1.bmp</bitmapname><bitmapname>Close_Chrome_Img1.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

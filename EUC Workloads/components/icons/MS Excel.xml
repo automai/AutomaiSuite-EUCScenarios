@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="MS Excel.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="rloader001" creationdate="9/16/2021 12:13:18 PM" lastmodifiedby="rloader001" lastmodifieddate="5/11/2022 09:01:08 PM" lastusedid="16523028680360000" scenarioid="1652302868036" sbversion="22.04.28" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="comment" comment="Check if excel is running" commentedout="0" id="16317944018490017" scenariosection="" step="1">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_App.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16317944018490018" scenariosection="" stepalias="Check if Excel is running and launch it" step="2">
+		<variable1 variable="TaskbarImage" vartype="Image" xsize="44" ysize="33">Excel_Taskbar_Icon.bmp</variable1>
+		<variable2 variable="" vartype="String" xsize="38" ysize="32">Initiation_Img5_alt2.bmp</variable2>
+		<variable3 variable="" vartype="String" xsize="29" ysize="24">Initiation_Img5_alt2_2.bmp</variable3>
+		<variable4 variable="OpenCheckImage" vartype="Image" xpos="58" ypos="52" xsize="54" ysize="23">Excel - Check_Open.bmp</variable4>
+		<variable5 variable="AppLocation" vartype="String" expression="%Excel_Location%"></variable5>
+		<variable6 variable="" vartype="String" xpos="10" ypos="50" xsize="109" ysize="26">Excel - Check_Open1.bmp</variable6>
+		<variable7 vartype="String"></variable7>
+		<variable8 vartype="String"></variable8>
+		<variable9 vartype="String"></variable9>
+		<variable10 vartype="Image"></variable10>
+	
+	</command>
+	<command type="comment" comment="Open sales spreadsheet&#xD;&#xA;" commentedout="0" id="16317944018490019" scenariosection="" step="3">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="findbitmap" stylename="" timeout="14000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="" commentedout="0" id="16317944018490020" scenariosection="" step="4">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="0" ypos="37" relative_xpos="0" relative_ypos="37" xsize="64" ysize="25">Excel Sales_Img1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317944018490021" scenariosection="" step="5">
+			<coords x="32" y="48" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="" stringtofind="Open" timeout="13000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="" commentedout="0" id="16317944018490022" scenariosection="" step="6">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="40" ypos="174" xsize="40" ysize="24">Excel Sales_Img2_alt1.bmp</bitmapname>
+		<bitmapname xpos="40" ypos="174" relative_xpos="48" relative_ypos="182" xsize="40" ysize="24">Excel Sales_Img2.bmp</bitmapname>
+		<bitmapname xpos="43" ypos="180" relative_xpos="43" relative_ypos="175" xsize="46" ysize="29">MS Excel_Img2.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317944018490023" scenariosection="" step="7">
+			<coords x="52" y="187" dx="-8" dy="1" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="" stringtofind="Browse" timeout="13000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="" commentedout="0" id="16317944018490024" scenariosection="" step="8">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="231" ypos="492" xsize="59" ysize="24">Excel Sales_Img3_alt1.bmp</bitmapname>
+		<bitmapname xpos="231" ypos="492" relative_xpos="239" relative_ypos="500" xsize="59" ysize="24">Excel Sales_Img3.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317944018490025" scenariosection="" step="9">
+			<coords x="245" y="506" dx="-15" dy="2" />
+		
+		</command>
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16317944018490026" scenariosection="" step="10">
+		<text>{{%userprofile%}}\Automai\Content\Sample_Sales Records_xlsx.xlsx</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16321535866010001" scenariosection="" step="11">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="transaction" name="Start Excel" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16317944018490035" scenariosection="" step="12">
+	
+	</command>
+	<command type="findbitmap" stringtofind="Sample_Sales Records_xlsx" timeout="60000" onfaillabel="Next Action" continueonfail="" percentlinetolerance="7" colortolerance="0" anchorx="Center" anchory="Center" repaction="" repwait="0" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16317944018490031" scenariosection="" step="13">
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="116" ypos="205" relative_xpos="113" relative_ypos="203" xsize="46" ysize="18">MS Excel Sales_Img28_1.bmp</bitmapname>
+	
+	</command>
+	<command type="transaction" name="Start Excel" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16317944018490036" scenariosection="" step="14">
+	
+	</command>
+	<command type="findbitmap" stringtofind="Sample_Sales Records_xlsx" timeout="10000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="" repwait="0" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16397377818350002" scenariosection="" step="15">
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="116" ypos="205" relative_xpos="113" relative_ypos="203" xsize="46" ysize="18">MS Excel Sales_Img28_1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16397377818350003" scenariosection="" step="16">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="keyboardkey" isremote="1" action="Down" timeout="10000" commentedout="0" id="16321535866010004" scenariosection="" step="17">
+		<key key1="CTRL" />
+		<window />
+	
+	</command>
+	<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="15" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16322343136780002" scenariosection="" step="18">
+		<coords dx="0" dy="0" />
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<bitmapname xpos="958" ypos="204" xsize="44" ysize="21">MS Excel Sales_Img29_alt1.bmp</bitmapname>
+	
+	</command>
+	<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="15" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16322343136780001" scenariosection="" step="19">
+		<coords dx="0" dy="0" />
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<bitmapname xpos="1076" ypos="205" xsize="34" ysize="21">MS Excel Sales_Img30.bmp</bitmapname>
+	
+	</command>
+	<command type="keyboardkey" isremote="1" action="Up" timeout="10000" commentedout="0" id="16321535866010011" scenariosection="" step="20">
+		<key key1="CTRL" />
+		<window />
+	
+	</command>
+	<command type="findbitmap" timeout="12000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16321535866010012" scenariosection="" step="21">
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="119" ypos="37" relative_xpos="119" relative_ypos="37" xsize="64" ysize="32">MS Excel Sales_Img31.bmp</bitmapname>
+		<bitmapname xpos="118" ypos="36" relative_xpos="118" relative_ypos="36" xsize="64" ysize="32">MS Excel Sales_Img31_alt1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010013" scenariosection="" step="22">
+			<coords x="172" y="54" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" timeout="12000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16321535866010014" scenariosection="" step="23">
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="480" ypos="83" xsize="64" ysize="32">MS Excel Sales_Img32.bmp</bitmapname>
+		<bitmapname xpos="480" ypos="83" xsize="64" ysize="32">MS Excel Sales_Img32_alt1.bmp</bitmapname>
+		<bitmapname xpos="447" ypos="108" relative_xpos="174" relative_ypos="108" xsize="36" ysize="22">Excel_Chart_3.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010015" scenariosection="" step="24">
+			<coords x="512" y="99" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" timeout="12000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16321535866010016" scenariosection="" step="25">
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="503" ypos="155" xsize="64" ysize="32">MS Excel Sales_Img33.bmp</bitmapname>
+		<bitmapname xpos="503" ypos="155" xsize="64" ysize="32">MS Excel Sales_Img33_alt1.bmp</bitmapname>
+		<bitmapname xpos="503" ypos="155" xsize="64" ysize="32">MS Excel Sales_Img33_alt2.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010017" scenariosection="" step="26">
+			<coords x="535" y="171" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="keyboardkey" action="Combination" timeout="10000" commentedout="0" id="16321535866010018" scenariosection="" step="27">
+		<key key1="CTRL" key2="x" />
+		<window />
+	
+	</command>
+	<command type="findbitmap" ocrconfig="2 2 65 32 16 512 128 4 5 50 3 20 " objectindex="0" timeout="14000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16321535866010019" scenariosection="" step="28">
+		<searcharea xstart="0" ystart="640" xend="1280" yend="1024" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="267" ypos="808" xsize="64" ysize="32">MS Excel Sales_Img34.bmp</bitmapname>
+		<bitmapname xpos="267" ypos="808" xsize="64" ysize="32">MS Excel Sales_Img34_alt1.bmp</bitmapname>
+		<bitmapname xpos="279" ypos="936" relative_xpos="173" relative_ypos="141" xsize="38" ysize="24">MS Excel_NewTab3.bmp</bitmapname>
+		<bitmapname xpos="440" ypos="823" relative_xpos="440" relative_ypos="183" xsize="20" ysize="21">MS Excel_Img1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010020" scenariosection="" step="29">
+			<coords x="299" y="824" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="keyboardkey" action="Combination" timeout="10000" commentedout="0" id="16321535866010021" scenariosection="" step="30">
+		<key key1="CTRL" key2="V" />
+		<window />
+	
+	</command>
+	<command type="clickonimage" stringtofind="Format" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16397377818350004" scenariosection="Excel_Format" step="31">
+		<coords dx="0" dy="0" />
+		<searcharea xstart="0" ystart="0" xend="1280" yend="300" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<bitmapname xpos="769" ypos="38" xsize="64" ysize="22">Excel_Format(1)(1)(1).bmp</bitmapname>
+	
+	</command>
+	<command type="clickonimage" stringtofind="MS Excel_GraphY" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16397377818350005" scenariosection="MS Excel_GraphY" step="32">
+		<coords x="1051" y="102" dx="30" dy="0" />
+		<searcharea xstart="829" ystart="0" xend="1213" yend="307" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<bitmapname xpos="1011" ypos="92" xsize="20" ysize="20">MS Excel_GraphY.bmp</bitmapname>
+	
+		<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16397377818350006" scenariosection="" step="33">
+			<text>10</text>
+			<window />
+			<key key1="Enter" action1="Press" />
+		
+		</command>
+	</command>
+	<command type="clickonimage" stringtofind="Excel_GraphX" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16397377818350007" scenariosection="Excel_GraphX" step="34">
+		<coords x="1051" y="134" dx="30" dy="0" />
+		<searcharea xstart="829" ystart="0" xend="1213" yend="307" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<bitmapname xpos="1011" ypos="124" xsize="20" ysize="20">Excel_GraphX.bmp</bitmapname>
+	
+		<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16397377818350008" scenariosection="" step="35">
+			<text>20
+</text>
+			<window />
+			<key key1="Enter" action1="Press" />
+		
+		</command>
+	</command>
+	<command type="if" expression="%CloseExcel_OnEnd% == 1" showelse="0" commentedout="0" id="16345759791320002" scenariosection="" step="36">
+	
+		<then commentedout="0" id="16345759791320003" scenariosection="" step="37">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16345759791320005" scenariosection="" step="38">
+				<variable1 variable="TaskbarImage" vartype="Image" xsize="44" ysize="33">Excel_Taskbar_Icon.bmp</variable1>
+				<variable2 variable="OpenCheckImage" vartype="Image" xpos="164" ypos="18" xsize="11" ysize="11">Excel Sales_OpenImage.bmp</variable2>
+				<variable3 variable="ProcessName" vartype="String" expression="EXCEL" xsize="42" ysize="32">MS Excel Sales_Img38_2.bmp</variable3>
+				<variable4 variable="" vartype="String" xsize="44" ysize="26">MS Excel Sales_Img38.bmp</variable4>
+				<variable5 variable="DontSaveButton" vartype="Image" xpos="601" ypos="399" xsize="78" ysize="29">MS Excel_DontSave.bmp</variable5>
+				<variable6 variable="" vartype="String" xpos="1229" ypos="10" xsize="50" ysize="32">MS Excel Sales_Close3.bmp</variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16345759791320004" scenariosection="" step="39">
+		
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Excel Sales.xml" /></Usage></commandcontainer>

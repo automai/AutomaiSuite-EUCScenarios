@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Browser Main 2.xml" scenariotype="Global" screenwidth="1280" screenheight="768" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="ScriptingBot" creationdate="10/28/2022 06:41:27 PM" lastmodifiedby="ScriptingBot" lastmodifieddate="11/1/2022 06:58:14 PM" lastusedid="16669824873540000" scenarioid="1666982487354" sbversion="22.09.7" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="setvariable" variable="`" expression="robot1" scope="Internal" encrypted="0" vartype="string" commentedout="0" id="16669824870760014" scenariosection="" step="1">
+	
+	</command>
+	<command type="aichannel" ctype="CITRIX" cpath="C:\Program Files\Automai\AIChannel" remoteinitid="%user_name%" timeout="10000" commentedout="0" id="16669824870760015" scenariosection="" step="2">
+	
+	</command>
+	<command type="setvariable" variable="Browser" expression="Chrome" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16669824870760001" scenariosection="" step="3">
+	
+	</command>
+	<command type="if" expression="%Browser% == Chrome" showelse="0" commentedout="0" id="16669824870760002" scenariosection="" step="4">
+	
+		<then commentedout="0" id="16669824870760003" scenariosection="" step="5">
+		
+			<command type="playscenario" scenariotype="Global" filename="Check_App.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16669824870760010" scenariosection="" step="6">
+			
+			</command>
+			<command type="randomcmd" name="" commentedout="1" id="16669824870760013" scenariosection="" step="7">
+			
+				<command type="playscenario" scenariotype="All" filename="" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16669824870760012" scenariosection="" step="8">
+				
+				</command>
+			</command>
+			<command type="windowaction" isremote="1" action="Close" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16669824870760011" scenariosection="" step="9">
+				<window windowsname="Google Chrome" processname="chrome" />
+				<coords />
+				<size />
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16669824870760006" scenariosection="" step="10">
+		
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Browser Main 2.xml"><commandcontainer type="scenario" name="Check_App.xml"><command type="findbitmap"><bitmapname>%OpenCheckImage%</bitmapname></command><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command><command type="findbitmap"><bitmapname>%OpenCheckImage%</bitmapname></command></commandcontainer></commandcontainer></Usage></commandcontainer>

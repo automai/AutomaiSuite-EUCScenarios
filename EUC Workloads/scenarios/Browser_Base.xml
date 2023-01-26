@@ -1,0 +1,675 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Browser_Base.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="rloader001" creationdate="10/27/2021 02:26:35 PM" lastmodifiedby="rloader001" lastmodifieddate="1/6/2023 11:50:31 AM" lastusedid="16730053799150165" scenarioid="1673005379915" sbversion="22.12.1" description="Browser controller script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="filler" commentedout="0" id="16730053799150001" scenariosection="" stepalias="Decide which browser is being used" step="1">
+		<color r="0" g="255" b="0" a="255" />
+	
+	</command>
+	<command type="comment" comment="Decide which browser is being worked with and launch it" commentedout="0" id="16730053799150002" scenariosection="" step="2">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="%Browser_Choice% == Chrome" showelse="0" commentedout="0" id="16730053799150015" scenariosection="" stepalias="If the Browser is Chrome work with it" step="3">
+	
+		<then commentedout="0" id="16730053799150013" scenariosection="" step="4">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16730053799150003" scenariosection="" stepalias="Check if Chrome is running and launch it" step="5">
+				<variable1 variable="WindowTitle" vartype="String" expression="Chrome"></variable1>
+				<variable2 variable="AppName" vartype="String" expression="chrome"></variable2>
+				<variable3 variable="AppLocation" vartype="String" expression="%Chrome_Location%"></variable3>
+				<variable4 variable="BrowserApp" vartype="String" expression="1"></variable4>
+				<variable5 vartype="Image"></variable5>
+				<variable6 vartype="Image"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16730053799150012" scenariosection="" step="6">
+			
+				<then commentedout="0" id="16730053799150008" scenariosection="" step="7">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150005" scenariosection="" step="8">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="257" ypos="4" relative_xpos="256" relative_ypos="3" xsize="27" ysize="25">Browser_Base_Img2.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150004" scenariosection="" step="9">
+							<coords x="0" y="0" dx="0" dy="0" />
+						
+						</command>
+					</command>
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150007" scenariosection="" step="10">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="73" ypos="42" relative_xpos="72" relative_ypos="41" xsize="26" ysize="20">Browser_Base_Img1.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150006" scenariosection="" step="11">
+							<coords x="0" y="0" dx="200" dy="5" />
+						
+						</command>
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150011" scenariosection="" step="12">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150010" scenariosection="" step="13">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="73" ypos="42" relative_xpos="72" relative_ypos="41" xsize="26" ysize="20">Browser_Base_Img1.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150009" scenariosection="" step="14">
+							<coords x="0" y="0" dx="200" dy="5" />
+						
+						</command>
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150014" scenariosection="" step="15">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Browser_Choice% == MSEdge" showelse="0" commentedout="0" id="16730053799150028" scenariosection="" stepalias="If the Browser is Edge work with it" step="16">
+	
+		<then commentedout="0" id="16730053799150026" scenariosection="" step="17">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16730053799150016" scenariosection="" stepalias="Check if Edge is running and launch it" step="18">
+				<variable1 variable="WindowTitle" vartype="String" expression="Microsoft​ Edge"></variable1>
+				<variable2 variable="AppName" vartype="String" expression="msedge"></variable2>
+				<variable3 variable="AppLocation" vartype="String" expression="%MSEdge_Location%"></variable3>
+				<variable4 variable="BrowserApp" vartype="String" expression="1"></variable4>
+				<variable5 vartype="Image"></variable5>
+				<variable6 vartype="Image"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16730053799150025" scenariosection="" step="19">
+			
+				<then commentedout="0" id="16730053799150021" scenariosection="" step="20">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150018" scenariosection="" step="21">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="531" ypos="5" relative_xpos="530" relative_ypos="4" xsize="25" ysize="21">Browser_Base_Img3.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150017" scenariosection="" step="22">
+							<coords x="0" y="0" dx="0" dy="0" />
+						
+						</command>
+					</command>
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150020" scenariosection="" step="23">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="58" ypos="35" relative_xpos="57" relative_ypos="34" xsize="30" ysize="28">Browser_Base_Img4.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150019" scenariosection="" step="24">
+							<coords x="0" y="0" dx="100" dy="5" />
+						
+						</command>
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150024" scenariosection="" step="25">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150023" scenariosection="" step="26">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="58" ypos="35" relative_xpos="57" relative_ypos="34" xsize="30" ysize="28">Browser_Base_Img4.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150022" scenariosection="" step="27">
+							<coords x="0" y="0" dx="100" dy="5" />
+						
+						</command>
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150027" scenariosection="" step="28">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Browser_Choice% == IE" showelse="0" commentedout="0" id="16730053799150041" scenariosection="" stepalias="If the Browser is IE work with it" step="29">
+	
+		<then commentedout="0" id="16730053799150039" scenariosection="" step="30">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16730053799150029" scenariosection="" stepalias="Check if IE is running and launch it" step="31">
+				<variable1 variable="WindowTitle" vartype="String" expression="Internet Explorer"></variable1>
+				<variable2 variable="AppName" vartype="String" expression="iexplore"></variable2>
+				<variable3 variable="AppLocation" vartype="String" expression="%IE_Location%"></variable3>
+				<variable4 variable="BrowserApp" vartype="String" expression="1"></variable4>
+				<variable5 vartype="Image"></variable5>
+				<variable6 vartype="Image"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16730053799150038" scenariosection="" step="32">
+			
+				<then commentedout="0" id="16730053799150034" scenariosection="" step="33">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" imagetype="leftLabel" objectwidth="469" objectheight="211" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="0" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150031" scenariosection="I" step="34">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="245" ypos="90" relative_xpos="209" relative_ypos="54" xsize="20" ysize="22">I.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150030" scenariosection="" step="35">
+							<coords x="0" y="0" dx="0" dy="0" />
+						
+						</command>
+					</command>
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150033" scenariosection="" step="36">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="491" ypos="64" relative_xpos="455" relative_ypos="28" xsize="15" ysize="20">Browser_Base_Img5.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150032" scenariosection="" step="37">
+							<coords x="0" y="0" dx="200" dy="5" />
+						
+						</command>
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150037" scenariosection="" step="38">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150036" scenariosection="" step="39">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="491" ypos="64" relative_xpos="455" relative_ypos="28" xsize="15" ysize="20">Browser_Base_Img5.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150035" scenariosection="" step="40">
+							<coords x="0" y="0" dx="200" dy="5" />
+						
+						</command>
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150040" scenariosection="" step="41">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Browser_Choice% == Firefox" showelse="0" commentedout="0" id="16730053799150056" scenariosection="" stepalias="If the Browser is Firefox work with it" step="42">
+	
+		<then commentedout="0" id="16730053799150054" scenariosection="" step="43">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16730053799150042" scenariosection="" stepalias="Check if FireFox is running and launch it" step="44">
+				<variable1 variable="WindowTitle" vartype="String" expression="Mozilla Firefox"></variable1>
+				<variable2 variable="AppName" vartype="String" expression="firefox"></variable2>
+				<variable3 variable="AppLocation" vartype="String" expression="%FireFox_Location%"></variable3>
+				<variable4 variable="BrowserApp" vartype="String" expression="1"></variable4>
+				<variable5 vartype="Image"></variable5>
+				<variable6 vartype="Image"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Not now" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" onfaillabel="Next Action" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150044" scenariosection="Not now" stepalias="If Firefox prompts to be the default browser, skip it" step="45">
+				<searcharea dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<window />
+				<bitmapname xpos="764" ypos="228" relative_xpos="763" relative_ypos="227" xsize="52" ysize="24">Not now.bmp</bitmapname>
+			
+				<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150043" scenariosection="" step="46">
+					<coords x="0" y="0" dx="0" dy="0" />
+				
+				</command>
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16730053799150053" scenariosection="" step="47">
+			
+				<then commentedout="0" id="16730053799150049" scenariosection="" step="48">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150046" scenariosection="" step="49">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="277" ypos="9" relative_xpos="276" relative_ypos="8" xsize="25" ysize="24">Browser_Base_Img6.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150045" scenariosection="" step="50">
+							<coords x="0" y="0" dx="0" dy="0" />
+						
+						</command>
+					</command>
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150048" scenariosection="" step="51">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="78" ypos="50" relative_xpos="77" relative_ypos="49" xsize="32" ysize="28">Browser_Base_Img7.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150047" scenariosection="" step="52">
+							<coords x="0" y="0" dx="300" dy="5" />
+						
+						</command>
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150052" scenariosection="" step="53">
+				
+					<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150051" scenariosection="" step="54">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="78" ypos="50" relative_xpos="77" relative_ypos="49" xsize="32" ysize="28">Browser_Base_Img7.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150050" scenariosection="" step="55">
+							<coords x="0" y="0" dx="300" dy="5" />
+						
+						</command>
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150055" scenariosection="" step="56">
+		
+		</else>
+	</command>
+	<command type="filler" commentedout="0" id="16730053799150057" scenariosection="" stepalias="Decide which browser is being used" step="57">
+		<color r="0" g="255" b="0" a="255" />
+	
+	</command>
+	<command type="filler" commentedout="0" id="16730053799150058" scenariosection="" stepalias="Decide which workload is going to be run" step="58">
+		<color r="128" g="128" b="128" a="255" />
+	
+	</command>
+	<command type="comment" comment="Work with the set BrowserWorkload Variable, Cyber, Folio, Video1, Video2, Bouncing, PDF" commentedout="0" id="16730053799150059" scenariosection="" step="59">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="(%BrowserWorkload% == Video2) AND (%Browser_Video% != 0)" showelse="0" commentedout="0" id="16730053799150063" scenariosection="" step="60">
+	
+		<then commentedout="0" id="16730053799150061" scenariosection="" step="61">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser - Video2.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16730053799150060" scenariosection="" step="62">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150062" scenariosection="" step="63">
+		
+		</else>
+	</command>
+	<command type="if" expression="(%BrowserWorkload% == Video1) AND (%Browser_Video% != 0)" showelse="0" commentedout="0" id="16730053799150067" scenariosection="" step="64">
+	
+		<then commentedout="0" id="16730053799150065" scenariosection="" step="65">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser - Video1.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16730053799150064" scenariosection="" step="66">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150066" scenariosection="" step="67">
+		
+		</else>
+	</command>
+	<command type="if" expression="%BrowserWorkload% == Bouncing" showelse="0" commentedout="0" id="16730053799150071" scenariosection="" step="68">
+	
+		<then commentedout="0" id="16730053799150069" scenariosection="" step="69">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser_Bouncing.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16730053799150068" scenariosection="" step="70">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150070" scenariosection="" step="71">
+		
+		</else>
+	</command>
+	<command type="if" expression="%BrowserWorkload% == Cyber" showelse="0" commentedout="0" id="16730053799150075" scenariosection="" step="72">
+	
+		<then commentedout="0" id="16730053799150073" scenariosection="" step="73">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser_Cyber.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16730053799150072" scenariosection="" step="74">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150074" scenariosection="" step="75">
+		
+		</else>
+	</command>
+	<command type="if" expression="%BrowserWorkload% == Folio" showelse="0" commentedout="0" id="16730053799150079" scenariosection="" step="76">
+	
+		<then commentedout="0" id="16730053799150077" scenariosection="" step="77">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser - Folio.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16730053799150076" scenariosection="" step="78">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150078" scenariosection="" step="79">
+		
+		</else>
+	</command>
+	<command type="if" expression="%BrowserWorkload% == PDF" showelse="0" commentedout="0" id="16730053799150083" scenariosection="" step="80">
+	
+		<then commentedout="0" id="16730053799150081" scenariosection="" step="81">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser_PDF.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16730053799150080" scenariosection="" step="82">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150082" scenariosection="" step="83">
+		
+		</else>
+	</command>
+	<command type="filler" commentedout="0" id="16730053799150084" scenariosection="" stepalias="Decide which workload is going to be run" step="84">
+		<color r="128" g="128" b="128" a="255" />
+	
+	</command>
+	<command type="filler" commentedout="0" id="16730053799150085" scenariosection="" stepalias="Shutdown the relevant browser" step="85">
+		<color r="255" g="0" b="0" a="255" />
+	
+	</command>
+	<command type="comment" comment="Close the browser app down if the variable is set to do so." commentedout="0" id="16730053799150086" scenariosection="" step="86">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="%CloseBrowser_OnEnd% != 0" showelse="0" commentedout="0" id="16730053799150108" scenariosection="" step="87">
+	
+		<then commentedout="0" id="16730053799150106" scenariosection="" step="88">
+		
+			<command type="comment" comment="Dependent on the browser choice, shutdown the app." commentedout="0" id="16730053799150087" scenariosection="" step="89">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="if" expression="%Browser_Choice% == Chrome" showelse="0" commentedout="0" id="16730053799150091" scenariosection="" stepalias="If the Browser is Chrome close it" step="90">
+			
+				<then commentedout="0" id="16730053799150089" scenariosection="" step="91">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16730053799150088" scenariosection="" stepalias="If the Browser is Chrome close it" step="92">
+						<variable1 variable="WindowTitle" vartype="String" expression="Chrome"></variable1>
+						<variable2 variable="AppName" vartype="String" expression="Chrome"></variable2>
+						<variable3 vartype="String"></variable3>
+						<variable4 variable="TaskbarImage" vartype="Image" xsize="15" ysize="19">Chrome_Taskbar_Icon.bmp</variable4>
+						<variable5 vartype="Image"></variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150090" scenariosection="" step="93">
+				
+				</else>
+			</command>
+			<command type="if" expression="%Browser_Choice% == MSEdge" showelse="0" commentedout="0" id="16730053799150095" scenariosection="" stepalias="If the Browser is Edge close it" step="94">
+			
+				<then commentedout="0" id="16730053799150093" scenariosection="" step="95">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16730053799150092" scenariosection="" stepalias="If the Edge is Chrome close it" step="96">
+						<variable1 variable="WindowTitle" vartype="String" expression="Microsoft​ Edge"></variable1>
+						<variable2 variable="AppName" vartype="String" expression="msedge"></variable2>
+						<variable3 vartype="String"></variable3>
+						<variable4 variable="TaskbarImage" vartype="Image" xsize="19" ysize="17">MSEdge_Taskbar_Icon.bmp</variable4>
+						<variable5 vartype="Image"></variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150094" scenariosection="" step="97">
+				
+				</else>
+			</command>
+			<command type="if" expression="%Browser_Choice% == IE" showelse="0" commentedout="0" id="16730053799150099" scenariosection="" stepalias="If the Browser is IE close it" step="98">
+			
+				<then commentedout="0" id="16730053799150097" scenariosection="" step="99">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16730053799150096" scenariosection="" stepalias="If the IE is Chrome close it" step="100">
+						<variable1 variable="WindowTitle" vartype="String" expression="Internet Explorer"></variable1>
+						<variable2 variable="AppName" vartype="String" expression="iexplore"></variable2>
+						<variable3 vartype="String"></variable3>
+						<variable4 variable="TaskbarImage" vartype="Image" xsize="16" ysize="15">IE_Taskbar_Icon.bmp</variable4>
+						<variable5 vartype="Image"></variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150098" scenariosection="" step="101">
+				
+				</else>
+			</command>
+			<command type="if" expression="%Browser_Choice% == Firefox" showelse="0" commentedout="0" id="16730053799150105" scenariosection="" stepalias="If the Browser is Firefox close it" step="102">
+			
+				<then commentedout="0" id="16730053799150103" scenariosection="" step="103">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16730053799150100" scenariosection="" stepalias="If the FireFox is Chrome close it" step="104">
+						<variable1 variable="WindowTitle" vartype="String" expression="Mozilla Firefox"></variable1>
+						<variable2 variable="AppName" vartype="String" expression="firefox"></variable2>
+						<variable3 vartype="String"></variable3>
+						<variable4 variable="TaskbarImage" vartype="Image" xsize="17" ysize="15">Firefox_Taskbar_Icon.bmp</variable4>
+						<variable5 vartype="Image"></variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+					<command type="findbitmap" stylename="find_image_in_active_window" timeout="5000" onfaillabel="Next Action" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16730053799150102" scenariosection="" stepalias="If Firefox prompts to close multiple tabs, allow it" step="105">
+						<searcharea xstart="360" ystart="361" xend="828" yend="700" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="554" ypos="518" xsize="84" ysize="33">Firefox_Tab_Close_Prompt.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16730053799150101" scenariosection="" step="106">
+							<coords x="0" y="0" dx="0" dy="0" />
+						
+						</command>
+					</command>
+				</then>
+				<else commentedout="0" id="16730053799150104" scenariosection="" step="107">
+				
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16730053799150107" scenariosection="" step="108">
+		
+		</else>
+	</command>
+	<command type="filler" commentedout="0" id="16730053799150109" scenariosection="" stepalias="Shutdown the relevant browser" step="109">
+		<color r="255" g="0" b="0" a="255" />
+	
+	</command>
+
+	<commandcontainer type="block" name="SetVars" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="16730053799150110" scenariosection="" step="110">
+	
+		<command type="comment" comment="Configure applications and environment  in scope for workload run" commentedout="0" id="16730053799150111" scenariosection="" step="111">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="filler" commentedout="0" id="16730053799150112" scenariosection="" step="112">
+			<color r="128" g="0" b="0" a="255" />
+		
+		</command>
+		<command type="comment" comment="Configure if the user should be logged off on failure" commentedout="0" id="16730053799150113" scenariosection="" step="113">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" stylename="rand" variable="Logoff_On_Failure" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150114" scenariosection="" stepalias="Log the user off on failure or not 1/0" step="114">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="Logoff_On_Complete" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150115" scenariosection="" stepalias="Log the user off on completion of the workload 1/0" step="115">
+		
+		</command>
+		<command type="comment" comment="Configure application workload behaviour" commentedout="0" id="16730053799150116" scenariosection="" step="116">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" stylename="rand" variable="CloseBrowser_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150117" scenariosection="" stepalias="Close Browser on workload completion or not 1/0" step="117">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="CloseExcel_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150118" scenariosection="" stepalias="Close Excel on workload completion or not 1/0" step="118">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="CloseOutlook_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150119" scenariosection="" stepalias="Close Outlook on workload completion or not 1/0" step="119">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="ClosePowerPoint_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150120" scenariosection="" stepalias="Close PowerPoint on workload completion or not 1/0" step="120">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="CloseWord_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150121" scenariosection="" stepalias="Close Word on workload completion or not 1/0" step="121">
+		
+		</command>
+		<command type="comment" comment="Configure which applications will run - 1 for yes, 0 for no" commentedout="0" id="16730053799150122" scenariosection="" step="122">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" stylename="rand" variable="RunExcel" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150123" scenariosection="" stepalias="Run Excel or not 1/0" step="123">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="RunOutlook" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150124" scenariosection="" stepalias="Run Outlook or not 1/0" step="124">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="RunPowerPoint" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150125" scenariosection="" stepalias="Run PowerPoint or not 1/0" step="125">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="RunWord" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150126" scenariosection="" stepalias="Run Word or not 1/0" step="126">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="RunPDF" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150127" scenariosection="" stepalias="Run PDF or not 1/0" step="127">
+		
+		</command>
+		<command type="comment" comment="Browser choice selection for web workloads - choices are Chrome, MSEdge and IE" commentedout="0" id="16730053799150128" scenariosection="" step="128">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" stylename="rand" variable="RunBrowser" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150129" scenariosection="" stepalias="Run the browser workloads or not" step="129">
+		
+		</command>
+		<command type="setvariable" variable="Browser_Choice" expression="Chrome" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150130" scenariosection="" stepalias="Choose your browser that will be used in workloads, Chrome, MSEdge, IE or Firefox" step="130">
+		
+		</command>
+		<command type="setvariable" stylename="rand" variable="Reuse_Browser_Tab" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16730053799150131" scenariosection="" stepalias="Start up additional tabs for each site or reuse the existing one 1/0" step="131">
+		
+		</command>
+		<command type="setvariable" variable="Browser_Video" expression="0" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150132" scenariosection="" stepalias="Select to add video to the browser workload or not" step="132">
+		
+		</command>
+		<command type="comment" comment="Configure locations of executables" commentedout="0" id="16730053799150133" scenariosection="" step="133">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Chrome_Location" expression="C:\Program Files\Google\Chrome\Application\Chrome.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150134" scenariosection="" stepalias="Location of Chrome executable" step="134">
+		
+		</command>
+		<command type="setvariable" variable="IE_Location" expression="C:\Program Files\internet explorer\iexplore.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150135" scenariosection="" stepalias="Location of IE executable" step="135">
+		
+		</command>
+		<command type="setvariable" variable="MSEdge_Location" expression="C:\Program Files (x86)\Microsoft\EdgeCore\95.0.1020.30\msedge.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150136" scenariosection="" stepalias="Location of Edge executable" step="136">
+		
+		</command>
+		<command type="setvariable" variable="FireFox_Location" expression="C:\Program Files\Mozilla Firefox\firefox.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150137" scenariosection="" step="137">
+		
+		</command>
+		<command type="setvariable" variable="Excel_Location" expression="C:\Program Files\Microsoft Office\root\Office16\excel.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150138" scenariosection="" stepalias="Location of Excel executable" step="138">
+		
+		</command>
+		<command type="setvariable" variable="Outlook_Location" expression="C:\Program Files\Microsoft Office\root\office16\outlook.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150139" scenariosection="" stepalias="Location of Outlook executable" step="139">
+		
+		</command>
+		<command type="setvariable" variable="PowerPoint_Location" expression="C:\Program Files\Microsoft Office\root\Office16\powerpnt.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150140" scenariosection="" stepalias="Location of PowerPoint executable" step="140">
+		
+		</command>
+		<command type="setvariable" variable="Word_Location" expression="C:\Program Files\Microsoft Office\root\Office16\winword.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150141" scenariosection="" stepalias="Location of Word executable" step="141">
+		
+		</command>
+		<command type="filler" commentedout="0" id="16730053799150142" scenariosection="" step="142">
+			<color r="128" g="64" b="0" a="255" />
+		
+		</command>
+		<command type="comment" comment="Set all varibales up for all scripts" commentedout="0" id="16730053799150143" scenariosection="" step="143">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="filler" commentedout="0" id="16730053799150144" scenariosection="" step="144">
+			<color r="128" g="128" b="0" a="255" />
+		
+		</command>
+		<command type="comment" comment="Configure varibale for the userprofile" commentedout="0" id="16730053799150145" scenariosection="" step="145">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Profile" expression="[Env USERPROFILE]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16730053799150146" scenariosection="" stepalias="Get the user profile of the rloader user" step="146">
+		
+		</command>
+		<command type="comment" comment="Configure Username variable" commentedout="0" id="16730053799150147" scenariosection="" step="147">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Username" expression="[Env USERNAME]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16730053799150148" scenariosection="" stepalias="Get the username of the rloder user" step="148">
+		
+		</command>
+		<command type="comment" comment="Configure the environment type being connected to - Citrix, VMWare, RDSH" commentedout="0" id="16730053799150149" scenariosection="" step="149">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Environment_Type" expression="Citrix" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150150" scenariosection="" stepalias="Type of virtual environment being connected to , Citrix, VMWare, RDSH" step="150">
+		
+		</command>
+		<command type="comment" comment="Configure domain of environment" commentedout="0" id="16730053799150151" scenariosection="" step="151">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Domain" expression="domain.local" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150152" scenariosection="" stepalias="Domain that is being used for user logins" step="152">
+		
+		</command>
+		<command type="comment" comment="Configure the URL of the Storefront server for the Citrix login" commentedout="0" id="16730053799150153" scenariosection="" step="153">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Citrix_URL" expression="https://storefront.domain.local/citrix/storeweb" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150154" scenariosection="" stepalias="Citrix Storeweb address" step="154">
+		
+		</command>
+		<command type="comment" comment="Configure the name of the Citrix Desktop to be launched" commentedout="0" id="16730053799150155" scenariosection="" step="155">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Citrix_Desktop_Name" expression="Automai" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150156" scenariosection="" step="156">
+		
+		</command>
+		<command type="comment" comment="Configure if Outlook is launching in Online mode or not, PST - Offline, O365 - Online" commentedout="0" id="16730053799150157" scenariosection="" step="157">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Outlook_Mode" expression="PST" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150158" scenariosection="" stepalias="Specify the outlook mode, O365 or PST" step="158">
+		
+		</command>
+		<command type="comment" comment="Configure the network location of the content zip file" commentedout="0" id="16730053799150159" scenariosection="" step="159">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Content_Zip" expression="\\dc-01.domain.local\Xa\Automai\Content.zip" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150160" scenariosection="" stepalias="Location of the Automai content.zip file" step="160">
+		
+		</command>
+		<command type="comment" comment="AI Channel Folder Share" commentedout="0" id="16730053799150161" scenariosection="" step="161">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="AIChannel_Folder" expression="\\dc-01.domain.local\Xa\Automai\AIChannel" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16730053799150162" scenariosection="" stepalias="Location of the AIChannel Folder" step="162">
+		
+		</command>
+		<command type="comment" comment="Configure PowerShell command - DO NOT CHANGE" commentedout="0" id="16730053799150163" scenariosection="" step="163">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Powershell_Path" expression="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16730053799150164" scenariosection="" stepalias="Set the variable for running powershell and bypassing the execution policy" step="164">
+		
+		</command>
+		<command type="filler" commentedout="0" id="16730053799150165" scenariosection="" step="165">
+			<color r="128" g="128" b="0" a="255" />
+		
+		</command>
+	</commandcontainer>
+<Usage><commandcontainer type="scenario" name="Browser_Base.xml"><commandcontainer type="scenario" name="Check_App.xml"><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command><command type="findbitmap"><bitmapname>%StartButtonImage1%</bitmapname><bitmapname>%StartButtonImage2%</bitmapname></command><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command></commandcontainer></commandcontainer></Usage></commandcontainer>

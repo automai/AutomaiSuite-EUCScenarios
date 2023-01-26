@@ -1,0 +1,132 @@
+<commandcontainer type="block" name="Setvars" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="66">
+  <command type="comment" comment="Configure applications and environment  in scope for workload run" commentedout="0" id="16643948715370003" scenariosection="" step="67">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="filler" commentedout="0" id="16643948715370004" scenariosection="" step="68">
+    <color r="128" g="0" b="0" a="255" />
+  </command>
+  <command type="comment" comment="Configure if the user should be logged off on failure" commentedout="0" id="16643948715370005" scenariosection="" step="69">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" stylename="rand" variable="Logoff_On_Failure" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370006" scenariosection="" stepalias="Log the user off on failure or not 1/0" step="70">
+  </command>
+  <command type="setvariable" stylename="rand" variable="Logoff_On_Complete" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370007" scenariosection="" stepalias="Log the user off on completion of the workload 1/0" step="71">
+  </command>
+  <command type="comment" comment="Configure application workload behaviour" commentedout="0" id="16643948715370008" scenariosection="" step="72">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" stylename="rand" variable="CloseBrowser_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370009" scenariosection="" stepalias="Close Browser on workload completion or not 1/0" step="73">
+  </command>
+  <command type="setvariable" stylename="rand" variable="CloseExcel_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370010" scenariosection="" stepalias="Close Excel on workload completion or not 1/0" step="74">
+  </command>
+  <command type="setvariable" stylename="rand" variable="CloseOutlook_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370011" scenariosection="" stepalias="Close Outlook on workload completion or not 1/0" step="75">
+  </command>
+  <command type="setvariable" stylename="rand" variable="ClosePowerPoint_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370012" scenariosection="" stepalias="Close PowerPoint on workload completion or not 1/0" step="76">
+  </command>
+  <command type="setvariable" stylename="rand" variable="CloseWord_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370013" scenariosection="" stepalias="Close Word on workload completion or not 1/0" step="77">
+  </command>
+  <command type="comment" comment="Configure which applications will run - 1 for yes, 0 for no" commentedout="0" id="16643948715370014" scenariosection="" step="78">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" stylename="rand" variable="RunExcel" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370015" scenariosection="" stepalias="Run Excel or not 1/0" step="79">
+  </command>
+  <command type="setvariable" stylename="rand" variable="RunOutlook" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370016" scenariosection="" stepalias="Run Outlook or not 1/0" step="80">
+  </command>
+  <command type="setvariable" stylename="rand" variable="RunPowerPoint" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370017" scenariosection="" stepalias="Run PowerPoint or not 1/0" step="81">
+  </command>
+  <command type="setvariable" stylename="rand" variable="RunWord" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370018" scenariosection="" stepalias="Run Word or not 1/0" step="82">
+  </command>
+  <command type="setvariable" stylename="rand" variable="RunPDF" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370019" scenariosection="" stepalias="Run PDF or not 1/0" step="83">
+  </command>
+  <command type="comment" comment="Browser choice selection for web workloads - choices are Chrome, MSEdge and IE" commentedout="0" id="16643948715370020" scenariosection="" step="84">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" stylename="rand" variable="RunBrowser" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370021" scenariosection="" stepalias="Run the browser workloads or not" step="85">
+  </command>
+  <command type="setvariable" variable="Browser_Choice" expression="Chrome" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370022" scenariosection="" stepalias="Choose your browser that will be used in workloads, Chrome, MSEdge, IE or Firefox" step="86">
+  </command>
+  <command type="setvariable" stylename="rand" variable="Reuse_Browser_Tab" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16643948715370023" scenariosection="" stepalias="Start up additional tabs for each site or reuse the existing one 1/0" step="87">
+  </command>
+  <command type="setvariable" variable="Browser_Video" expression="0" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370024" scenariosection="" stepalias="Select to add video to the browser workload or not" step="88">
+  </command>
+  <command type="setvariable" variable="BrowserWorkload " expression="Video2" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948718250001" step="89" scenariosection="">
+  </command>
+  <command type="comment" comment="Configure locations of executables" commentedout="0" id="16643948715370025" scenariosection="" step="90">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Chrome_Location" expression="C:\Program Files\Google\Chrome\Application\Chrome.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370026" scenariosection="" stepalias="Location of Chrome executable" step="91">
+  </command>
+  <command type="setvariable" variable="IE_Location" expression="C:\Program Files\internet explorer\iexplore.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370027" scenariosection="" stepalias="Location of IE executable" step="92">
+  </command>
+  <command type="setvariable" variable="MSEdge_Location" expression="C:\Program Files (x86)\Microsoft\EdgeCore\95.0.1020.30\msedge.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370028" scenariosection="" stepalias="Location of Edge executable" step="93">
+  </command>
+  <command type="setvariable" variable="FireFox_Location" expression="C:\Program Files\Mozilla Firefox\firefox.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370029" scenariosection="" step="94">
+  </command>
+  <command type="setvariable" variable="Excel_Location" expression="C:\Program Files\Microsoft Office\root\Office16\excel.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370030" scenariosection="" stepalias="Location of Excel executable" step="95">
+  </command>
+  <command type="setvariable" variable="Outlook_Location" expression="C:\Program Files\Microsoft Office\root\office16\outlook.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370031" scenariosection="" stepalias="Location of Outlook executable" step="96">
+  </command>
+  <command type="setvariable" variable="PowerPoint_Location" expression="C:\Program Files\Microsoft Office\root\Office16\powerpnt.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370032" scenariosection="" stepalias="Location of PowerPoint executable" step="97">
+  </command>
+  <command type="setvariable" variable="Word_Location" expression="C:\Program Files\Microsoft Office\root\Office16\winword.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370033" scenariosection="" stepalias="Location of Word executable" step="98">
+  </command>
+  <command type="filler" commentedout="0" id="16643948715370034" scenariosection="" step="99">
+    <color r="128" g="64" b="0" a="255" />
+  </command>
+  <command type="comment" comment="Set all varibales up for all scripts" commentedout="0" id="16643948715370035" scenariosection="" step="100">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="filler" commentedout="0" id="16643948715370036" scenariosection="" step="101">
+    <color r="128" g="128" b="0" a="255" />
+  </command>
+  <command type="comment" comment="Configure varibale for the userprofile" commentedout="0" id="16643948715370037" scenariosection="" step="102">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Profile" expression="[Env USERPROFILE]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16643948715370038" scenariosection="" stepalias="Get the user profile of the rloader user" step="103">
+  </command>
+  <command type="comment" comment="Configure Username variable" commentedout="0" id="16643948715370039" scenariosection="" step="104">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Username" expression="[Env USERNAME]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16643948715370040" scenariosection="" stepalias="Get the username of the rloder user" step="105">
+  </command>
+  <command type="comment" comment="Configure the environment type being connected to - Citrix, VMWare, RDSH" commentedout="0" id="16643948715370041" scenariosection="" step="106">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Environment_Type" expression="Citrix" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370042" scenariosection="" stepalias="Type of virtual environment being connected to , Citrix, VMWare, RDSH" step="107">
+  </command>
+  <command type="comment" comment="Configure domain of environment" commentedout="0" id="16643948715370043" scenariosection="" step="108">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Domain" expression="domain.local" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370044" scenariosection="" stepalias="Domain that is being used for user logins" step="109">
+  </command>
+  <command type="comment" comment="Configure the URL of the Storefront server for the Citrix login" commentedout="0" id="16643948715370045" scenariosection="" step="110">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Citrix_URL" expression="https://storefront.domain.local/citrix/storeweb" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370046" scenariosection="" stepalias="Citrix Storeweb address" step="111">
+  </command>
+  <command type="comment" comment="Configure the name of the Citrix Desktop to be launched" commentedout="0" id="16643948715370047" scenariosection="" step="112">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Citrix_Desktop_Name" expression="Automai" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370048" scenariosection="" step="113">
+  </command>
+  <command type="comment" comment="Configure if Outlook is launching in Online mode or not, PST - Offline, O365 - Online" commentedout="0" id="16643948715370049" scenariosection="" step="114">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Outlook_Mode" expression="PST" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370050" scenariosection="" stepalias="Specify the outlook mode, O365 or PST" step="115">
+  </command>
+  <command type="comment" comment="Configure the network location of the content zip file" commentedout="0" id="16643948715370051" scenariosection="" step="116">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Content_Zip" expression="\\dc-01.domain.local\Xa\Automai\Content.zip" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370052" scenariosection="" stepalias="Location of the Automai content.zip file" step="117">
+  </command>
+  <command type="comment" comment="AI Channel Folder Share" commentedout="0" id="16643948715370053" scenariosection="" step="118">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="AIChannel_Folder" expression="\\dc-01.domain.local\Xa\Automai\AIChannel" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16643948715370054" scenariosection="" stepalias="Location of the AIChannel Folder" step="119">
+  </command>
+  <command type="comment" comment="Configure PowerShell command - DO NOT CHANGE" commentedout="0" id="16643948715370055" scenariosection="" step="120">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="setvariable" variable="Powershell_Path" expression="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16643948715370056" scenariosection="" stepalias="Set the variable for running powershell and bypassing the execution policy" step="121">
+  </command>
+</commandcontainer>

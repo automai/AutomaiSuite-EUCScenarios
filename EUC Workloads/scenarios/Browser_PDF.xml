@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Browser_PDF.xml" scenariotype="Process" screenwidth="1690" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="rloader001" creationdate="1/6/2023 11:15:26 AM" lastmodifiedby="rloader001" lastmodifieddate="1/6/2023 11:20:55 AM" lastusedid="16856181267620018" scenarioid="1685618126762" sbversion="22.12.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" step="0" scenariosection="">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16856181267620001" scenariosection="" step="1">
+		<text>file://c:/users/%user_name%/Automai/content/sample-pdf-with-images.pdf</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16856181267620002" scenariosection="" step="2">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="transaction" name="Open PDF" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16856181267620003" scenariosection="" step="3">
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Boundary Waters Trip" imagetype="" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page UP" repwait="1" reptimes="10" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16856181267620004" scenariosection="Boundary Waters Trip" step="4">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="509" ypos="431" relative_xpos="499" relative_ypos="421" xsize="17" ysize="20">Boundary Waters Trip.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16856181267620005" scenariosection="" step="5">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="transaction" name="Open PDF" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16856181267620006" step="6" scenariosection="">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="2" commentedout="0" id="16856181267620007" scenariosection="" step="7">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="16856181267620008" scenariosection="" step="8">
+	
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="16856181267620009" scenariosection="" step="9">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="16856181267620010" scenariosection="" step="10">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="20" commentedout="0" id="16856181267620011" scenariosection="" step="11">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="20" commentedout="0" id="16856181267620012" scenariosection="" step="12">
+	
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="16856181267620013" scenariosection="" step="13">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="16856181267620014" scenariosection="" step="14">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="20" commentedout="0" id="16856181267620015" scenariosection="" step="15">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="20" commentedout="0" id="16856181267620016" scenariosection="" step="16">
+	
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="16856181267620017" scenariosection="" step="17">
+	
+	</command>
+	<command type="mousewheel" scrollup="100" scrolldown="0" commentedout="0" id="16856181267620018" scenariosection="" step="18">
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Browser_PDF.xml" ReferenceTime="1"><command type="transaction" name="Open PDF"><command type="findbitmap"><bitmapname>Boundary Waters Trip.bmp</bitmapname></command></command></commandcontainer></Usage></commandcontainer>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commandcontainer type="scenario" name="Browser_Cyber.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="rloader001" creationdate="10/20/2021 02:30:21 PM" lastmodifiedby="rloader001" lastmodifieddate="10/27/2021 05:37:09 PM" lastusedid="16353562296270000" scenarioid="1635356229627" sbversion="21.09.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+  <errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+  <command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16347408461280004" scenariosection="" step="1">
+    <text>file://c:/users/%user_name%/Automai/content/cyber-tech/index.html</text>
+    <window />
+    <key />
+  </command>
+  <command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16353447647030001" scenariosection="" step="2">
+    <key key1="Enter" />
+    <window />
+  </command>
+  <command type="transaction" name="Open Chrome - Cyber" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16353450899300001" scenariosection="" step="3"></command>
+  <command type="findbitmap" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353450899300003" scenariosection="" step="4">
+    <searcharea dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <coordvars />
+    <bitmapname xsize="139" ysize="45">HTML - Cyber_Open Cyber_Img1_2.bmp</bitmapname>
+  </command>
+  <command type="transaction" name="Open Chrome - Cyber" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16347408461280007" scenariosection="" step="5"></command>
+  <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280006" scenariosection="" step="6">
+    <coords dx="0" dy="0" />
+    <searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <bitmapname xpos="6" ypos="73" xsize="139" ysize="45">HTML - Cyber_Open Cyber_Img1_2.bmp</bitmapname>
+  </command>
+  <command type="mousewheel" scrollup="0" scrolldown="2" commentedout="0" id="16347408461280008" scenariosection="" step="7"></command>
+  <command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="16347408461280009" scenariosection="" step="8"></command>
+  <command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="16347408461280010" scenariosection="" step="9"></command>
+  <command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="16347408461280011" scenariosection="" step="10"></command>
+  <command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="16347408461280012" scenariosection="" step="11"></command>
+  <command type="mousewheel" scrollup="0" scrolldown="1" commentedout="0" id="16347408461280013" scenariosection="" step="12"></command>
+  <command type="mousewheel" scrollup="0" scrolldown="5" commentedout="0" id="16347408461280014" scenariosection="" step="13"></command>
+  <command type="mousewheel" scrollup="11" scrolldown="0" commentedout="0" id="16347408461280015" scenariosection="" step="14"></command>
+  <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="2000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280016" scenariosection="" step="15">
+    <coords dx="0" dy="0" />
+    <searcharea dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <bitmapname xpos="226" ypos="72" xsize="107" ysize="48">Cyber_HTML_Technology_Blue.bmp</bitmapname>
+  </command>
+  <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280017" scenariosection="" step="16">
+    <coords dx="0" dy="0" />
+    <searcharea dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <bitmapname xpos="331" ypos="72" xsize="84" ysize="48">Cyber_HTML_Mobile_Blue.bmp</bitmapname>
+  </command>
+  <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="2000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280018" scenariosection="" step="17">
+    <coords dx="0" dy="0" />
+    <searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <bitmapname xpos="343" ypos="74" xsize="67" ysize="36">Cyber_HTML_Nokia_Blue.bmp</bitmapname>
+  </command>
+  <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="2000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280019" scenariosection="" step="18">
+    <coords dx="0" dy="0" />
+    <searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <bitmapname xpos="510" ypos="77" xsize="67" ysize="36">Cyber_HTML_Tablets_Blue.bmp</bitmapname>
+  </command>
+  <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="2000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280020" scenariosection="" step="19">
+    <coords dx="0" dy="0" />
+    <searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <bitmapname xpos="594" ypos="78" xsize="83" ysize="36">Cyber_HTML_ContactUs_Blue.bmp</bitmapname>
+  </command>
+  <command type="mousewheel" scrollup="0" scrolldown="2" commentedout="0" id="16347408461280021" scenariosection="" step="20"></command>
+  <command type="mousewheel" scrollup="3" scrolldown="0" commentedout="0" id="16347408461280022" scenariosection="" step="21"></command>
+  <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="2000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280023" scenariosection="" step="22">
+    <coords dx="0" dy="0" />
+    <searcharea dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <bitmapname xpos="154" ypos="73" xsize="63" ysize="48">Cyber_HTML_Home_White.bmp</bitmapname>
+  </command>
+  <command type="findbitmap" timeout="15000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347408461280024" scenariosection="" step="23">
+    <searcharea xstart="0" ystart="200" xend="500" yend="800" dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <coordvars />
+    <bitmapname xpos="49" ypos="319" relative_xpos="49" relative_ypos="153" xsize="221" ysize="167">HTML - Cyber_Img10_2_1.bmp</bitmapname>
+    <bitmapname xpos="22" ypos="319" xsize="248" ysize="224">HTML - Cyber_Img10_2.bmp</bitmapname>
+  </command>
+  <Usage>
+    <commandcontainer type="scenario" name="Browser_Cyber.xml">
+      <command type="findbitmap">
+        <bitmapname>Cyber_HTML_Technology_Blue.bmp</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>Cyber_HTML_Mobile_Blue.bmp</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>Cyber_HTML_Nokia_Blue.bmp</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>Cyber_HTML_Tablets_Blue.bmp</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>Cyber_HTML_ContactUs_Blue.bmp</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>Cyber_HTML_Home_White.bmp</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>HTML - Cyber_Img10.bmp</bitmapname>
+      </command>
+      <commandcontainer type="scenario" name="Check_Chrome.xml">
+        <command type="findbitmap">
+          <bitmapname>Chrome_Taskbar_Icon.bmp</bitmapname>
+        </command>
+        <command type="findbitmap">
+          <bitmapname>Initiation_Img5_alt2.bmp</bitmapname>
+          <bitmapname>Initiation_Img5_alt2_2.bmp</bitmapname>
+        </command>
+        <command type="findbitmap">
+          <bitmapname>Chrome_Taskbar_Icon.bmp</bitmapname>
+        </command>
+        <command type="findbitmap">
+          <bitmapname>Chrome - Check_Open.bmp</bitmapname>
+        </command>
+      </commandcontainer>
+      <commandcontainer type="scenario" name="Close_Chrome.xml">
+        <command type="findbitmap">
+          <bitmapname>Chrome_Taskbar_Icon.bmp</bitmapname>
+        </command>
+        <command type="findbitmap">
+          <bitmapname>Chrome_Taskbar_Icon.bmp</bitmapname>
+        </command>
+        <command type="findbitmap">
+          <bitmapname>Chrome - Check_Open.bmp</bitmapname>
+        </command>
+        <command type="findbitmap">
+          <bitmapname>Close_Chrome_Img1.bmp</bitmapname>
+          <bitmapname>Close_Chrome_Img1_1.bmp</bitmapname>
+        </command>
+      </commandcontainer>
+    </commandcontainer>
+  </Usage>
+</commandcontainer>

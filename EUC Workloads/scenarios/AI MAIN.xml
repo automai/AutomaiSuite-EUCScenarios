@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="AI MAIN.xml" scenariotype="Flow" screenwidth="1280" screenheight="768" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="49847" actualruntime="49847" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="ScriptingBot" creationdate="9/28/2022 07:54:31 PM" lastmodifiedby="rloader001" lastmodifieddate="1/6/2023 10:40:49 AM" lastusedid="16730016492850000" scenarioid="1673001649285" sbversion="22.12.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="execute" block="Setvars" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16643948715370057" scenariosection="" step="1">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="CTX Login.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948718250003" scenariosection="" step="2">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="Connect RDP.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" skipexpression="%_iteration% &gt; 1" commentedout="0" id="16643948710070003" scenariosection="" step="3">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="Browser_Base.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948715370001" scenariosection="" step="4">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="MS Outlook - New.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948719710002" scenariosection="" step="5">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="MS Outlook - Reply.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948719710003" scenariosection="" step="6">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="PDF.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948710070004" scenariosection="" step="7">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="MS Word.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948717200001" scenariosection="" step="8">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="MS Powerpoint.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948717200002" scenariosection="" step="9">
+	
+	</command>
+	<command type="playscenario" scenariotype="Global" filename="MS Excel.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16643948718410001" scenariosection="" step="10">
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="AI MAINScriptingBot_tmp.xml" /></Usage></commandcontainer>

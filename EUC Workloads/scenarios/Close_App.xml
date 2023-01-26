@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commandcontainer type="scenario" name="Close_App.xml" scenariotype="Snippet" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="rloader001" creationdate="10/20/2021 01:34:07 PM" lastmodifiedby="rloader001" lastmodifieddate="5/11/2022 09:04:24 PM" lastusedid="16518521052590030" scenarioid="1651852105259" sbversion="22.04.28" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+  <errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+  <command type="comment" comment="Check if app is running" commentedout="0" id="16518521052590001" scenariosection="" step="1">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="findbitmap" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="9" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="App_Running" commentedout="0" id="16518521052590002" scenariosection="" step="2">
+    <searcharea xstart="0" ystart="700" xend="1280" yend="1024" dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <coordvars />
+    <bitmapname xpos="197" ypos="882" relative_xpos="" relative_ypos="" xsize="44" ysize="33">%TaskbarImage%</bitmapname>
+  </command>
+  <command type="findbitmap" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="App_Open" commentedout="0" id="16518521052590003" scenariosection="" step="3">
+    <searcharea xstart="0" ystart="0" xend="1280" yend="400" dx="0" dy="0" />
+    <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+    <coordvars />
+    <bitmapname xpos="197" ypos="882" relative_xpos="197" relative_ypos="137" xsize="44" ysize="33">%OpenCheckImage%</bitmapname>
+  </command>
+  <command type="comment" comment="If the app is not running do nothing, if it is, close it." commentedout="0" id="16518521052590004" scenariosection="" step="4">
+    <color r="128" g="128" b="128" a="128" />
+  </command>
+  <command type="if" expression="%App_Open% == SUCCESS" showelse="1" commentedout="0" id="16518521052590021" scenariosection="" step="5">
+    <then commentedout="0" id="16518521052590011" scenariosection="" step="6">
+      <command type="windowaction" isremote="1" action="Close" timeout="10000" continueonfail="1" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16518521052590024" scenariosection="" step="7">
+        <window processname="%ProcessName%" x="-8" y="-8" width="1296" height="1000" />
+        <coords />
+        <size />
+      </command>
+      <command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{Get-Process -Name *}}%ProcessName%{{ | Stop-Process -Force}}" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" continueonfail="1" commentedout="0" id="16518521052590030" scenariosection="" step="8">
+        <expression expression="" />
+      </command>
+      <command type="findbitmap" timeout="2000" onfaillabel="Next Action" continueonfail="1" percentlinetolerance="0" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="DontSaveDialog" commentedout="0" id="16518521052590006" scenariosection="" step="9">
+        <searcharea dx="0" dy="0" />
+        <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+        <coordvars />
+        <bitmapname xsize="98" ysize="33">%DontSaveButton%</bitmapname>
+      </command>
+      <command type="if" expression="%DontSaveDialog% == SUCCESS" showelse="0" commentedout="0" id="16518521052590010" scenariosection="" step="10">
+        <then commentedout="0" id="16518521052590008" scenariosection="" step="11">
+          <command type="clickonimage" timeout="10000" continueonfail="0" percentlinetolerance="0" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16518521052590007" scenariosection="" step="12">
+            <coords dx="0" dy="0" />
+            <searcharea dx="0" dy="0" />
+            <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+            <bitmapname xsize="98" ysize="33">%DontSaveButton%</bitmapname>
+          </command>
+        </then>
+        <else commentedout="0" id="16518521052590009" scenariosection="" step="13"></else>
+      </command>
+    </then>
+    <else commentedout="0" id="16518521052590020" scenariosection="" step="14">
+      <command type="clickonimage" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="9" colortolerance="0" anchorx="center" anchory="center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" balloon="1" useanchor="Parent" statusvariable="" commentedout="0" id="16518521052590012" scenariosection="" step="15">
+        <coords x="197" y="882" dx="0" dy="0" />
+        <searcharea xstart="0" ystart="700" xend="1280" yend="1024" dx="0" dy="0" />
+        <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+        <bitmapname xpos="197" ypos="882" xsize="44" ysize="33">%TaskbarImage%</bitmapname>
+      </command>
+      <command type="findbitmap" timeout="10000" onfaillabel="Previous Action" continueonfail="0" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16518521052590013" scenariosection="" step="16">
+        <searcharea xstart="0" ystart="0" xend="1280" yend="400" dx="0" dy="0" />
+        <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+        <coordvars />
+        <bitmapname xpos="11" ypos="34" relative_xpos="11" relative_ypos="34" xsize="109" ysize="33">%OpenCheckImage%</bitmapname>
+      </command>
+      <command type="windowaction" isremote="1" action="Close" timeout="10000" continueonfail="1" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16518521052590025" scenariosection="" step="17">
+        <window processname="%ProcessName%" />
+        <coords />
+        <size />
+      </command>
+      <command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{Get-Process -Name *}}%ProcessName%{{ | Stop-Process -Force}}" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" continueonfail="1" commentedout="0" id="16518521052590029" step="18" scenariosection="">
+        <expression expression="" />
+      </command>
+      <command type="findbitmap" timeout="10000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="DontSaveDialog" commentedout="0" id="16518521052590015" scenariosection="" step="19">
+        <searcharea dx="0" dy="0" />
+        <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+        <coordvars />
+        <bitmapname xsize="98" ysize="33">%DontSaveButton%</bitmapname>
+      </command>
+      <command type="if" expression="%DontSaveDialog% == SUCCESS" showelse="0" commentedout="0" id="16518521052590019" scenariosection="" step="20">
+        <then commentedout="0" id="16518521052590017" scenariosection="" step="21">
+          <command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16518521052590016" scenariosection="" step="22">
+            <coords dx="0" dy="0" />
+            <searcharea dx="0" dy="0" />
+            <excludearea xstart="0" ystart="0" xend="0" yend="0" />
+            <bitmapname xsize="98" ysize="33">%DontSaveButton%</bitmapname>
+          </command>
+        </then>
+        <else commentedout="0" id="16518521052590018" scenariosection="" step="23"></else>
+      </command>
+    </else>
+  </command>
+  <Usage>
+    <commandcontainer type="scenario" name="Close_App.xml">
+      <command type="findbitmap">
+        <bitmapname>%TaskbarImage%</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>%TaskbarImage%</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>%OpenCheckImage%</bitmapname>
+      </command>
+      <command type="findbitmap">
+        <bitmapname>%CloseAppImage1%</bitmapname>
+        <bitmapname>%CloseAppImage2%</bitmapname>
+      </command>
+    </commandcontainer>
+  </Usage>
+</commandcontainer>

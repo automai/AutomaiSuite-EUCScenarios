@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Check_App.xml" scenariotype="Snippet" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="rloader001" creationdate="10/18/2021 01:25:10 PM" lastmodifiedby="ScriptingBot" lastmodifieddate="11/3/2022 06:47:35 PM" lastusedid="16345635104570000" scenarioid="1634563510457" sbversion="22.09.7" description="Check and App is running" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="if" expression="%Browser% == Microsoft​ Edge" showelse="1" commentedout="0" id="16488449295180022" scenariosection="" step="1">
+	
+		<then commentedout="0" id="16488449295180023" scenariosection="" step="2">
+		
+			<command type="windowaction" isremote="1" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " advancedfind="0" timeout="100" continueonfail="0" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16488449295180003" scenariosection="" step="3">
+				<window windowsname="Microsoft​ Edge" processname="msedge" x="-8" y="-8" width="1296" height="744" />
+				<coords />
+				<size />
+			
+			</command>
+			<command type="openapplication" isremote="1" continueonfail="0" commentedout="0" id="16488449295180006" scenariosection="" step="4">
+				<application>C:\Program Files\Internet Explorer\iexplore.exe</application>
+			
+			</command>
+			<command type="windowaction" isremote="1" action="resize" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16488449295180040" scenariosection="" step="5">
+				<window windowsname="Microsoft​ Edge" processname="msedge" classname="" x="104" y="104" width="1025" height="525" />
+				<coords />
+				<size width="800" height="600" />
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16488449295180024" scenariosection="" step="6">
+		
+			<command type="if" expression="%Browser% == Chrome" showelse="1" commentedout="0" id="16488449295180034" scenariosection="" step="7">
+			
+				<then commentedout="0" id="16488449295180035" scenariosection="" step="8">
+				
+					<command type="windowaction" isremote="1" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="100" waittodisappear="0" continueonfail="1" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16488449295180004" scenariosection="" step="9">
+						<window windowsname="Google Chrome" processname="chrome" x="10" y="10" width="1050" height="708" />
+						<coords />
+						<size />
+					
+					</command>
+					<command type="openapplication" isremote="1" commentedout="0" id="16488449295180007" scenariosection="" step="10">
+						<application>C:\Program Files\Google\Chrome\Application\chrome.exe</application>
+					
+					</command>
+					<command type="windowaction" isremote="1" action="resize" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16488449295180041" scenariosection="" step="11">
+						<window windowsname="Google Chrome" processname="chrome" classname="" x="104" y="104" width="1025" height="525" />
+						<coords />
+						<size width="800" height="600" />
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16488449295180036" scenariosection="" step="12">
+				
+					<command type="if" expression="%Browser% == Firefox" showelse="0" commentedout="0" id="16488449295180037" scenariosection="" step="13">
+					
+						<then commentedout="0" id="16488449295180038" scenariosection="" step="14">
+						
+							<command type="windowaction" isremote="1" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="100" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16488449295180005" scenariosection="" step="15">
+								<window windowsname="Mozilla Firefox" processname="firefox" x="-8" y="-8" width="1296" height="744" />
+								<coords />
+								<size />
+							
+							</command>
+							<command type="openapplication" isremote="1" commentedout="0" id="16488449295180008" scenariosection="" step="16">
+								<application>C:\Users\ScriptingBot\AppData\Local\Mozilla Firefox\firefox.exe</application>
+							
+							</command>
+							<command type="windowaction" isremote="1" action="resize" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16488449295180042" scenariosection="" step="17">
+								<window windowsname="Mozilla Firefox" processname="firefox" classname="" x="104" y="104" width="1025" height="525" />
+								<coords />
+								<size width="800" height="600" />
+							
+							</command>
+						</then>
+						<else commentedout="0" id="16488449295180039" scenariosection="" step="18">
+						
+						</else>
+					</command>
+				</else>
+			</command>
+		</else>
+	</command>
+	<command type="findbitmap" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="App_Open" commentedout="1" id="16353698819250002" scenariosection="" step="19">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="11" ypos="34" relative_xpos="11" relative_ypos="34" xsize="109" ysize="33">%OpenCheckImage%</bitmapname>
+	
+	</command>
+	<command type="findbitmap" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="9" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="App_Running" commentedout="1" id="16353698819250001" scenariosection="" step="20">
+		<searcharea xstart="0" ystart="700" xend="1280" yend="1024" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="197" ypos="882" relative_xpos="" relative_ypos="" xsize="44" ysize="33">%TaskbarImage%</bitmapname>
+	
+	</command>
+	<command type="comment" comment="Check if the supplied app is already running or not" commentedout="1" id="16353698819250003" scenariosection="" step="21">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="%App_Running% == FAILURE" showelse="1" commentedout="1" id="16353698819250023" scenariosection="" step="22">
+	
+		<then commentedout="0" id="16353698819250015" scenariosection="" step="23">
+		
+			<command type="comment" comment="Time Application launch" commentedout="0" id="16353698819250011" scenariosection="" step="24">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="transaction" name="Start %AppLocation%" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16353698819250012" scenariosection="" step="25">
+			
+			</command>
+			<command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{Start-Process &quot;&quot;&quot;}}%AppLocation%{{&quot;&quot;&quot; -WindowStyle Maximized}}" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16488449295180002" scenariosection="" step="26">
+				<expression expression="" />
+			
+			</command>
+			<command type="findbitmap" timeout="20000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353698819250013" scenariosection="" step="27">
+				<searcharea xstart="0" ystart="0" xend="1280" yend="400" dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<bitmapname xpos="11" ypos="34" relative_xpos="7" relative_ypos="29" xsize="109" ysize="33">%OpenCheckImage%</bitmapname>
+			
+			</command>
+			<command type="transaction" name="Start %AppLocation%" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16353698819250014" scenariosection="" step="28">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16353698819250022" scenariosection="" step="29">
+		
+			<command type="comment" comment="The app is in the taskbar but not in focus, get it into focus" commentedout="0" id="16353698819250016" scenariosection="" step="30">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="if" expression="%App_Open% == FAILURE" showelse="0" commentedout="0" id="16353698819250021" scenariosection="" step="31">
+			
+				<then commentedout="0" id="16353698819250019" scenariosection="" step="32">
+				
+					<command type="clickonimage" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="9" colortolerance="0" anchorx="left" anchory="bottom" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="Parent" statusvariable="" commentedout="0" id="16353698819250017" scenariosection="" step="33">
+						<coords x="570" y="876" dx="0" dy="0" />
+						<searcharea xstart="0" ystart="700" xend="1280" yend="1024" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="197" ypos="882" xsize="44" ysize="33">%TaskbarImage%</bitmapname>
+					
+					</command>
+					<command type="findbitmap" timeout="20000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353698819250018" scenariosection="" step="34">
+						<searcharea xstart="0" ystart="0" xend="1280" yend="400" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<bitmapname xpos="11" ypos="34" relative_xpos="11" relative_ypos="34" xsize="109" ysize="33">%OpenCheckImage%</bitmapname>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16353698819250020" scenariosection="" step="35">
+				
+				</else>
+			</command>
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Check_App.xml"><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command><command type="findbitmap"><bitmapname>Initiation_Img5_alt2.bmp</bitmapname><bitmapname>Initiation_Img5_alt2_2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Excel_Taskbar_Icon.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

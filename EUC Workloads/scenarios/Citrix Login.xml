@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commandcontainer type="scenario" name="Citrix Login.xml" scenariotype="Process" colordepth="32" lockinput="0" csvfilename="" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="ssun" creationdate="9/7/2020 10:32:17 AM" lastmodifiedby="rloader001" lastmodifieddate="10/29/2021 05:13:18 PM" lastusedid="15942907371830000" scenarioid="1594290737183" sbversion="21.09.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Connect to Citrix" step="0">
+  <errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+  <command type="citrixlogin" name="LAB" url="%Citrix_URL%" timeout="10000" citrixusername="%user_name%" citrixpassword="%user_password%" citrixdomain="%user_domain%" continueonfail="0" commentedout="0" id="15942907372520003" scenariosection="" step="1"></command>
+  <command type="citrixlist" name="LAB" timeout="10000" filter="%Citrix_Desktop_Name%" variable="CTXDT" commentedout="0" id="15942907372520004" scenariosection="" step="2"></command>
+  <command type="foreach" tmpvar="Automai" listvar="CTXDT" onfail="exit" commentedout="0" id="15942907372520008" scenariosection="" step="3">
+    <command type="transaction" name="Citrix_Logon" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="15942907373860001" scenariosection="" step="4"></command>
+    <command type="citrixlaunch" name="LAB" timeout="360000" resourcevar="Automai" commentedout="0" id="15942907372520005" scenariosection="" step="5"></command>
+    <command type="transaction" name="Citrix_Logon" end="1" referencetime="" report="" uflag="U" commentedout="0" id="15942907373860002" scenariosection="" step="6"></command>
+  </command>
+  <Usage>
+    <commandcontainer type="scenario" name="Citrix Login.xml" />
+  </Usage>
+</commandcontainer>

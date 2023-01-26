@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Browser_Base.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="rloader001" creationdate="10/27/2021 02:26:35 PM" lastmodifiedby="rloader001" lastmodifieddate="5/10/2022 09:54:53 PM" lastusedid="16522196937050000" scenarioid="1652219693705" sbversion="22.04.28" description="Browser controller script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="filler" commentedout="0" id="16353452381770001" scenariosection="" stepalias="Decide which browser is being used" step="1">
+		<color r="0" g="255" b="0" a="255" />
+	
+	</command>
+	<command type="comment" comment="Decide which browser is being worked with and launch it" commentedout="0" id="16353452381770002" scenariosection="" step="2">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="%Browser_Choice% == Chrome" showelse="0" commentedout="0" id="16353448160880006" scenariosection="" stepalias="If the Browser is Chrome work with it" step="3">
+	
+		<then commentedout="0" id="16353448160880007" scenariosection="" step="4">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_App.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16353448160880001" scenariosection="" stepalias="Check if Chrome is running and launch it" step="5">
+				<variable1 variable="TaskbarImage" vartype="Image" xpos="199" ypos="922" xsize="37" ysize="28">Chrome_Taskbar_Icon.bmp</variable1>
+				<variable2 variable="" vartype="String" xsize="38" ysize="32"></variable2>
+				<variable3 variable="" vartype="String" xsize="29" ysize="24"></variable3>
+				<variable4 variable="OpenCheckImage" vartype="Image" xsize="31" ysize="30">Chrome - Check_Open.bmp</variable4>
+				<variable5 variable="AppLocation" vartype="String" expression="%Chrome_Location%"></variable5>
+				<variable6 variable="" vartype="Image" xsize="31" ysize="30"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16354289886020019" scenariosection="" step="6">
+			
+				<then commentedout="0" id="16354289886020020" scenariosection="" step="7">
+				
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020021" scenariosection="" step="8">
+						<coords dx="0" dy="0" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="290" ypos="6" xsize="29" ysize="21">Chrome_New_Tab.bmp</bitmapname>
+					
+					</command>
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="center" anchory="center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020032" scenariosection="" step="9">
+						<coords x="303" y="56" dx="200" dy="10" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="87" ypos="58" xsize="33" ysize="27">Chrome_Refresh_Button.bmp</bitmapname>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16354289886020024" scenariosection="" step="10">
+				
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="center" anchory="center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353448160880003" scenariosection="" step="11">
+						<coords x="303" y="56" dx="200" dy="10" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="87" ypos="58" xsize="33" ysize="27">Chrome_Refresh_Button.bmp</bitmapname>
+					
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16353448160880008" scenariosection="" step="12">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Browser_Choice% == MSEdge" showelse="0" commentedout="0" id="16353452381770009" scenariosection="" stepalias="If the Browser is Edge work with it" step="13">
+	
+		<then commentedout="0" id="16353452381770010" scenariosection="" step="14">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_App.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16353452381770011" scenariosection="" stepalias="Check if Edge is running and launch it" step="15">
+				<variable1 variable="TaskbarImage" vartype="Image" xpos="249" ypos="987" xsize="38" ysize="36">MSEdge_Taskbar_Icon.bmp</variable1>
+				<variable2 variable="" vartype="String" xsize="38" ysize="32">Initiation_Img5_alt2.bmp</variable2>
+				<variable3 variable="" vartype="String" xsize="29" ysize="24"></variable3>
+				<variable4 variable="OpenCheckImage" vartype="Image" xpos="116" ypos="54" xsize="36" ysize="30">Edge - Check_Open.bmp</variable4>
+				<variable5 variable="AppLocation" vartype="String" expression="%MSEdge_Location%"></variable5>
+				<variable6 variable="" vartype="Image" xsize="36" ysize="30"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16354289886020025" scenariosection="" step="16">
+			
+				<then commentedout="0" id="16354289886020026" scenariosection="" step="17">
+				
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020027" scenariosection="" step="18">
+						<coords dx="0" dy="0" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="290" ypos="6" xsize="29" ysize="21">MSEdge_New_Tab.bmp</bitmapname>
+					
+					</command>
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="center" anchory="center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020031" scenariosection="" step="19">
+						<coords x="296" y="53" dx="191" dy="10" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="87" ypos="58" xsize="36" ysize="30">Edge - Check_Open.bmp</bitmapname>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16354289886020030" scenariosection="" step="20">
+				
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="center" anchory="center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353452381770013" scenariosection="" step="21">
+						<coords x="296" y="53" dx="191" dy="10" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="87" ypos="58" xsize="36" ysize="30">Edge - Check_Open.bmp</bitmapname>
+					
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16353452381770014" scenariosection="" step="22">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Browser_Choice% == IE" showelse="0" commentedout="0" id="16353452381770015" scenariosection="" stepalias="If the Browser is IE work with it" step="23">
+	
+		<then commentedout="0" id="16353452381770016" scenariosection="" step="24">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_App.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16353452381770017" scenariosection="" stepalias="Check if IE is running and launch it" step="25">
+				<variable1 variable="TaskbarImage" vartype="Image" xpos="249" ypos="989" xsize="39" ysize="30">IE_Taskbar_Icon.bmp</variable1>
+				<variable2 variable="" vartype="String" xsize="38" ysize="32"></variable2>
+				<variable3 variable="" vartype="String" xsize="29" ysize="24"></variable3>
+				<variable4 variable="OpenCheckImage" vartype="Image" xpos="792" ypos="29" xsize="51" ysize="19">IE - Check_Open.bmp</variable4>
+				<variable5 variable="AppLocation" vartype="String" expression="%IE_Location%"></variable5>
+				<variable6 variable="" vartype="String" xsize="51" ysize="19">IE - Check_Open.bmp</variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16354289886020033" scenariosection="" step="26">
+			
+				<then commentedout="0" id="16354289886020034" scenariosection="" step="27">
+				
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020035" scenariosection="" step="28">
+						<coords dx="0" dy="0" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="199" ypos="58" xsize="23" ysize="18">IE_New_Tab.bmp</bitmapname>
+					
+					</command>
+					<command type="findbitmap" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020039" scenariosection="" step="29">
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<bitmapname xsize="51" ysize="19">IE - Check_Open.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="1" button="Left" action="Click" commentedout="0" id="16354289886020040" scenariosection="" step="30">
+							<coords x="117" y="37" dx="-400" dy="0" />
+						
+						</command>
+					</command>
+				</then>
+				<else commentedout="0" id="16354289886020037" scenariosection="" step="31">
+				
+					<command type="findbitmap" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353527134180003" scenariosection="" step="32">
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<bitmapname xsize="51" ysize="19">IE - Check_Open.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="1" button="Left" action="Click" commentedout="0" id="16353527134180005" scenariosection="" step="33">
+							<coords x="117" y="37" dx="-400" dy="0" />
+						
+						</command>
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16353452381770020" scenariosection="" step="34">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Browser_Choice% == Firefox" showelse="0" commentedout="0" id="16354289886020041" scenariosection="" stepalias="If the Browser is Firefox work with it" step="35">
+	
+		<then commentedout="0" id="16354289886020042" scenariosection="" step="36">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_App.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16354289886020043" scenariosection="" stepalias="Check if FireFox is running and launch it" step="37">
+				<variable1 variable="TaskbarImage" vartype="Image" xpos="201" ypos="989" xsize="39" ysize="30">Firefox_Taskbar_Icon.bmp</variable1>
+				<variable2 variable="" vartype="String" xsize="38" ysize="32"></variable2>
+				<variable3 variable="" vartype="String" xsize="29" ysize="24"></variable3>
+				<variable4 variable="OpenCheckImage" vartype="Image" xpos="71" ypos="40" xsize="61" ysize="28">Firefox - Check_Open.bmp</variable4>
+				<variable5 variable="AppLocation" vartype="String" expression="%FireFox_Location%"></variable5>
+				<variable6 variable="" vartype="String" xsize="61" ysize="28">Firefox - Check_Open.bmp</variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="clickonimage" stringtofind="Not now" timeout="10000" onfaillabel="Next Action" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16355201658800006" scenariosection="" stepalias="If Firefox prompts to be the default browser, skip it" step="38">
+				<coords dx="0" dy="0" />
+				<searcharea xstart="515" ystart="358" xend="981" yend="707" dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<bitmapname xpos="707" ypos="520" xsize="82" ysize="30">Firefox_Default_Browser_Prompt.bmp</bitmapname>
+			
+			</command>
+			<command type="if" expression="%Reuse_Browser_Tab% == 0" showelse="1" commentedout="0" id="16354289886020044" scenariosection="" step="39">
+			
+				<then commentedout="0" id="16354289886020045" scenariosection="" step="40">
+				
+					<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020046" scenariosection="" step="41">
+						<coords dx="0" dy="0" />
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="454" ypos="7" xsize="23" ysize="18">Firefox_New_Tab.bmp</bitmapname>
+					
+					</command>
+					<command type="findbitmap" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020047" scenariosection="" step="42">
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<bitmapname xsize="61" ysize="28">Firefox - Check_Open.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="1" button="Left" action="Click" commentedout="0" id="16354289886020048" scenariosection="" step="43">
+							<coords x="117" y="37" dx="500" dy="0" />
+						
+						</command>
+					</command>
+				</then>
+				<else commentedout="0" id="16354289886020049" scenariosection="" step="44">
+				
+					<command type="findbitmap" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16354289886020050" scenariosection="" step="45">
+						<searcharea xstart="0" ystart="0" xend="1280" yend="100" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<bitmapname xsize="61" ysize="28">Firefox - Check_Open.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="1" button="Left" action="Click" commentedout="0" id="16354289886020051" scenariosection="" step="46">
+							<coords x="117" y="37" dx="500" dy="0" />
+						
+						</command>
+					</command>
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16354289886020052" scenariosection="" step="47">
+		
+		</else>
+	</command>
+	<command type="filler" commentedout="0" id="16353452381770023" scenariosection="" stepalias="Decide which browser is being used" step="48">
+		<color r="0" g="255" b="0" a="255" />
+	
+	</command>
+	<command type="filler" commentedout="0" id="16353452381770021" scenariosection="" stepalias="Decide which workload is going to be run" step="49">
+		<color r="128" g="128" b="128" a="255" />
+	
+	</command>
+	<command type="comment" comment="Work with the set BrowserWorkload Variable, Cyber, Folio, Video1, Video2, Bouncing" commentedout="0" id="16353452381770048" scenariosection="" step="50">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="(%BrowserWorkload% == Video2) AND (%Browser_Video% != 0)" showelse="0" commentedout="0" id="16353552890270013" scenariosection="" step="51">
+	
+		<then commentedout="0" id="16353552890270014" scenariosection="" step="52">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser - Video2.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353552890270015" scenariosection="" step="53">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16353552890270016" scenariosection="" step="54">
+		
+		</else>
+	</command>
+	<command type="if" expression="(%BrowserWorkload% == Video1) AND (%Browser_Video% != 0)" showelse="0" commentedout="0" id="16353552890270009" scenariosection="" step="55">
+	
+		<then commentedout="0" id="16353552890270010" scenariosection="" step="56">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser - Video1.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353552890270011" scenariosection="" step="57">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16353552890270012" scenariosection="" step="58">
+		
+		</else>
+	</command>
+	<command type="if" expression="%BrowserWorkload% == Bouncing" showelse="0" commentedout="0" id="16353552890270005" scenariosection="" step="59">
+	
+		<then commentedout="0" id="16353552890270006" scenariosection="" step="60">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser_Bouncing.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353552890270007" scenariosection="" step="61">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16353552890270008" scenariosection="" step="62">
+		
+		</else>
+	</command>
+	<command type="if" expression="%BrowserWorkload% == Cyber" showelse="0" commentedout="0" id="16353478224220001" scenariosection="" step="63">
+	
+		<then commentedout="0" id="16353478224220002" scenariosection="" step="64">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser_Cyber.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353478224220004" scenariosection="" step="65">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16353478224220003" scenariosection="" step="66">
+		
+		</else>
+	</command>
+	<command type="if" expression="%BrowserWorkload% == Folio" showelse="0" commentedout="0" id="16353552890270001" scenariosection="" step="67">
+	
+		<then commentedout="0" id="16353552890270002" scenariosection="" step="68">
+		
+			<command type="playscenario" scenariotype="All" filename="Browser - Folio.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353552890270003" scenariosection="" step="69">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16353552890270004" scenariosection="" step="70">
+		
+		</else>
+	</command>
+	<command type="filler" commentedout="0" id="16353452381770028" scenariosection="" stepalias="Decide which workload is going to be run" step="71">
+		<color r="128" g="128" b="128" a="255" />
+	
+	</command>
+	<command type="filler" commentedout="0" id="16353452381770029" scenariosection="" stepalias="Shutdown the relevant browser" step="72">
+		<color r="255" g="0" b="0" a="255" />
+	
+	</command>
+	<command type="comment" comment="Close the browser app down if the variable is set to do so." commentedout="0" id="16353452381770047" scenariosection="" step="73">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="%CloseBrowser_OnEnd% != 0" showelse="0" commentedout="0" id="16353452381770024" scenariosection="" step="74">
+	
+		<then commentedout="0" id="16353452381770025" scenariosection="" step="75">
+		
+			<command type="comment" comment="Dependent on the browser choice, shutdown the app." commentedout="0" id="16353452381770046" scenariosection="" step="76">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="if" expression="%Browser_Choice% == Chrome" showelse="0" commentedout="0" id="16353452381770042" scenariosection="" stepalias="If the Browser is Chrome close it" step="77">
+			
+				<then commentedout="0" id="16353452381770043" scenariosection="" step="78">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16353452381770044" scenariosection="" step="79">
+						<variable1 variable="TaskbarImage" vartype="Image" xsize="37" ysize="28">Chrome_Taskbar_Icon.bmp</variable1>
+						<variable2 variable="OpenCheckImage" vartype="Image" xsize="33" ysize="27">Chrome_Refresh_Button.bmp</variable2>
+						<variable3 variable="ProcessName" vartype="String" expression="CHROME" xsize="46" ysize="25"></variable3>
+						<variable4 variable="" vartype="String" xsize="46" ysize="25"></variable4>
+						<variable5 variable="" vartype="String" xsize="46" ysize="25">Close_Chrome_Img1_1.bmp</variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16353452381770045" scenariosection="" step="80">
+				
+				</else>
+			</command>
+			<command type="if" expression="%Browser_Choice% == MSEdge" showelse="0" commentedout="0" id="16353452381770038" scenariosection="" stepalias="If the Browser is Edge close it" step="81">
+			
+				<then commentedout="0" id="16353452381770039" scenariosection="" step="82">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16353452381770040" scenariosection="" step="83">
+						<variable1 variable="TaskbarImage" vartype="Image" xsize="38" ysize="36">MSEdge_Taskbar_Icon.bmp</variable1>
+						<variable2 variable="OpenCheckImage" vartype="Image" xsize="36" ysize="30">Edge - Check_Open.bmp</variable2>
+						<variable3 variable="ProcessName" vartype="String" expression="MSEdge" xpos="1009" ypos="15" xsize="41" ysize="31">Close_Edge_Img1.bmp</variable3>
+						<variable4 variable="" vartype="String" xsize="41" ysize="31">Close_Edge_Img1.bmp</variable4>
+						<variable5 variable="" vartype="String" xsize="41" ysize="31">Close_Edge_Img1.bmp</variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16353452381770041" scenariosection="" step="84">
+				
+				</else>
+			</command>
+			<command type="if" expression="%Browser_Choice% == IE" showelse="0" commentedout="0" id="16353452381770031" scenariosection="" stepalias="If the Browser is IE close it" step="85">
+			
+				<then commentedout="0" id="16353452381770032" scenariosection="" step="86">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16353452381770037" scenariosection="" step="87">
+						<variable1 variable="TaskbarImage" vartype="Image" xsize="16" ysize="15">IE_Taskbar_Icon.bmp</variable1>
+						<variable2 variable="OpenCheckImage" vartype="Image" xsize="51" ysize="19">IE - Check_Open.bmp</variable2>
+						<variable3 variable="ProcessName" vartype="String" expression="IEXPLORE" xpos="1237" ypos="4" xsize="36" ysize="21">Close_IE_Img1.bmp</variable3>
+						<variable4 variable="" vartype="String" xsize="36" ysize="21">Close_IE_Img1.bmp</variable4>
+						<variable5 variable="" vartype="String" xsize="36" ysize="21">Close_IE_Img1.bmp</variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16353452381770036" scenariosection="" step="88">
+				
+				</else>
+			</command>
+			<command type="if" expression="%Browser_Choice% == Firefox" showelse="0" commentedout="0" id="16355201658800001" scenariosection="" stepalias="If the Browser is Firefox close it" step="89">
+			
+				<then commentedout="0" id="16355201658800002" scenariosection="" step="90">
+				
+					<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16355201658800003" scenariosection="" step="91">
+						<variable1 variable="TaskbarImage" vartype="Image" xsize="17" ysize="15">Firefox_Taskbar_Icon.bmp</variable1>
+						<variable2 variable="OpenCheckImage" vartype="Image" xsize="61" ysize="28">Firefox - Check_Open.bmp</variable2>
+						<variable3 variable="ProcessName" vartype="String" expression="FIREFOX" xpos="1240" ypos="5" xsize="36" ysize="21">Firefox_Close_Img1.bmp</variable3>
+						<variable4 variable="" vartype="String" xsize="36" ysize="21">Firefox_Close_Img1.bmp</variable4>
+						<variable5 variable="" vartype="String" xsize="36" ysize="21">Firefox_Close_Img1.bmp</variable5>
+						<variable6 vartype="Image"></variable6>
+						<variable7 vartype="String"></variable7>
+						<variable8 vartype="String"></variable8>
+						<variable9 vartype="String"></variable9>
+						<variable10 vartype="Image"></variable10>
+					
+					</command>
+					<command type="clickonimage" timeout="5000" onfaillabel="Next Action" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16355201658800005" scenariosection="" stepalias="If Firefox prompts to close multiple tabs, allow it" step="92">
+						<coords dx="0" dy="0" />
+						<searcharea xstart="360" ystart="361" xend="828" yend="700" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="554" ypos="518" xsize="84" ysize="33">Firefox_Tab_Close_Prompt.bmp</bitmapname>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16355201658800004" scenariosection="" step="93">
+				
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16353452381770027" scenariosection="" step="94">
+		
+		</else>
+	</command>
+	<command type="filler" commentedout="0" id="16353452381770030" scenariosection="" stepalias="Shutdown the relevant browser" step="95">
+		<color r="255" g="0" b="0" a="255" />
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Browser_Base.xml"><commandcontainer type="scenario" name="Check_App.xml"><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command><command type="findbitmap"><bitmapname>%StartButtonImage1%</bitmapname><bitmapname>%StartButtonImage2%</bitmapname></command><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command></commandcontainer></commandcontainer></Usage></commandcontainer>

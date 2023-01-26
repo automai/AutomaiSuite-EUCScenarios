@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Connect RDP.xml" scenariotype="Global" screenwidth="1280" screenheight="768" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="16905" actualruntime="16905" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="ScriptingBot" creationdate="9/27/2022 09:06:31 PM" lastmodifiedby="ScriptingBot" lastmodifieddate="10/5/2022 07:04:52 PM" lastusedid="16643127914460000" scenarioid="1664312791446" sbversion="22.09.7" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="setvariable" variable="user_name" expression="robot1" scope="Internal" encrypted="0" vartype="string" commentedout="0" id="16643127915830021" scenariosection="" step="1">
+	
+	</command>
+	<command type="openapplication" arguments="C:\Users\ScriptingBot\Desktop\robot1.rdp" commentedout="0" id="16643127913120001" scenariosection="" step="2">
+		<application>mstsc.exe</application>
+	
+	</command>
+	<command type="windowaction" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16643127915830017" scenariosection="" step="3">
+		<window windowsname="Windows Security" processname="CredentialUIBroker" x="412" y="180" width="456" height="368" />
+		<coords />
+		<size />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16643127915830016" scenariosection="" step="4">
+		<text>@utomai!2468</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16643127915830018" scenariosection="" step="5">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="windowaction" action="resize" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="30000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16643127915830019" scenariosection="" step="6">
+		<window windowsname=" Remote Desktop Connection" processname="mstsc" x="0" y="0" width="986" height="735" />
+		<coords />
+		<size width="1000" height="650" />
+	
+	</command>
+	<command type="aichannel" ctype="CITRIX" cpath="C:\Program Files\Automai\AIChannel" remoteinitid="%user_name%" timeout="10000" commentedout="0" id="16643127915830020" scenariosection="" step="7">
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Connect RDPScriptingBot_tmp.xml"><command type="findbitmap"><bitmapname>Computer.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

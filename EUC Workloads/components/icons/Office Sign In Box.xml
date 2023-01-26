@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Office Sign In Box.xml" scenariotype="Process" screenwidth="1690" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="debugging" createdby="rloader001" creationdate="1/6/2023 10:14:52 AM" lastmodifiedby="rloader001" lastmodifieddate="1/6/2023 10:35:53 AM" lastusedid="16856144920660069" scenarioid="1685614492066" sbversion="22.12.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" step="0" scenariosection="">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="setvariable" stylename="rand" variable="Office_In_Test_Mode" vartype="number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16856144920660066" step="1" scenariosection="">
+	
+	</command>
+	<command type="setvariable" variable="AppLocation" expression="C:\Program Files\Microsoft Office\root\Office16\Excel.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16856144920660041" scenariosection="" step="2">
+	
+	</command>
+	<command type="setvariable" variable="Powershell_Path" expression="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16856144920660042" scenariosection="" step="3">
+	
+	</command>
+	<command type="setvariable" variable="AIChannel_Folder" expression="\\dc-01.ctxlab.local\Xa\Automai\AIChannel" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16856144920660043" scenariosection="" step="4">
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" timeout="360000" continueonfail="" percentlinetolerance="6" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16856144920660044" scenariosection="" stepalias="Find the start button and click it, two different variants" step="5">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="" dy="" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="8" ypos="860" relative_xpos="8" relative_ypos="147" xsize="38" ysize="32">Initiation_Img5_alt2.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16856144920660045" scenariosection="" step="6">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16856144920660046" scenariosection="" stepalias="Type the command defined earlier for powershell" step="7">
+		<text>%Powershell_Path%</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16856144920660047" scenariosection="" stepalias="Press enter" step="8">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16856144920660048" scenariosection="" stepalias="Click on the powershell window that just opened" step="9">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="" dy="" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="114" ypos="81" xsize="148" ysize="27">Initiation_Img11.bmp</bitmapname>
+	
+		<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16856144920660049" scenariosection="" stepalias="Start a powershell transcript to log the output" step="10">
+			<text>Start-Process -FilePath "%AIChannel_Folder%\AIChannel.exe" -ArgumentList "$env:username"</text>
+			<window />
+			<key />
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16856144920660050" scenariosection="" stepalias="Press enter" step="11">
+			<key key1="Enter" />
+			<window />
+		
+		</command>
+		<command type="findbitmap" stylename="find_image_in_active_window" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Parent" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16856144920660051" scenariosection="" stepalias="Focus on the PowerShell Window again so we can close it" step="12">
+			<searcharea xstart="" ystart="" xend="" yend="" dx="188" dy="94" />
+			<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+			<coordvars />
+			<window />
+			<bitmapname xpos="114" ypos="81" xsize="148" ysize="27">Initiation_Img11.bmp</bitmapname>
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16856144920660052" scenariosection="" stepalias="Press enter" step="13">
+			<key key1="Enter" />
+			<window />
+		
+		</command>
+		<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16856144920660053" scenariosection="" stepalias="Exit PowerShell" step="14">
+			<text>Exit</text>
+			<window />
+			<key />
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16856144920660054" scenariosection="" stepalias="Press enter" step="15">
+			<key key1="Enter" />
+			<window />
+		
+		</command>
+		<command type="dialogbox" dialogtitle="Automai - Dialog Box" dialogicon="Info" dialogmsg1="%AIChannel_Folder%" dialogmsg2="%user_name%" timeout="30000" commentedout="1" id="16856144920660055" scenariosection="" step="16">
+		
+		</command>
+		<command type="aichannel" ctype="CITRIX FULL SCREEN" cpath="%AIChannel_Folder%" remoteinitid="rloader001" timeout="10000" commentedout="0" id="16856144920660056" scenariosection="" stepalias="Initiate AI Channel" step="17">
+		
+		</command>
+		<command type="execute" stylename="pshellcommand" powershellcommand="{{Start-Process &quot;&quot;&quot;}}%AppLocation%{{&quot;&quot;&quot; -WindowStyle Normal}}" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16856144920660057" scenariosection="" step="18">
+			<expression expression="" />
+		
+		</command>
+		<command type="windowaction" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " isremote="1" timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16856144920660058" scenariosection="" step="19">
+			<window windowsname="EXCEL" processname="EXCEL" />
+			<coords />
+			<size />
+		
+		</command>
+	</command>
+	<command type="if" expression="%Office_In_Test_Mode% == 1" showelse="0" commentedout="0" id="16856144920660067" step="20" scenariosection="">
+	
+		<then commentedout="0" id="16856144920660068" step="21" scenariosection="">
+		
+			<command type="findbitmap" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundSignIn" commentedout="0" id="16856144920660061" step="22" scenariosection="">
+				<searcharea dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<bitmapname xpos="500" ypos="304" xsize="14" ysize="10">MS_Logo_SignIn_Office.bmp</bitmapname>
+			
+			</command>
+			<command type="if" expression="%Office_In_Test_Mode%  == 1" showelse="0" commentedout="0" id="16856144920660062" step="23" scenariosection="">
+			
+				<then commentedout="0" id="16856144920660063" step="24" scenariosection="">
+				
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16856144920660065" step="25" scenariosection="">
+						<key key1="Esc" />
+						<window />
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16856144920660064" step="26" scenariosection="">
+				
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16856144920660069" step="27" scenariosection="">
+		
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Office Sign In Box.xml" ReferenceTime="1"><command type="setvariable" variable="AppLocation" expression="C:\Program Files\Microsoft Office\root\Office16\Excel.exe" /><command type="setvariable" variable="Powershell_Path" expression="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass" /><command type="setvariable" variable="AIChannel_Folder" expression="\\dc-01.ctxlab.local\Xa\Automai\AIChannel" /><command type="findbitmap"><bitmapname>Initiation_Img5_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Initiation_Img11.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Initiation_Img11.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

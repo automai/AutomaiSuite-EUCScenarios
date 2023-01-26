@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="MS Outlook - New.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="ssun" creationdate="8/24/2020 01:22:10 PM" lastmodifiedby="rloader001" lastmodifieddate="5/6/2022 07:40:22 PM" lastusedid="16488455703430006" scenarioid="1648845570343" sbversion="22.04.28" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="comment" comment="Check if outlook is running" commentedout="0" id="16276497395300012" scenariosection="" step="1">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_App.xml" continueonfail="0" statusvariable="Is_App_Running" commentedout="0" id="16485834149870003" scenariosection="" stepalias="Check if Outlook is running and launch it" step="2">
+		<variable1 variable="TaskbarImage" vartype="Image" xsize="23" ysize="13">Outlook_Taskbar_Icon.bmp</variable1>
+		<variable2 variable="" vartype="Image" xsize="38" ysize="32"></variable2>
+		<variable3 variable="" vartype="Image" xsize="29" ysize="24"></variable3>
+		<variable4 variable="OpenCheckImage" vartype="Image" xsize="30" ysize="27">Outlook - New Email_2.bmp</variable4>
+		<variable5 variable="AppLocation" vartype="String" expression="%Outlook_Location%"></variable5>
+		<variable6 vartype="String"></variable6>
+		<variable7 vartype="String"></variable7>
+		<variable8 vartype="String"></variable8>
+		<variable9 vartype="String"></variable9>
+		<variable10 vartype="String"></variable10>
+	
+	</command>
+	<command type="comment" comment="Start new email" commentedout="0" id="16276484420620039" scenariosection="" step="3">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="findbitmap" stringtofind="New Email" ocrconfig="2 2 65 32 16 512 128 4 5 50 3 20 " timeout="19000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16276484420620011" scenariosection="" step="4">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="19" ypos="88" relative_xpos="19" relative_ypos="88" xsize="30" ysize="27">Outlook - New Email_2.bmp</bitmapname>
+		<bitmapname xpos="37" ypos="71" relative_xpos="37" relative_ypos="71" xsize="66" ysize="27">Outlook - New Email_Img2_1_1(1).bmp</bitmapname>
+		<bitmapname xpos="10" ypos="69" relative_xpos="10" relative_ypos="69" xsize="96" ysize="33">MS Outlook - Check Open.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16276484420620010" scenariosection="" step="5">
+			<coords x="41" y="87" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16276484420620012" scenariosection="" step="6">
+		<text>test@email.com</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620013" scenariosection="" step="7">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620014" scenariosection="" step="8">
+		<key key1="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620015" scenariosection="" step="9">
+		<key key1="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16276484420620016" scenariosection="" step="10">
+		<text>New Email</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620017" scenariosection="" step="11">
+		<key key1="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="1" id="16276484420620018" scenariosection="" step="12">
+		<text>Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Considered use dispatched melancholy sympathize discretion led. Oh feel if up to till like. </text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620019" scenariosection="" step="13">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="1" id="16276484420620020" scenariosection="" step="14">
+		<text>At as in understood an remarkably solicitude. Mean them very seen she she. Use totally written the observe pressed justice. Instantly cordially far intention recommend estimable yet her his. Ladies stairs enough esteem add fat all enable. Needed its design number winter see. Oh be me sure wise sons no. Piqued ye of am spirit regret. Stimulated discretion impossible admiration in particular conviction up. </text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620021" scenariosection="" step="15">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620022" scenariosection="" step="16">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="1" id="16276484420620023" scenariosection="" step="17">
+		<text>Thanks,</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620024" scenariosection="" step="18">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16276484420620025" scenariosection="" step="19">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16276484420620026" scenariosection="" step="20">
+		<text>Automai Robot</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="comment" comment="Save the email" commentedout="0" id="16276484420620038" scenariosection="" step="21">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="keyboardkey" isremote="0" action="Press" timeout="10000" commentedout="0" id="16276484420620035" scenariosection="" stepalias="Save the email" step="22">
+		<key key1="Ctrl" key2="s" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" isremote="0" action="Press" timeout="10000" commentedout="0" id="16488455703430006" stepalias="Close the email" step="23" scenariosection="">
+		<key key1="Esc" />
+		<window />
+	
+	</command>
+	<command type="findbitmap" stylename="" stringtofind="Yes" timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="" commentedout="0" id="16276484420620043" scenariosection="" step="24">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="854" ypos="499" relative_xpos="49" relative_ypos="18" xsize="26" ysize="20">Outlook - New Email_Img7.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16276484420620044" scenariosection="" step="25">
+			<coords x="881" y="508" dx="14" dy="-1" />
+		
+		</command>
+	</command>
+	<command type="if" expression="%CloseOutlook_OnEnd%  != 0" showelse="0" commentedout="0" id="16276497395300016" scenariosection="" step="26">
+	
+		<then commentedout="0" id="16276497395300017" scenariosection="" step="27">
+		
+			<command type="comment" comment="Close Outlook" commentedout="0" id="16276497395300015" scenariosection="" step="28">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16276497395300021" scenariosection="" step="29">
+				<variable1 variable="TaskbarImage" vartype="Image" xsize="44" ysize="33">Outlook_Taskbar_Icon.bmp</variable1>
+				<variable2 variable="OpenCheckImage" vartype="Image" xsize="30" ysize="27">Outlook - New Email_2.bmp</variable2>
+				<variable3 variable="ProcessName" vartype="String" expression="OUTLOOK" xsize="56" ysize="32"></variable3>
+				<variable4 variable="" vartype="Image" xsize="56" ysize="32"></variable4>
+				<variable5 variable="" vartype="Image" xsize="39" ysize="43"></variable5>
+				<variable6 variable="" vartype="Image"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16276497395300018" scenariosection="" step="30">
+		
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Outlook - New Email.xml"><command type="findbitmap"><bitmapname>Outlook - New Email_Img1.bmp</bitmapname><bitmapname>Outlook - New Email_Img1_alt1.bmp</bitmapname><bitmapname>Outlook - New Email_Img1_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Outlook - New Email_Img2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Outlook - New Email_Img3.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Outlook - New Email_Img4.bmp</bitmapname><bitmapname>Outlook - New Email_Img4_alt1.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Outlook - New Email_Img5.bmp</bitmapname><bitmapname>Outlook - New Email_Img5_alt1.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

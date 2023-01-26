@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Initiation.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="automai1" creationdate="6/21/2021 06:34:05 PM" lastmodifiedby="rloader001" lastmodifieddate="5/5/2022 09:56:30 AM" lastusedid="16516975985950000" scenarioid="1651697598595" sbversion="22.04.28" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Preparation for all settings relevant to the testing scenario" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="Wait" millisecs="30000" commentedout="0" id="16294009791790001" scenariosection="" step="1">
+	
+	</command>
+	<command type="findbitmap" stylename="" timeout="360000" continueonfail="" percentlinetolerance="6" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="" commentedout="0" id="16243056391120009" scenariosection="" stepalias="Find the start button and click it, two different variants" step="2">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="8" ypos="860" relative_xpos="8" relative_ypos="147" xsize="38" ysize="32">Initiation_Img5_alt2.bmp</bitmapname>
+		<bitmapname xpos="8" ypos="860" xsize="38" ysize="32">Initiation_Img5_alt2_2.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16243056391120010" scenariosection="" stepalias="Click the start button" step="3">
+			<coords x="21" y="876" dx="-19" dy="0" />
+		
+		</command>
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16243056391120011" scenariosection="" stepalias="Type the command defined earlier for powershell" step="4">
+		<text>%Powershell_Path%</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16243056391120012" scenariosection="" stepalias="Press enter" step="5">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16243056391120030" scenariosection="" stepalias="Click on the powershell window that just opened" step="6">
+		<searcharea xstart="0" ystart="0" xend="564" yend="275" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="114" ypos="81" xsize="148" ysize="27">Initiation_Img11.bmp</bitmapname>
+	
+		<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16354377511120018" scenariosection="" stepalias="Start a powershell transcript to log the output" step="7">
+			<text>Start-Process -FilePath "%AIChannel_Folder%\AIChannel.exe" -ArgumentList "$env:username"</text>
+			<window />
+			<key />
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16243056391120038" scenariosection="" stepalias="Press enter" step="8">
+			<key key1="Enter" />
+			<window />
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16511416275900011" scenariosection="" stepalias="Press enter" step="9">
+			<key key1="Enter" />
+			<window />
+		
+		</command>
+		<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16511416275900009" scenariosection="" stepalias="Exit PowerShell" step="10">
+			<text>Exit</text>
+			<window />
+			<key />
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16511416275900008" scenariosection="" stepalias="Press enter" step="11">
+			<key key1="Enter" />
+			<window />
+		
+		</command>
+		<command type="aichannel" ctype="CITRIX FULL SCREEN" cpath="%AIChannel_Folder%" remoteinitid="%user_name%" timeout="10000" commentedout="0" id="16354377511120025" scenariosection="" stepalias="Initiate AI Channel" step="12">
+		
+		</command>
+		<command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{New-Item $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -ItemType Directory -Force}}" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900005" scenariosection="" step="13">
+		
+		</command>
+		<command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{Expand-Archive -Path &quot;&quot;&quot;}}%Content_Zip%{{&quot;&quot;&quot; -DestinationPath $(&quot;&quot;&quot;$env:userprofile\Automai\Content&quot;&quot;&quot;) -Force}}" execpolicy="Bypass" timeout="30000" statusvariable="ExecMyComponentStatus" continueonfail="1" commentedout="0" id="16511416275900006" scenariosection="" step="14">
+		
+		</command>
+		<command type="if" expression="%Outlook_Mode% == O365" showelse="0" commentedout="0" id="16354377511120001" scenariosection="" stepalias="If the environment type set matches the environment type of the command run it" step="15">
+		
+			<then commentedout="0" id="16354377511120002" scenariosection="" step="16">
+			
+				<command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$env:userprofile\Automai\content\ALLO365.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" timeout="30000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900019" scenariosection="" step="17">
+				
+				</command>
+			</then>
+			<else commentedout="0" id="16354377511120011" scenariosection="" step="18">
+			
+			</else>
+		</command>
+		<command type="if" expression="%Outlook_Mode% == PST" showelse="0" commentedout="0" id="16354377511120012" scenariosection="" stepalias="If the environment type set matches the environment type of the command run it" step="19">
+		
+			<then commentedout="0" id="16354377511120013" scenariosection="" step="20">
+			
+				<command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$env:userprofile\Automai\content\ALLPST.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" timeout="30000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900020" scenariosection="" step="21">
+					<expression expression="#result#" />
+				
+				</command>
+			</then>
+			<else commentedout="0" id="16354377511120014" scenariosection="" step="22">
+			
+			</else>
+		</command>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Initiation.xml" /></Usage></commandcontainer>

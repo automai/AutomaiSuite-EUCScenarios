@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="CTX Login.xml" scenariotype="Global" screenwidth="1280" screenheight="768" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" csvfilename="mydaasusers.csv" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="63231" actualruntime="63231" imgtolerance="0" errorsize="15" projectname="test" createdby="ScriptingBot" creationdate="9/14/2022 01:38:42 AM" lastmodifiedby="automai" lastmodifieddate="9/26/2022 07:26:20 PM" lastusedid="16631195221640001" scenarioid="1663119522164" sbversion="22.09.7" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="setvariable" variable="_CurrentSection" expression="WebSignOn" scope="Internal" encrypted="0" vartype="string" commentedout="0" id="16631195224920028" scenariosection="" step="1">
+	
+	</command>
+	<command type="allwindows" action="Close" commentedout="0" id="16631195224920041" scenariosection="" step="2">
+	
+	</command>
+	<command type="openurl" browser="Microsoft Edge" url="automai.cloud.com" commentedout="0" id="16631195224920001" scenariosection="" step="3">
+		<browserpath></browserpath>
+	
+	</command>
+	<command type="windowaction" action="resize" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16631195221640001" step="4" scenariosection="">
+		<window windowsname=" Microsoft​ Edge" processname="msedge" x="0" y="0" width="1198" height="837" />
+		<coords />
+		<size width="1280" height="768" />
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="User name" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16631195224920002" scenariosection="" step="5">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="372" ypos="290" relative_xpos="371" relative_ypos="289" xsize="90" ysize="25">User name(3).bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16631195224920003" scenariosection="" step="6">
+			<coords x="456" y="346" dx="17" dy="48" />
+		
+		</command>
+		<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16631195224920004" scenariosection="" step="7">
+			<text>%username%</text>
+			<window />
+			<key />
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16631195224920005" scenariosection="" step="8">
+			<key key1="Tab" />
+			<window />
+		
+		</command>
+		<command type="keyboardtypetext" encrypted="1" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16631195224920006" scenariosection="" step="9">
+			<text>790DD9A3526C8EEF0BD19295906FEB60</text>
+			<window />
+			<key />
+		
+		</command>
+		<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16631195224920007" scenariosection="" step="10">
+			<key key1="Enter" />
+			<window />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="M365 Desktop" imagetype="wordsIn" ocrconfig="1 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 10 1" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16631195224920012" scenariosection="M365 Desktop" step="11">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="120" ypos="393" relative_xpos="119" relative_ypos="392" xsize="125" ysize="27">M365 Desktop.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="DoubleClick" commentedout="0" id="16631195224920013" scenariosection="" step="12">
+			<coords x="0" y="0" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Open" imagetype="button" objectwidth="68" objectheight="32" ocrconfig="1 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 10 1" objectindex="0" timeout="20000" continueonfail="1" percentlinetolerance="5" colortolerance="46" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16631195224920014" scenariosection="" step="13">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="736" ypos="182" relative_xpos="744" relative_ypos="190" xsize="68" ysize="32">Test install_Img1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16631195224920015" scenariosection="" step="14">
+			<coords x="763" y="196" dx="-7" dy="-2" />
+		
+		</command>
+	</command>
+	<command type="windowaction" action="Minimize" ocrconfig="1 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 10 1" timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16631195224920016" scenariosection="" step="15">
+		<window windowsname="Microsoft​ Edge" processname="msedge" classname="Chrome_WidgetWin_1" x="-8" y="-8" width="1296" height="744" />
+		<coords />
+		<size />
+	
+	</command>
+	<command type="setvariable" variable="_CurrentSection" expression="StartVDI" scope="Internal" encrypted="0" vartype="string" commentedout="0" id="16631195224920033" scenariosection="" step="16">
+	
+	</command>
+	<command type="transaction" name="Start VDA" begin="1" referencetime="24688" report="" uflag="U" commentedout="0" id="16631195224920017" scenariosection="" step="17">
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_app_window" stringtofind="Test install_Img2" ocrconfig="1 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 10 1" timeout="60000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="0" commentedout="0" id="16631195224920018" scenariosection="Test install_Img2" step="18">
+		<window windowsname="desktop viewer" processname="CDViewer" />
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="66" ypos="697" xsize="33" ysize="20">Test install_Img2.bmp</bitmapname>
+	
+		<command type="movemouse" useanchor="Parent" mousedrag="0" commentedout="0" id="16631195224920038" scenariosection="" step="19">
+			<coords x="133" y="675" dx="51" dy="-32" />
+		
+		</command>
+	</command>
+	<command type="transaction" name="Start VDA" end="1" referencetime="24688" report="" uflag="U" commentedout="0" id="16631195224920019" scenariosection="" step="20">
+	
+	</command>
+	<command type="windowaction" action="resize" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16631195224920022" scenariosection="" step="21">
+		<window windowsname="Desktop Viewer" processname="CDViewer" x="50" y="50" width="1040" height="653" />
+		<coords />
+		<size width="1025" height="660" />
+	
+	</command>
+	<command type="setvariable" variable="_CurrentSection" expression="StartAIC" scope="Internal" encrypted="0" vartype="string" commentedout="0" id="16631195224920037" scenariosection="" step="22">
+	
+	</command>
+	<command type="aichannel" ctype="CITRIX" cpath="c:\program files\automai\aichannel" remoteinitid="%userid%" aimetrics="GetICA_RTT_FPSV2.ps1" timeout="10000" commentedout="0" id="16631195224920020" scenariosection="" step="23">
+	
+	</command>
+	<onfail rexp="1" commentedout="0" id="16631195224920023" scenariosection="" step="24">
+	
+		<command type="switch" variable="_CurrentSection" commentedout="0" id="16631195224920029" scenariosection="" step="25">
+		
+			<case value="WebSignOn" commentedout="0" id="16631195224920030" scenariosection="" step="26">
+			
+				<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Detect Workspace" imagetype="button" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="0" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Parent" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16631195224920024" scenariosection="Detect Workspace" step="27">
+					<searcharea dx="0" dy="0" />
+					<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+					<coordvars />
+					<window />
+					<bitmapname xpos="550" ypos="426" relative_xpos="549" relative_ypos="425" xsize="129" ysize="24">Detect Workspace.bmp</bitmapname>
+				
+					<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16631195224920025" scenariosection="" step="28">
+						<coords x="0" y="0" dx="0" dy="0" />
+					
+					</command>
+					<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Open" imagetype="button" objectwidth="68" objectheight="32" ocrconfig="1 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 10 1" objectindex="0" timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="46" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16631195224920026" scenariosection="" step="29">
+						<searcharea dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<window />
+						<bitmapname xpos="736" ypos="182" relative_xpos="744" relative_ypos="190" xsize="68" ysize="32">Test install_Img1.bmp</bitmapname>
+					
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16631195224920027" scenariosection="" step="30">
+							<coords x="763" y="196" dx="-7" dy="-2" />
+						
+						</command>
+					</command>
+					<command type="resume" retries="1" commentedout="0" id="16631195224920032" scenariosection="" step="31">
+					</command>
+				</command>
+			</case>
+			<case value="StartAIC" commentedout="0" id="16631195224920036" scenariosection="" step="32">
+			
+				<command type="mousebutton" button="Left" action="Click" commentedout="0" id="16631195224920039" scenariosection="" step="33">
+				
+				</command>
+				<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16631195224920040" scenariosection="" step="34">
+					<text>logoff</text>
+					<window />
+					<key key1="Enter" action1="Press" />
+				
+				</command>
+			</case>
+			<Default commentedout="0" id="16631195224920031" scenariosection="" step="35">
+			
+			</Default>
+		</command>
+		<command type="windowaction" action="Close" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="1" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16631195224920035" scenariosection="" step="36">
+			<window windowsname="Citrix" processname="msedge" />
+			<coords />
+			<size />
+		
+		</command>
+	</onfail>
+
+<Usage><commandcontainer type="scenario" name="CTX Login.xml"><command type="findbitmap"><bitmapname>User name(3).bmp</bitmapname></command><command type="findbitmap"><bitmapname>Detect Workspace.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Test install_Img1.bmp</bitmapname></command><command type="findbitmap"><bitmapname>M365 Desktop.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Test install_Img1.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

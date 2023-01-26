@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="PDF.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="ssun" creationdate="8/20/2020 03:05:36 PM" lastmodifiedby="rloader001" lastmodifieddate="5/6/2022 07:34:38 PM" lastusedid="16518634749440023" scenarioid="1651863474944" sbversion="22.04.28" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="transaction" name="Open PDF1" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16518634749440004" scenariosection="" step="1">
+	
+	</command>
+	<command type="execute" isremote="1" open="C:/Users/%user_name%/Automai/Content/sample-pdf-with-images.pdf" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16518634749440020" step="2" scenariosection="">
+	
+	</command>
+	<command type="windowaction" isremote="1" action="Maximize" timeout="10000" continueonfail="1" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16518634749440003" step="3" scenariosection="">
+		<window windowsname="Microsoft Word" />
+		<coords />
+		<size />
+	
+	</command>
+	<command type="findbitmap" stringtofind="pdf 1_Img3" ocrconfig="2 2 65 32 16 512 128 4 5 50 3 20 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" waittodisappear="0" statusvariable="ExecMyImageStatus" commentedout="0" id="16518634749440006" scenariosection="" step="4">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="532" ypos="310" relative_xpos="529" relative_ypos="307" xsize="14" ysize="70">pdf 1_Img3(1).bmp</bitmapname>
+	
+	</command>
+	<command type="transaction" name="Open PDF1" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16518634749440007" scenariosection="" step="5">
+	
+	</command>
+	<command type="clickonimage" stringtofind="Boundary Waters Trip" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16518634749440008" scenariosection="" step="6">
+		<coords dx="0" dy="0" />
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<bitmapname xpos="145" ypos="232" xsize="104" ysize="70">pdf 1_Img3(1).bmp</bitmapname>
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="2" commentedout="0" id="16518634749440009" scenariosection="" step="7">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="16518634749440010" scenariosection="" step="8">
+	
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="16518634749440011" scenariosection="" step="9">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="16518634749440012" scenariosection="" step="10">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="20" commentedout="0" id="16518634749440013" scenariosection="" step="11">
+	
+	</command>
+	<command type="mousewheel" scrollup="0" scrolldown="20" commentedout="0" id="16518634749440014" scenariosection="" step="12">
+	
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="16518634749440015" scenariosection="" step="13">
+	
+	</command>
+	<command type="mousewheel" scrollup="40" scrolldown="0" commentedout="0" id="16518634749440016" scenariosection="" step="14">
+	
+	</command>
+	<command type="windowaction" isremote="1" action="Close" timeout="10000" continueonfail="1" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16518634749440023" scenariosection="" step="15">
+		<window windowsname="Microsoft Word" />
+		<coords />
+		<size />
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="pdf 1.xml"><command type="findbitmap"><bitmapname>pdf 1_Img1.bmp</bitmapname><bitmapname>pdf 1_Img1_alt1.bmp</bitmapname><bitmapname>pdf 1_Img1_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>pdf 1_Img3.bmp</bitmapname></command><command type="findbitmap"><bitmapname>pdf 1_Img4.bmp</bitmapname><bitmapname>pdf 1_Img4_alt1.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

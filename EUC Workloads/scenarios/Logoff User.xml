@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commandcontainer type="scenario" name="Logoff User.xml" scenariotype="Snippet" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="rloader001" creationdate="9/16/2021 10:40:32 AM" lastmodifiedby="rloader001" lastmodifieddate="5/10/2022 10:45:54 PM" lastusedid="16317889223540009" scenarioid="1631788922354" sbversion="22.04.28" description="Logoff User on Failure" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+  <errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+  <command type="if" expression="%Logoff_On_Failure% != 0" showelse="0" commentedout="0" id="16317889223540006" scenariosection="" step="1">
+    <then commentedout="0" id="16317889223540007" scenariosection="" step="2">
+      <command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="logoff" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16317889223540009" step="3" scenariosection="">
+        <expression expression="" />
+      </command>
+    </then>
+    <else commentedout="0" id="16317889223540008" scenariosection="" step="4"></else>
+  </command>
+  <Usage>
+    <commandcontainer type="scenario" name="Logoff User.xml">
+      <command type="findbitmap">
+        <bitmapname>Initiation_Img5_alt2.bmp</bitmapname>
+        <bitmapname>Initiation_Img5_alt2_2.bmp</bitmapname>
+      </command>
+    </commandcontainer>
+  </Usage>
+</commandcontainer>

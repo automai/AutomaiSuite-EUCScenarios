@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="MS Powerpoint.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="ssun" creationdate="8/20/2020 04:36:27 PM" lastmodifiedby="rloader001" lastmodifieddate="5/10/2022 09:43:29 PM" lastusedid="16480764407440001" scenarioid="1648076440744" sbversion="22.04.28" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_App.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16347532590890001" scenariosection="" stepalias="Check if PowerPoint is running and launch it" step="1">
+		<variable1 variable="TaskbarImage" vartype="Image" xpos="150" ypos="767" xsize="38" ysize="27">PowerPoint_Taskbar_Icon.bmp</variable1>
+		<variable2 variable="" vartype="Image" xsize="38" ysize="32"></variable2>
+		<variable3 variable="" vartype="Image" xsize="29" ysize="24"></variable3>
+		<variable4 variable="OpenCheckImage" vartype="Image" xpos="62" ypos="50" xsize="47" ysize="26">MS Powerpoint_Open_Check.bmp</variable4>
+		<variable5 variable="AppLocation" vartype="String" expression="%PowerPoint_Location%"></variable5>
+		<variable6 variable="" vartype="Image" xpos="0" ypos="49" xsize="11" ysize="11"></variable6>
+		<variable7 vartype="String"></variable7>
+		<variable8 vartype="String"></variable8>
+		<variable9 vartype="String"></variable9>
+		<variable10 vartype="Image"></variable10>
+	
+	</command>
+	<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347620458460002" scenariosection="" step="2">
+		<key key1="Tab" action1="Press" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540009" scenariosection="" step="3">
+		<text>Automai</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="comment" comment="Text recognition and image recognition is not good for Powerpoint text, using tabs instead." commentedout="0" id="16347620458460011" scenariosection="" step="4">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="keyboardkey" action="Combination" timeout="10000" commentedout="0" id="15979413875540015" scenariosection="" step="5">
+		<key key1="CTRL" key2="M" />
+		<window />
+	
+	</command>
+	<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347620458460012" scenariosection="" step="6">
+		<key key1="Tab" action1="Press" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540020" scenariosection="" step="7">
+		<text>Automai AppLoader</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="findbitmap" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347620458460040" scenariosection="" step="8">
+		<searcharea xstart="0" ystart="0" xend="1280" yend="600" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xsize="47" ysize="61">MS Powerpoint 1_Img19_2.bmp</bitmapname>
+		<bitmapname xpos="546" ypos="246" relative_xpos="192" relative_ypos="120" xsize="49" ysize="60">MS Powerpoint_Img1.bmp</bitmapname>
+		<bitmapname xpos="714" ypos="162" relative_xpos="714" relative_ypos="162" xsize="46" ysize="59">MS Powerpoint 1_Img19_2_1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16347620458460042" scenariosection="" step="9">
+			<coords x="768" y="517" dx="0" dy="50" />
+		
+		</command>
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540024" scenariosection="" step="10">
+		<text>Performs load testing of Windows systems</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540025" scenariosection="" step="11">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540026" scenariosection="" step="12">
+		<key key1="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540027" scenariosection="" step="13">
+		<text>VDI/RDSH</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540028" scenariosection="" step="14">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540029" scenariosection="" step="15">
+		<key key1="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Combination" timeout="10000" commentedout="0" id="15979413875540030" scenariosection="" step="16">
+		<key key1="Shift" key2="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540031" scenariosection="" step="17">
+		<text>Physical Desktops</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540032" scenariosection="" step="18">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Combination" timeout="10000" commentedout="0" id="15979413875540033" scenariosection="" step="19">
+		<key key1="Shift" key2="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540034" scenariosection="" step="20">
+		<text>Use robots to simulate user workflows</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540035" scenariosection="" step="21">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540036" scenariosection="" step="22">
+		<text>Uses Image Recognition</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540037" scenariosection="" step="23">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540038" scenariosection="" step="24">
+		<key key1="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540039" scenariosection="" step="25">
+		<text>Interacts with applications like a user does</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540040" scenariosection="" step="26">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540041" scenariosection="" step="27">
+		<text>Allows for double-hop sessions</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540042" scenariosection="" step="28">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540043" scenariosection="" step="29">
+		<text>No login scripts required.</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Combination" timeout="10000" commentedout="0" id="15979413875540044" scenariosection="" step="30">
+		<key key1="CTRL" key2="M" />
+		<window />
+	
+	</command>
+	<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347620458460017" scenariosection="" step="31">
+		<key key1="Tab" action1="Press" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540050" scenariosection="" step="32">
+		<text>Automai AppsWatch</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="findbitmap" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347620458460038" scenariosection="" step="33">
+		<searcharea xstart="0" ystart="0" xend="1280" yend="600" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xsize="47" ysize="61">MS Powerpoint 1_Img19_2.bmp</bitmapname>
+		<bitmapname xpos="546" ypos="246" relative_xpos="192" relative_ypos="120" xsize="49" ysize="60">MS Powerpoint_Img1.bmp</bitmapname>
+		<bitmapname xpos="714" ypos="162" relative_xpos="714" relative_ypos="162" xsize="46" ysize="59">MS Powerpoint 1_Img19_2_1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16347620458460043" scenariosection="" step="34">
+			<coords x="0" y="0" dx="0" dy="50" />
+		
+		</command>
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540057" scenariosection="" step="35">
+		<text>Continuously runs robots on Production systems</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540058" scenariosection="" step="36">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540059" scenariosection="" step="37">
+		<text>Monitors availability and performance</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540060" scenariosection="" step="38">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540061" scenariosection="" step="39">
+		<key key1="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540062" scenariosection="" step="40">
+		<text>User experience</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540063" scenariosection="" step="41">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540064" scenariosection="" step="42">
+		<text>Platform components</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15979413875540065" scenariosection="" step="43">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="keyboardkey" action="Combination" timeout="10000" commentedout="0" id="15979413875540066" scenariosection="" step="44">
+		<key key1="Shift" key2="Tab" />
+		<window />
+	
+	</command>
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979413875540067" scenariosection="" step="45">
+		<text>Alerts admins</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" timeout="14000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16347500067920014" scenariosection="" step="46">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="246" ypos="37" xsize="54" ysize="25">MS Powerpoint Design.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16347500067920015" scenariosection="" step="47">
+			<coords x="262" y="47" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" timeout="16000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16347500067920016" scenariosection="" step="48">
+		<searcharea dx="" dy="" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="645" ypos="80" xsize="64" ysize="32">MS Powerpoint 1_Img25_alt1.bmp</bitmapname>
+		<bitmapname xpos="453" ypos="276" relative_xpos="197" relative_ypos="72" xsize="91" ysize="55">MS Powerpoint 1_Design1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16347500067920017" scenariosection="" step="49">
+			<coords x="677" y="96" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" timeout="16000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="15979413875540070" scenariosection="" step="50">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="497" ypos="25" xsize="64" ysize="32">MS Powerpoint 1_Img11.bmp</bitmapname>
+		<bitmapname xpos="497" ypos="25" xsize="64" ysize="32">MS Powerpoint 1_Img11_alt1.bmp</bitmapname>
+		<bitmapname xpos="497" ypos="25" xsize="64" ysize="32">MS PowerPoint_Slideshow.bmp</bitmapname>
+		<bitmapname xpos="758" ypos="240" relative_xpos="283" relative_ypos="140" xsize="80" ysize="28">MS Powerpoint_Slideshow1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="15979413875540071" scenariosection="" step="51">
+			<coords x="529" y="41" dx="0" dy="0" />
+		
+		</command>
+	</command>
+	<command type="findbitmap" timeout="12000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="15979413875540072" scenariosection="" step="52">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="0" ypos="82" xsize="64" ysize="32">MS Powerpoint 1_Img12.bmp</bitmapname>
+		<bitmapname xpos="0" ypos="82" xsize="64" ysize="32">MS Powerpoint 1_Img12_alt1.bmp</bitmapname>
+	
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="15979413875540073" scenariosection="" step="53">
+			<coords x="25" y="98" dx="-7" dy="0" />
+		
+		</command>
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="15979413875540086" scenariosection="" step="54">
+	
+	</command>
+	<command type="mousebutton" button="Left" action="Click" commentedout="0" id="15979413875540093" scenariosection="" step="55">
+	
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="15979413875540087" scenariosection="" step="56">
+	
+	</command>
+	<command type="mousebutton" button="Left" action="Click" commentedout="0" id="15979413875540094" scenariosection="" step="57">
+	
+	</command>
+	<command type="Wait" millisecs="5000" commentedout="0" id="15979413875540088" scenariosection="" step="58">
+	
+	</command>
+	<command type="mousebutton" button="Left" action="Click" commentedout="0" id="15979413875540095" scenariosection="" step="59">
+	
+	</command>
+	<command type="mousebutton" button="Left" action="Click" commentedout="0" id="15979413875540096" scenariosection="" step="60">
+	
+	</command>
+	<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347620458460022" scenariosection="" step="61">
+		<key key1="Esc" action1="Press" />
+		<window />
+	
+	</command>
+	<command type="clickonimage" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16347620458460023" scenariosection="" step="62">
+		<coords dx="0" dy="0" />
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<bitmapname xpos="318" ypos="243" xsize="53" ysize="24">MS Powerpoint_Home_Tab.bmp</bitmapname>
+	
+	</command>
+	<command type="if" expression="%ClosePowerPoint_OnEnd% == 1" showelse="0" commentedout="0" id="16347532590890002" scenariosection="" step="63">
+	
+		<then commentedout="0" id="16347532590890003" scenariosection="" step="64">
+		
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16347532590890004" scenariosection="" step="65">
+				<variable1 variable="TaskbarImage" vartype="Image" xpos="201" ypos="924" xsize="41" ysize="32">PowerPoint_Taskbar_Icon.bmp</variable1>
+				<variable2 variable="OpenCheckImage" vartype="Image" xsize="47" ysize="26">MS Powerpoint_Open_Check.bmp</variable2>
+				<variable3 variable="ProcessName" vartype="String" expression="POWERPNT" xpos="1488" ypos="3" xsize="52" ysize="32">MS Powerpoint 1_Img17_alt1.bmp</variable3>
+				<variable4 variable="DontSaveButton" vartype="Image" xpos="677" ypos="598" xsize="92" ysize="29">PowerPoint_DontSave(1).bmp</variable4>
+				<variable5 variable="" vartype="Image" xsize="98" ysize="33"></variable5>
+				<variable6 variable="" vartype="Image" xpos="1235" ypos="7" xsize="40" ysize="34"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16347532590890005" scenariosection="" step="66">
+		
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="MS Powerpoint 1.xml"><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img1.bmp</bitmapname><bitmapname>MS Powerpoint 1_Img1_alt1.bmp</bitmapname><bitmapname>MS Powerpoint 1_Img1_alt2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img3.bmp</bitmapname><bitmapname>MS Powerpoint 1_Img3_alt1.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img4.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img5.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img6.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img7.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img8.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img9.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img10.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img11.bmp</bitmapname><bitmapname>MS Powerpoint 1_Img11_alt1.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img12.bmp</bitmapname><bitmapname>MS Powerpoint 1_Img12_alt1.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img13.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img14.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img15.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img16.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img17.bmp</bitmapname><bitmapname>MS Powerpoint 1_Img17_alt1.bmp</bitmapname></command><command type="findbitmap"><bitmapname>MS Powerpoint 1_Img18.bmp</bitmapname><bitmapname>MS Powerpoint 1_Img18_alt1.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>

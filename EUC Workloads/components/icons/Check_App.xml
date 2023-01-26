@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Check_App.xml" scenariotype="Snippet" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workload" createdby="rloader001" creationdate="10/18/2021 01:25:10 PM" lastmodifiedby="rloader001" lastmodifieddate="5/6/2022 08:09:39 PM" lastusedid="16488449295180002" scenarioid="1648844929518" sbversion="22.04.28" description="Check and App is running" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="findbitmap" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="9" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="App_Running" commentedout="0" id="16353698819250001" scenariosection="" step="1">
+		<searcharea xstart="0" ystart="700" xend="1280" yend="1024" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="197" ypos="882" relative_xpos="" relative_ypos="" xsize="44" ysize="33">%TaskbarImage%</bitmapname>
+	
+	</command>
+	<command type="findbitmap" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="App_Open" commentedout="0" id="16353698819250002" scenariosection="" step="2">
+		<searcharea xstart="" ystart="" xend="" yend="" dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<bitmapname xpos="11" ypos="34" relative_xpos="11" relative_ypos="34" xsize="109" ysize="33">%OpenCheckImage%</bitmapname>
+	
+	</command>
+	<command type="comment" comment="Check if the supplied app is already running or not" commentedout="0" id="16353698819250003" scenariosection="" step="3">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="%App_Running% == FAILURE" showelse="1" commentedout="0" id="16353698819250023" scenariosection="" step="4">
+	
+		<then commentedout="0" id="16353698819250015" scenariosection="" step="5">
+		
+			<command type="comment" comment="Time Application launch" commentedout="0" id="16353698819250011" scenariosection="" step="6">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="transaction" name="Start %AppLocation%" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16353698819250012" scenariosection="" step="7">
+			
+			</command>
+			<command type="execute" isremote="1" stylename="pshellcommand" powershellcommand="{{Start-Process &quot;&quot;&quot;}}%AppLocation%{{&quot;&quot;&quot; -WindowStyle Maximized}}" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16488449295180002" step="8" scenariosection="">
+				<expression expression="" />
+			
+			</command>
+			<command type="findbitmap" timeout="20000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353698819250013" scenariosection="" step="9">
+				<searcharea xstart="0" ystart="0" xend="1280" yend="400" dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<bitmapname xpos="11" ypos="34" relative_xpos="7" relative_ypos="29" xsize="109" ysize="33">%OpenCheckImage%</bitmapname>
+			
+			</command>
+			<command type="transaction" name="Start %AppLocation%" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16353698819250014" scenariosection="" step="10">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16353698819250022" scenariosection="" step="11">
+		
+			<command type="comment" comment="The app is in the taskbar but not in focus, get it into focus" commentedout="0" id="16353698819250016" scenariosection="" step="12">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="if" expression="%App_Open% == FAILURE" showelse="0" commentedout="0" id="16353698819250021" scenariosection="" step="13">
+			
+				<then commentedout="0" id="16353698819250019" scenariosection="" step="14">
+				
+					<command type="clickonimage" timeout="5000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="9" colortolerance="0" anchorx="left" anchory="bottom" mousebutton="Left" clicktype="Click" repwait="1" reptimes="0" sleeptime="1000" useanchor="Parent" statusvariable="" commentedout="0" id="16353698819250017" scenariosection="" step="15">
+						<coords x="570" y="876" dx="0" dy="0" />
+						<searcharea xstart="0" ystart="700" xend="1280" yend="1024" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<bitmapname xpos="197" ypos="882" xsize="44" ysize="33">%TaskbarImage%</bitmapname>
+					
+					</command>
+					<command type="findbitmap" timeout="20000" onfaillabel="Next Action" continueonfail="0" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="None" statusvariable="ExecMyImageStatus" commentedout="0" id="16353698819250018" scenariosection="" step="16">
+						<searcharea xstart="0" ystart="0" xend="1280" yend="400" dx="0" dy="0" />
+						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+						<coordvars />
+						<bitmapname xpos="11" ypos="34" relative_xpos="11" relative_ypos="34" xsize="109" ysize="33">%OpenCheckImage%</bitmapname>
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16353698819250020" scenariosection="" step="17">
+				
+				</else>
+			</command>
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Check_App.xml"><command type="findbitmap"><bitmapname>%TaskbarImage%</bitmapname></command><command type="findbitmap"><bitmapname>Initiation_Img5_alt2.bmp</bitmapname><bitmapname>Initiation_Img5_alt2_2.bmp</bitmapname></command><command type="findbitmap"><bitmapname>Excel_Taskbar_Icon.bmp</bitmapname></command></commandcontainer></Usage></commandcontainer>
