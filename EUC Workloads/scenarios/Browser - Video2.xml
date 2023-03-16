@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Browser - Video2.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="ssun" creationdate="8/24/2020 09:35:44 AM" lastmodifiedby="rloader001" lastmodifieddate="12/11/2022 07:39:30 PM" lastusedid="16707875701790000" scenarioid="1670787570179" sbversion="22.12.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Browser - Video2.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="8/24/2020 09:35:44 AM" lastmodifiedby="rloader099" lastmodifieddate="2/10/2023 12:40:00 PM" lastusedid="16760328004430000" scenarioid="1676032800443" sbversion="23.1.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15982617444640005" scenariosection="" step="1">
@@ -13,7 +13,7 @@
 		<window />
 	
 	</command>
-	<command type="transaction" name="Open Video2" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="15982617444640007" scenariosection="" step="3">
+	<command type="transaction" name="Open Train Video Website" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="15982617444640007" scenariosection="" step="3">
 	
 	</command>
 	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="topLabel" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16353578680940001" scenariosection="" step="4">
@@ -24,7 +24,7 @@
 		<bitmapname xsize="78" ysize="60">HTML - Video1_Img3.bmp</bitmapname>
 	
 	</command>
-	<command type="transaction" name="Open Video2" end="1" referencetime="" report="" uflag="U" commentedout="0" id="15982617444640009" scenariosection="" step="5">
+	<command type="transaction" name="Open Train Video Website" end="1" referencetime="" report="" uflag="U" commentedout="0" id="15982617444640009" scenariosection="" step="5">
 	
 	</command>
 	<command type="Wait" millisecs="25000" commentedout="0" id="15982617444640010" scenariosection="" step="6">

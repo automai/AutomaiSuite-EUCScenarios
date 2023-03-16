@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Browser_Cyber.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="rloader001" creationdate="10/20/2021 02:30:21 PM" lastmodifiedby="rloader001" lastmodifieddate="1/4/2023 12:57:27 PM" lastusedid="16728370474850000" scenarioid="1672837047485" sbversion="22.12.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Browser_Cyber.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="10/20/2021 02:30:21 PM" lastmodifiedby="rloader099" lastmodifieddate="2/10/2023 12:33:09 PM" lastusedid="16760323896380000" scenarioid="1676032389638" sbversion="23.1.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16347408461280004" scenariosection="" step="1">
@@ -13,7 +13,7 @@
 		<window />
 	
 	</command>
-	<command type="transaction" name="Open Chrome - Cyber" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16353450899300001" scenariosection="" step="3">
+	<command type="transaction" name="Open Cyber Website" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16353450899300001" scenariosection="" step="3">
 	
 	</command>
 	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Cyber Tech" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16353562296270001" scenariosection="" step="4">
@@ -24,7 +24,7 @@
 		<bitmapname xsize="139" ysize="45">HTML - Cyber_Open Cyber_Img1_2.bmp</bitmapname>
 	
 	</command>
-	<command type="transaction" name="Open Chrome - Cyber" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16347408461280007" scenariosection="" step="5">
+	<command type="transaction" name="Open Cyber Website" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16347408461280007" scenariosection="" step="5">
 	
 	</command>
 	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Cyber Tech" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16353562296270002" scenariosection="" step="6">

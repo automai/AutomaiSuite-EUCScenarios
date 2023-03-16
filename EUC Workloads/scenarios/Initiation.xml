@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Initiation.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="6/21/2021 06:34:05 PM" lastmodifiedby="rloader001" lastmodifieddate="1/19/2023 08:02:40 PM" lastusedid="16739864990650025" scenarioid="1673986499065" sbversion="22.12.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Preparation for all settings relevant to the testing scenario" step="0">
+<commandcontainer type="scenario" name="Initiation.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="6/21/2021 06:34:05 PM" lastmodifiedby="rloader099" lastmodifieddate="2/10/2023 11:19:36 AM" lastusedid="16739864990650026" scenarioid="1673986499065" sbversion="23.1.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Preparation for all settings relevant to the testing scenario" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="Wait" millisecs="30000" commentedout="1" id="16294009791790001" scenariosection="" step="1">
@@ -24,12 +24,12 @@
 		<bitmapname xpos="167" ypos="965" xsize="26" ysize="14">Start_Profile_Img.bmp</bitmapname>
 	
 	</command>
-	<command type="comment" comment="Try the start menu multiple times if it does not work the first time on initial login" commentedout="0" id="16739864990650013" step="5" scenariosection="">
+	<command type="comment" comment="Try the start menu multiple times if it does not work the first time on initial login" commentedout="0" id="16739864990650013" scenariosection="" step="5">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
 	<command type="loop" iterations="5" loopuntil="%StartOpened% == SUCCESS" onfail="" skipexpression="%StartOpened% == SUCCESS" commentedout="0" id="16739864990650009" scenariosection="" step="6">
 	
-		<command type="moveclickmouse" useanchor="None" mousedrag="0" button="Left" action="Click" commentedout="0" id="16739864990650025" step="7" scenariosection="">
+		<command type="moveclickmouse" useanchor="None" mousedrag="0" button="Left" action="Click" commentedout="0" id="16739864990650025" scenariosection="" step="7">
 			<coords x="800" y="600" dx="836" dy="607" />
 		
 		</command>
@@ -92,17 +92,17 @@
 			<size />
 		
 		</command>
-		<command type="execute" stylename="pshellcommand" powershellcommand="{{New-Item $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -ItemType Directory -Force}}" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" isremote="1" commentedout="0" id="16511416275900005" scenariosection="" step="18">
+		<command type="execute" stylename="pshellcommand" powershellcommand="{{New-Item $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -ItemType Directory -Force}}" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900005" scenariosection="" step="18">
 		
 		</command>
-		<command type="execute" stylename="pshellcommand" powershellcommand="{{Expand-Archive -Path &quot;&quot;&quot;}}%Content_Zip%{{&quot;&quot;&quot; -DestinationPath $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -Force}}" execpolicy="Bypass" timeout="30000" statusvariable="ExecMyComponentStatus" continueonfail="1" isremote="1" commentedout="0" id="16511416275900006" scenariosection="" step="19">
+		<command type="execute" stylename="pshellcommand" powershellcommand="{{Expand-Archive -Path &quot;&quot;&quot;}}%Content_Zip%{{&quot;&quot;&quot; -DestinationPath $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -Force}}" execpolicy="Bypass" isremote="1" timeout="30000" statusvariable="ExecMyComponentStatus" continueonfail="1" commentedout="0" id="16511416275900006" scenariosection="" step="19">
 		
 		</command>
 		<command type="if" expression="%Outlook_Mode% == O365" showelse="0" commentedout="0" id="16354377511120001" scenariosection="" stepalias="If the environment type set matches the environment type of the command run it" step="20">
 		
 			<then commentedout="0" id="16354377511120002" scenariosection="" step="21">
 			
-				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLO365.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" timeout="30000" statusvariable="ExecMyComponentStatus" isremote="1" commentedout="0" id="16511416275900019" scenariosection="" step="22">
+				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLO365.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" isremote="1" timeout="30000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900019" scenariosection="" step="22">
 				
 				</command>
 			</then>
@@ -114,7 +114,7 @@
 		
 			<then commentedout="0" id="16354377511120013" scenariosection="" step="25">
 			
-				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLPST.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" timeout="30000" statusvariable="ExecMyComponentStatus" isremote="1" commentedout="0" id="16511416275900020" scenariosection="" step="26">
+				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLPST.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" isremote="1" timeout="30000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900020" scenariosection="" step="26">
 					<expression expression="#result#" />
 				
 				</command>

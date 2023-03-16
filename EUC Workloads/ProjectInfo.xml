@@ -7,33 +7,34 @@
   <scenario name="pdf 1.xml" scenariotype="Process" />
   <scenario name="Tesla Website.xml" scenariotype="Process" />
   <scenario name="MS Excel Sales.xml" scenariotype="Process" />
-  <scenario name="Citrix Login.xml" scenariotype="Process" />
-  <scenario name="Logoff User.xml" scenariotype="Snippet" />
   <scenario name="Close_App.xml" scenariotype="Snippet" />
   <scenario name="Connect RDPScriptingBot_tmp.xml" scenariotype="Global" />
   <scenario name="AI MAINScriptingBot_tmp.xml" scenariotype="Flow" />
   <scenario name="Connect RDP.xml" scenariotype="Global" />
   <scenario name="Browser Main 2.xml" scenariotype="Global" />
   <scenario name="Check_App.xml" scenariotype="Snippet" />
-  <scenario name="Browser_Bouncing.xml" scenariotype="Process" />
   <scenario name="Closapp.xml" scenariotype="Snippet" />
-  <scenario name="Browser - Folio.xml" scenariotype="Process" />
   <scenario name="CTX Login.xml" scenariotype="Global" />
+  <scenario name="Close_App_Name.xml" scenariotype="Snippet" />
+  <scenario name="Office Sign In Box.xml" scenariotype="Process" />
+  <scenario name="AI MAIN.xml" scenariotype="Flow" />
+  <scenario name="Initiation.xml" scenariotype="Process" />
+  <scenario name="Logoff User.xml" scenariotype="Snippet" />
+  <scenario name="Citrix Login.xml" scenariotype="Process" />
+  <scenario name="Browser_PDF.xml" scenariotype="Process" />
+  <scenario name="Browser - Folio.xml" scenariotype="Process" />
+  <scenario name="Browser_Cyber.xml" scenariotype="Process" />
+  <scenario name="Browser_Bouncing.xml" scenariotype="Process" />
   <scenario name="Browser - Video1.xml" scenariotype="Process" />
   <scenario name="Browser - Video2.xml" scenariotype="Process" />
-  <scenario name="Close_App_Name.xml" scenariotype="Snippet" />
-  <scenario name="Browser_Cyber.xml" scenariotype="Process" />
-  <scenario name="Office Sign In Box.xml" scenariotype="Process" />
-  <scenario name="Browser_PDF.xml" scenariotype="Process" />
-  <scenario name="Browser_Base.xml" scenariotype="Process" />
-  <scenario name="MS Outlook - Reply.xml" scenariotype="Process" />
-  <scenario name="MS Powerpoint.xml" scenariotype="Process" />
-  <scenario name="MS Word.xml" scenariotype="Process" />
   <scenario name="Check_app_name.xml" scenariotype="Snippet" />
+  <scenario name="Browser_Base.xml" scenariotype="Process" />
   <scenario name="EUC_Main.xml" scenariotype="Process" />
-  <scenario name="Initiation Test.xml" scenariotype="Process" />
-  <scenario name="MS Excel.xml" scenariotype="Process" />
-  <scenario name="Initiation.xml" scenariotype="Process" />
+  <scenario name="Browser_External.xml" scenariotype="Snippet" />
+  <scenario name="Test.xml" scenariotype="Process" />
+  <scenario name="MS Outlook - Reply.xml" scenariotype="Process" />
   <scenario name="MS Outlook - New.xml" scenariotype="Process" />
-  <scenario name="AI MAIN.xml" scenariotype="Flow" />
+  <scenario name="MS Word.xml" scenariotype="Process" />
+  <scenario name="MS Powerpoint.xml" scenariotype="Process" />
+  <scenario name="MS Excel.xml" scenariotype="Process" />
 </project>

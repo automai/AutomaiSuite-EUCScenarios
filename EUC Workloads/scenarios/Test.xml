@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Test.xml" scenariotype="Process" screenwidth="1634" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="3/16/2023 12:41:47 PM" lastmodifiedby="rloader099" lastmodifieddate="3/16/2023 12:57:26 PM" lastusedid="16789705427530002" scenarioid="1678970542753" sbversion="23.3.10" description="Test" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" step="0" scenariosection="">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="execute" stylename="pshellcommand" powershellcommand="Get-Process; Start-Sleep -Seconds 30" execpolicy="Bypass" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16789705427530002" step="1" scenariosection="">
+		<expression expression="" />
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Test.xml" ReferenceTime="1" /></Usage></commandcontainer>

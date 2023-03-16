@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Browser_External.xml" scenariotype="Snippet" screenwidth="1634" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="2/10/2023 12:37:42 PM" lastmodifiedby="rloader099" lastmodifieddate="3/8/2023 04:42:41 PM" lastusedid="16962502629200018" scenarioid="1696250262920" sbversion="23.1.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16962502620080001" scenariosection="" step="1">
+		<text>%Website_URL%</text>
+		<window />
+		<key />
+	
+	</command>
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16962502620080002" scenariosection="" step="2">
+		<key key1="Enter" />
+		<window />
+	
+	</command>
+	<command type="if" expression="%Website_Name% == &quot;YouTube&quot;" showelse="0" commentedout="0" id="16962502629200010" scenariosection="" step="3">
+	
+		<then commentedout="0" id="16962502629200011" scenariosection="" step="4">
+		
+			<command type="transaction" name="External Website YouTube" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200012" scenariosection="" step="5">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16962502629200013" scenariosection="" step="6">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Website_Name% == &quot;BBC&quot;" showelse="0" commentedout="0" id="16962502629200001" step="7" scenariosection="">
+	
+		<then commentedout="0" id="16962502629200002" step="8" scenariosection="">
+		
+			<command type="transaction" name="External Webite BBC" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200004" step="9" scenariosection="">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16962502629200003" step="10" scenariosection="">
+		
+		</else>
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="topLabel" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16962502620080004" scenariosection="" step="11">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xsize="78" ysize="60">%Website_Image%</bitmapname>
+	
+	</command>
+	<command type="if" expression="%Website_Name% == &quot;YouTube&quot;" showelse="0" commentedout="0" id="16962502629200005" scenariosection="" step="12">
+	
+		<then commentedout="0" id="16962502629200006" scenariosection="" step="13">
+		
+			<command type="transaction" name="External Website YouTube" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200009" step="14" scenariosection="">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16962502629200008" scenariosection="" step="15">
+		
+		</else>
+	</command>
+	<command type="if" expression="%Website_Name% == &quot;BBC&quot;" showelse="0" commentedout="0" id="16962502629200014" scenariosection="" step="16">
+	
+		<then commentedout="0" id="16962502629200015" scenariosection="" step="17">
+		
+			<command type="transaction" name="External Webite BBC" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200018" step="18" scenariosection="">
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16962502629200017" scenariosection="" step="19">
+		
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Browser_External.xml" /></Usage></commandcontainer>
