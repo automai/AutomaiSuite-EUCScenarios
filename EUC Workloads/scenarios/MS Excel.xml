@@ -1,11 +1,14 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="MS Excel.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="9/16/2021 12:13:18 PM" lastmodifiedby="rloader099" lastmodifieddate="3/16/2023 01:51:01 PM" lastusedid="16760432429140006" scenarioid="1676043242914" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="MS Excel.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="9/16/2021 12:13:18 PM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 12:49:19 PM" lastusedid="16790562202370000" scenarioid="1679056220237" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
-	<command type="transaction" name="Start Excel" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16523028680360001" scenariosection="" step="1">
+	<command type="comment" comment="WORKLOAD USES POINT OF REFERENCE AND APP MUST BE RESIZED" commentedout="0" id="16760432429140009" scenariosection="" step="1">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="transaction" name="Start Excel" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16523028680360001" scenariosection="" step="2">
 	
 	</command>
-	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16317943988820001" scenariosection="" stepalias="Check if EXCEL is running and launch it" step="2">
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16317943988820001" scenariosection="" stepalias="Check if EXCEL is running and launch it" step="3">
 		<variable1 variable="WindowTitle" vartype="String" expression="Excel"></variable1>
 		<variable2 variable="AppName" vartype="String" expression="EXCEL"></variable2>
 		<variable3 variable="AppLocation" vartype="String" expression="%Excel_Location%"></variable3>
@@ -18,69 +21,69 @@
 		<variable10 vartype="Image"></variable10>
 	
 	</command>
-	<command type="transaction" name="Start Excel" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16317944018490036" scenariosection="" step="3">
+	<command type="transaction" name="Start Excel" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16317944018490036" scenariosection="" step="4">
 	
 	</command>
-	<command type="comment" comment="If office is in test mode we need to skip the sign-in dialog" commentedout="0" id="16728320331530005" scenariosection="" step="4">
+	<command type="comment" comment="If office is in test mode we need to skip the sign-in dialog" commentedout="0" id="16728320331530005" scenariosection="" step="5">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%Office_In_Test_Mode% == 1" showelse="0" commentedout="0" id="16728320331530006" scenariosection="" step="5">
+	<command type="if" expression="%Office_In_Test_Mode% == 1" showelse="0" commentedout="0" id="16728320331530006" scenariosection="" step="6">
 	
-		<then commentedout="0" id="16728320331530007" scenariosection="" step="6">
+		<then commentedout="0" id="16728320331530007" scenariosection="" step="7">
 		
-			<command type="findbitmap" stringtofind="Account Issue" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundActivation" commentedout="0" id="16760432429140001" scenariosection="" step="7">
+			<command type="findbitmap" stringtofind="Account Issue" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundActivation" commentedout="0" id="16760432429140001" scenariosection="" step="8">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
 				<bitmapname xpos="591" ypos="418" xsize="82" ysize="17">MS_Logo_Activation.bmp</bitmapname>
 			
 			</command>
-			<command type="if" expression="%FoundActivation% ==SUCCESS " showelse="0" commentedout="0" id="16730114793380002" scenariosection="" step="8">
+			<command type="if" expression="%FoundActivation% ==SUCCESS " showelse="0" commentedout="0" id="16730114793380002" scenariosection="" step="9">
 			
-				<then commentedout="0" id="16730114793380003" scenariosection="" step="9">
+				<then commentedout="0" id="16730114793380003" scenariosection="" step="10">
 				
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16730114793380004" scenariosection="" step="10">
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16730114793380004" scenariosection="" step="11">
 						<key key1="Tab" />
 						<window />
 					
 					</command>
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760432429140006" scenariosection="" step="11">
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760432429140006" scenariosection="" step="12">
 						<key key1="Enter" />
 						<window />
 					
 					</command>
 				</then>
-				<else commentedout="0" id="16730114793380005" scenariosection="" step="12">
+				<else commentedout="0" id="16730114793380005" scenariosection="" step="13">
 				
 				</else>
 			</command>
-			<command type="findbitmap" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundSignIn" commentedout="0" id="16730114793380001" scenariosection="" step="13">
+			<command type="findbitmap" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundSignIn" commentedout="0" id="16730114793380001" scenariosection="" step="14">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
 				<bitmapname xpos="500" ypos="304" xsize="14" ysize="10">MS_Logo_SignIn_Office.bmp</bitmapname>
 			
 			</command>
-			<command type="if" expression="%FoundSignIn% ==SUCCESS " showelse="0" commentedout="0" id="16760432429140002" scenariosection="" step="14">
+			<command type="if" expression="%FoundSignIn% ==SUCCESS " showelse="0" commentedout="0" id="16760432429140002" scenariosection="" step="15">
 			
-				<then commentedout="0" id="16760432429140003" scenariosection="" step="15">
+				<then commentedout="0" id="16760432429140003" scenariosection="" step="16">
 				
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760432429140004" scenariosection="" step="16">
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760432429140004" scenariosection="" step="17">
 						<key key1="Esc" />
 						<window />
 					
 					</command>
 				</then>
-				<else commentedout="0" id="16760432429140005" scenariosection="" step="17">
+				<else commentedout="0" id="16760432429140005" scenariosection="" step="18">
 				
 				</else>
 			</command>
 		</then>
-		<else commentedout="0" id="16728320331530013" scenariosection="" step="18">
+		<else commentedout="0" id="16728320331530013" scenariosection="" step="19">
 		
 		</else>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="File" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943988700003" scenariosection="(7 Home" step="19">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="File" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943988700003" scenariosection="(7 Home" step="20">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
@@ -91,12 +94,12 @@
 		<bitmapname xpos="479" ypos="449" relative_xpos="197" relative_ypos="192" xsize="53" ysize="36">MSExcel_File.bmp</bitmapname>
 		<bitmapname xpos="12" ypos="37" relative_xpos="11" relative_ypos="36" xsize="30" ysize="21">MS_Excel_File2.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943988700004" scenariosection="" step="20">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943988700004" scenariosection="" step="21">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Open" imagetype="leftLabel" objectwidth="772" objectheight="20" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " objectindex="" timeout="5000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Alt" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943988820012" scenariosection="B Browse" step="21">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Open" imagetype="leftLabel" objectwidth="772" objectheight="20" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " objectindex="" timeout="5000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Alt" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943988820012" scenariosection="B Browse" step="22">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
@@ -109,35 +112,43 @@
 		<bitmapname xpos="470" ypos="468" relative_xpos="188" relative_ypos="211" xsize="58" ysize="28">MSExcel_Open_Old.bmp</bitmapname>
 		<bitmapname xpos="42" ypos="173" relative_xpos="41" relative_ypos="172" xsize="118" ysize="26">B Browse.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943988820013" scenariosection="" step="22">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943988820013" scenariosection="" step="23">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Browse" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16707900576840001" scenariosection="(7 Home" step="23">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Browse" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16707900576840001" scenariosection="(7 Home" step="24">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="170" ypos="508" relative_xpos="169" relative_ypos="507" xsize="127" ysize="29">MS_Excel_Browser.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16707900576840002" scenariosection="" step="24">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16707900576840002" scenariosection="" step="25">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
-		<command type="keyboardtypetext" encrypted="" isremote="1" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16317943988820014" scenariosection="" step="25">
+		<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Open" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Parent" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16760432429140007" scenariosection="Open" stepalias="Find the Excel Open Dialog" step="26">
+			<searcharea dx="233" dy="522" />
+			<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+			<coordvars />
+			<window />
+			<bitmapname xpos="58" ypos="31" relative_xpos="37" relative_ypos="10" xsize="33" ysize="15">MS_Excel_Open_Dialog.bmp</bitmapname>
+		
+		</command>
+		<command type="keyboardtypetext" encrypted="" isremote="1" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16317943988820014" scenariosection="" step="27">
 			<text>{{%userprofile%}}\Automai\Content\Sample_Sales Records_xlsx.xlsx</text>
 			<window />
 			<key />
 		
 		</command>
-		<command type="keyboardkey" action="Press" isremote="1" timeout="10000" commentedout="0" id="16707900576840003" scenariosection="" step="26">
+		<command type="keyboardkey" action="Press" isremote="1" timeout="10000" commentedout="0" id="16707900576840003" scenariosection="" step="28">
 			<key key1="Enter" />
 			<window />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="A" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="17" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610001" scenariosection="" step="27">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="A" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="17" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610001" scenariosection="" step="29">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
@@ -145,24 +156,24 @@
 		<bitmapname xsize="46" ysize="18">MS Excel Sales_Img28_1.bmp</bitmapname>
 		<bitmapname xpos="123" ypos="219" relative_xpos="122" relative_ypos="218" xsize="28" ysize="16">MS Excel_Open Excel File_A.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16397377818350003" scenariosection="" step="28">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16397377818350003" scenariosection="" step="30">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Insert" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610007" scenariosection="" step="29">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Insert" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610007" scenariosection="" step="31">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="125" ypos="41" relative_xpos="124" relative_ypos="40" xsize="54" ysize="18">MS Excel Sales_Img31(1).bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010013" scenariosection="" step="30">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010013" scenariosection="" step="32">
 			<coords x="00" y="00" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="17" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610008" scenariosection="" step="31">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="17" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610008" scenariosection="" step="33">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
@@ -170,24 +181,24 @@
 		<bitmapname xpos="517" ypos="88" relative_xpos="516" relative_ypos="87" xsize="39" ysize="24">MS Excel Sales_Img32(1).bmp</bitmapname>
 		<bitmapname xpos="450" ypos="107" relative_xpos="449" relative_ypos="106" xsize="23" ysize="22">MS Excel_Graph_Dropdown.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010015" scenariosection="" step="32">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010015" scenariosection="" step="34">
 			<coords x="512" y="99" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="wordsIn" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610009" scenariosection="" step="33">
+	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="wordsIn" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610009" scenariosection="" step="35">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="524" ypos="146" relative_xpos="4" relative_ypos="33" xsize="54" ysize="51">MS Excel Sales_Img33_alt2(1).bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610010" scenariosection="" step="34">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610010" scenariosection="" step="36">
 			<coords x="512" y="99" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="SelectData" imagetype="leftLabel" objectwidth="63" objectheight="19" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="13" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610011" scenariosection="5SelectData" step="35">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="SelectData" imagetype="leftLabel" objectwidth="63" objectheight="19" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="13" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610011" scenariosection="5SelectData" step="37">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
@@ -195,91 +206,92 @@
 		<bitmapname xpos="1000" ypos="68" relative_xpos="999" relative_ypos="67" xsize="44" ysize="72">5SelectData.bmp</bitmapname>
 		<bitmapname xpos="1019" ypos="84" relative_xpos="1018" relative_ypos="83" xsize="40" ysize="72">MS_Excel_SelecthData2.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610012" scenariosection="" step="36">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610012" scenariosection="" step="38">
 			<coords x="512" y="99" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="keyboardkey" action="Press" isremote="1" timeout="10000" commentedout="0" id="16317943985610013" scenariosection="" step="37">
+	<command type="keyboardkey" action="Press" isremote="1" timeout="10000" commentedout="0" id="16317943985610013" scenariosection="" step="39">
 		<key key1="BACKSPACE" />
 		<window />
 	
 	</command>
-	<command type="keyboardtypetext" encrypted="" isremote="1" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16317943985610014" scenariosection="" step="38">
+	<command type="keyboardtypetext" encrypted="" isremote="1" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16317943985610014" scenariosection="" step="40">
 		<text>='Sample_Sales Records'!$A:$A,'Sample_Sales Records'!$L:$L,'Sample_Sales Records'!$N:$N</text>
 		<window />
 		<key />
 	
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="OK" imagetype="topLabel" objectwidth="280" objectheight="84" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="0" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610015" scenariosection="I OK" step="39">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="OK" imagetype="topLabel" objectwidth="280" objectheight="84" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="0" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610015" scenariosection="I OK" step="41">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="59" ystart="13" xend="63" yend="13" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="772" ypos="494" relative_xpos="431" relative_ypos="295" xsize="67" ysize="17">I OK.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610016" scenariosection="" step="40">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610016" scenariosection="" step="42">
 			<coords x="512" y="99" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="Wait" millisecs="5000" commentedout="0" id="16317943989930009" scenariosection="" step="41">
+	<command type="Wait" millisecs="5000" commentedout="0" id="16317943989930009" scenariosection="" step="43">
 	
 	</command>
-	<command type="keyboardkey" action="Combination" isremote="1" timeout="10000" commentedout="0" id="16321535866010018" scenariosection="" step="42">
+	<command type="keyboardkey" action="Combination" isremote="1" timeout="10000" commentedout="0" id="16321535866010018" scenariosection="" step="44">
 		<key key1="CTRL" key2="x" />
 		<window />
 	
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="248" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610017" scenariosection="MS Excel_Img3" step="43">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " objectindex="" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610017" scenariosection="MS Excel_Img3" step="45">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="281" ypos="620" relative_xpos="280" relative_ypos="619" xsize="38" ysize="19">MS Excel_Img3.bmp</bitmapname>
 		<bitmapname xpos="312" ypos="939" relative_xpos="311" relative_ypos="938" xsize="23" ysize="16">MS Excel_New_Sheet_2.bmp</bitmapname>
+		<bitmapname xpos="194" ypos="1037" relative_xpos="193" relative_ypos="1036" xsize="24" ysize="19">MS_Excel_New_Sheet3.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010020" scenariosection="" step="44">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16321535866010020" scenariosection="" step="46">
 			<coords x="299" y="824" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="keyboardkey" action="Combination" isremote="1" timeout="10000" commentedout="0" id="16321535866010021" scenariosection="" step="45">
+	<command type="keyboardkey" action="Combination" isremote="1" timeout="10000" commentedout="0" id="16321535866010021" scenariosection="" step="47">
 		<key key1="CTRL" key2="v" />
 		<window />
 	
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Format" imagetype="topLabel" objectwidth="478" objectheight="286" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="0" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610018" scenariosection="Format" step="46">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Format" imagetype="topLabel" objectwidth="478" objectheight="286" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="0" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16317943985610018" scenariosection="Format" step="48">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="715" ypos="38" relative_xpos="714" relative_ypos="37" xsize="57" ysize="20">Format.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16707900576840007" scenariosection="" step="47">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16707900576840007" scenariosection="" step="49">
 			<coords x="299" y="824" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="topLabel" objectwidth="1023" objectheight="24" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="0" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" advancedcap="0" statusvariable="" usecurrentwindow="1" commentedout="0" id="16317943985610020" scenariosection="apes" step="48">
+	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="topLabel" objectwidth="1023" objectheight="24" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="0" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" advancedcap="0" statusvariable="" usecurrentwindow="1" commentedout="0" id="16317943985610020" scenariosection="apes" step="50">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="1152" ypos="78" relative_xpos="1151" relative_ypos="77" xsize="26" ysize="21">apes.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610022" scenariosection="" step="49">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610022" scenariosection="" step="51">
 			<coords x="1191" y="80" dx="100" dy="5" />
 		
 		</command>
-		<command type="keyboardtypetext" encrypted="" isremote="0" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16317943985610021" scenariosection="" step="50">
+		<command type="keyboardtypetext" encrypted="" isremote="0" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16317943985610021" scenariosection="" step="52">
 			<text>10</text>
 			<window />
 			<key key1="Enter" action1="Press" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="" usecurrentwindow="1" commentedout="0" id="16317943985610023" scenariosection="" step="51">
+	<command type="findbitmap" stylename="find_image_in_active_window" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="" usecurrentwindow="1" commentedout="0" id="16317943985610023" scenariosection="" step="53">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
@@ -287,22 +299,22 @@
 		<bitmapname xsize="20" ysize="20">Excel_GraphX.bmp</bitmapname>
 		<bitmapname xpos="1448" ypos="107" relative_xpos="1447" relative_ypos="106" xsize="20" ysize="27">MS_Excel_Chart_Width.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610025" scenariosection="" step="52">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16317943985610025" scenariosection="" step="54">
 			<coords x="1190" y="115" dx="100" dy="5" />
 		
 		</command>
-		<command type="keyboardtypetext" encrypted="" isremote="0" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16728320331530004" scenariosection="" step="53">
+		<command type="keyboardtypetext" encrypted="" isremote="0" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16728320331530004" scenariosection="" step="55">
 			<text>30</text>
 			<window />
 			<key key1="Enter" action1="Press" />
 		
 		</command>
 	</command>
-	<command type="if" expression="%CloseExcel_OnEnd%  == 1" showelse="0" commentedout="0" id="16317943988820002" scenariosection="" step="54">
+	<command type="if" expression="%CloseExcel_OnEnd%  == 1" showelse="0" commentedout="0" id="16317943988820002" scenariosection="" step="56">
 	
-		<then commentedout="0" id="16317943988820003" scenariosection="" step="55">
+		<then commentedout="0" id="16317943988820003" scenariosection="" step="57">
 		
-			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16317943988820004" scenariosection="" stepalias="If EXCEL is open close it" step="56">
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16317943988820004" scenariosection="" stepalias="If EXCEL is open close it" step="58">
 				<variable1 variable="WindowTitle" vartype="String" expression="EXCEL"></variable1>
 				<variable2 variable="AppName" vartype="String" expression="EXCEL"></variable2>
 				<variable3 vartype="String"></variable3>
@@ -316,7 +328,7 @@
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16317943988820005" scenariosection="" step="57">
+		<else commentedout="0" id="16317943988820005" scenariosection="" step="59">
 		
 		</else>
 	</command>

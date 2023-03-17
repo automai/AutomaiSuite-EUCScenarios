@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Browser_Base.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="10/27/2021 02:26:35 PM" lastmodifiedby="rloader099" lastmodifieddate="3/8/2023 04:14:02 PM" lastusedid="16782920424020000" scenarioid="1678292042402" sbversion="23.1.1" description="Browser controller script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Browser_Base.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="10/27/2021 02:26:35 PM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 01:02:53 PM" lastusedid="16790581731620000" scenarioid="1679058173162" sbversion="23.3.10" description="Browser controller script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="filler" commentedout="0" id="16730053799150001" scenariosection="" stepalias="Decide which browser is being used" step="1">
@@ -379,7 +379,7 @@
 			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Browser_External.xml" continueonfail="1" statusvariable="ExecMyScenarioStatus" commentedout="0" id="16730053799150170" scenariosection="" stepalias="Open an external website and time it - Youtube" step="86">
 				<variable1 variable="Website_URL" vartype="String" expression="https://www.youtube.com"></variable1>
 				<variable2 variable="Website_Image" vartype="Image" xpos="214" ypos="231" xsize="18" ysize="13">Youtube_Logo(2).bmp</variable2>
-				<variable3 variable="Website_Name" vartype="String" expression="YouTube"></variable3>
+				<variable3 variable="" vartype="String" expression=""></variable3>
 				<variable4 vartype="Image"></variable4>
 				<variable5 vartype="Image"></variable5>
 				<variable6 vartype="Image"></variable6>
@@ -401,7 +401,7 @@
 			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Browser_External.xml" continueonfail="1" statusvariable="ExecMyScenarioStatus" commentedout="0" id="16730053799150173" scenariosection="" stepalias="Open an external website and time it - Youtube" step="90">
 				<variable1 variable="Website_URL" vartype="String" expression="https://www.bbc.co.uk"></variable1>
 				<variable2 variable="Website_Image" vartype="Image" xpos="45" ypos="215" xsize="20" ysize="24">BBC_Logo.bmp</variable2>
-				<variable3 variable="Website_Name" vartype="String" expression="BBC"></variable3>
+				<variable3 variable="" vartype="String" expression=""></variable3>
 				<variable4 vartype="Image"></variable4>
 				<variable5 vartype="Image"></variable5>
 				<variable6 vartype="Image"></variable6>

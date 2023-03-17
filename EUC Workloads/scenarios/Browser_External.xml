@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Browser_External.xml" scenariotype="Snippet" screenwidth="1634" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="2/10/2023 12:37:42 PM" lastmodifiedby="rloader099" lastmodifieddate="3/8/2023 04:42:41 PM" lastusedid="16962502629200018" scenarioid="1696250262920" sbversion="23.1.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Browser_External.xml" scenariotype="Snippet" screenwidth="1634" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="2/10/2023 12:37:42 PM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 01:02:55 PM" lastusedid="16962502620240000" scenarioid="1696250262024" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16962502620080001" scenariosection="" step="1">
@@ -13,7 +13,7 @@
 		<window />
 	
 	</command>
-	<command type="if" expression="%Website_Name% == &quot;YouTube&quot;" showelse="0" commentedout="0" id="16962502629200010" scenariosection="" step="3">
+	<command type="if" expression="%BrowserWorkload% == External1" showelse="0" commentedout="0" id="16962502629200010" scenariosection="" step="3">
 	
 		<then commentedout="0" id="16962502629200011" scenariosection="" step="4">
 		
@@ -25,15 +25,15 @@
 		
 		</else>
 	</command>
-	<command type="if" expression="%Website_Name% == &quot;BBC&quot;" showelse="0" commentedout="0" id="16962502629200001" step="7" scenariosection="">
+	<command type="if" expression="%BrowserWorkload% == External2" showelse="0" commentedout="0" id="16962502629200001" scenariosection="" step="7">
 	
-		<then commentedout="0" id="16962502629200002" step="8" scenariosection="">
+		<then commentedout="0" id="16962502629200002" scenariosection="" step="8">
 		
-			<command type="transaction" name="External Webite BBC" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200004" step="9" scenariosection="">
+			<command type="transaction" name="External Webite BBC" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200004" scenariosection="" step="9">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16962502629200003" step="10" scenariosection="">
+		<else commentedout="0" id="16962502629200003" scenariosection="" step="10">
 		
 		</else>
 	</command>
@@ -45,11 +45,11 @@
 		<bitmapname xsize="78" ysize="60">%Website_Image%</bitmapname>
 	
 	</command>
-	<command type="if" expression="%Website_Name% == &quot;YouTube&quot;" showelse="0" commentedout="0" id="16962502629200005" scenariosection="" step="12">
+	<command type="if" expression="%BrowserWorkload% == External1" showelse="0" commentedout="0" id="16962502629200005" scenariosection="" step="12">
 	
 		<then commentedout="0" id="16962502629200006" scenariosection="" step="13">
 		
-			<command type="transaction" name="External Website YouTube" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200009" step="14" scenariosection="">
+			<command type="transaction" name="External Website YouTube" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200009" scenariosection="" step="14">
 			
 			</command>
 		</then>
@@ -57,11 +57,11 @@
 		
 		</else>
 	</command>
-	<command type="if" expression="%Website_Name% == &quot;BBC&quot;" showelse="0" commentedout="0" id="16962502629200014" scenariosection="" step="16">
+	<command type="if" expression="%BrowserWorkload% == External2" showelse="0" commentedout="0" id="16962502629200014" scenariosection="" step="16">
 	
 		<then commentedout="0" id="16962502629200015" scenariosection="" step="17">
 		
-			<command type="transaction" name="External Webite BBC" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200018" step="18" scenariosection="">
+			<command type="transaction" name="External Webite BBC" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16962502629200018" scenariosection="" step="18">
 			
 			</command>
 		</then>

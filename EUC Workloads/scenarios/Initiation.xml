@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Initiation.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="6/21/2021 06:34:05 PM" lastmodifiedby="rloader099" lastmodifieddate="2/10/2023 11:19:36 AM" lastusedid="16739864990650026" scenarioid="1673986499065" sbversion="23.1.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Preparation for all settings relevant to the testing scenario" step="0">
+<commandcontainer type="scenario" name="Initiation.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="6/21/2021 06:34:05 PM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 10:59:06 AM" lastusedid="16790507232820001" scenarioid="1679050723282" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Preparation for all settings relevant to the testing scenario" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="Wait" millisecs="30000" commentedout="1" id="16294009791790001" scenariosection="" step="1">
@@ -95,7 +95,7 @@
 		<command type="execute" stylename="pshellcommand" powershellcommand="{{New-Item $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -ItemType Directory -Force}}" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900005" scenariosection="" step="18">
 		
 		</command>
-		<command type="execute" stylename="pshellcommand" powershellcommand="{{Expand-Archive -Path &quot;&quot;&quot;}}%Content_Zip%{{&quot;&quot;&quot; -DestinationPath $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -Force}}" execpolicy="Bypass" isremote="1" timeout="30000" statusvariable="ExecMyComponentStatus" continueonfail="1" commentedout="0" id="16511416275900006" scenariosection="" step="19">
+		<command type="execute" stylename="pshellcommand" powershellcommand="{{Expand-Archive -Path &quot;&quot;&quot;}}%Content_Zip%{{&quot;&quot;&quot; -DestinationPath $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -Force}}" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16790507232820001" scenariosection="" step="19">
 		
 		</command>
 		<command type="if" expression="%Outlook_Mode% == O365" showelse="0" commentedout="0" id="16354377511120001" scenariosection="" stepalias="If the environment type set matches the environment type of the command run it" step="20">

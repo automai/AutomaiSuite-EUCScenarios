@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="MS Outlook - Reply.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="8/24/2020 11:49:27 AM" lastmodifiedby="rloader099" lastmodifieddate="3/16/2023 01:20:09 PM" lastusedid="16760321766910030" scenarioid="1676032176691" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="MS Outlook - Reply.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="8/24/2020 11:49:27 AM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 12:29:57 PM" lastusedid="16790561971490000" scenarioid="1679056197149" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="transaction" name="Start Outlook" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16760321766910001" scenariosection="" step="1">
@@ -21,196 +21,199 @@
 	<command type="transaction" name="Start Outlook" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16760321766910002" scenariosection="" step="3">
 	
 	</command>
-	<command type="comment" comment="If office is in test mode we need to skip the sign-in dialog" commentedout="0" id="15982697670600001" scenariosection="" step="4">
+	<command type="comment" comment="WORKLOAD USES POINT OF REFERENCE AND APP MUST BE RESIZED" commentedout="0" id="16760321766910033" scenariosection="" step="4">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%Office_In_Test_Mode% == 1" showelse="0" commentedout="0" id="16760321766910017" scenariosection="" step="5">
+	<command type="comment" comment="If office is in test mode we need to skip the sign-in dialog" commentedout="0" id="15982697670600001" scenariosection="" step="5">
+		<color r="128" g="128" b="128" a="128" />
+	</command>
+	<command type="if" expression="%Office_In_Test_Mode% == 1" showelse="0" commentedout="0" id="16760321766910017" scenariosection="" step="6">
 	
-		<then commentedout="0" id="16760321766910018" scenariosection="" step="6">
+		<then commentedout="0" id="16760321766910018" scenariosection="" step="7">
 		
-			<command type="findbitmap" stringtofind="Account Issue" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundActivation" commentedout="0" id="16760321766910019" scenariosection="" step="7">
+			<command type="findbitmap" stringtofind="Account Issue" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundActivation" commentedout="0" id="16760321766910019" scenariosection="" step="8">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
 				<bitmapname xpos="591" ypos="418" xsize="82" ysize="17">MS_Logo_Activation.bmp</bitmapname>
 			
 			</command>
-			<command type="if" expression="%FoundActivation% ==SUCCESS " showelse="0" commentedout="0" id="16760321766910020" scenariosection="" step="8">
+			<command type="if" expression="%FoundActivation% ==SUCCESS " showelse="0" commentedout="0" id="16760321766910020" scenariosection="" step="9">
 			
-				<then commentedout="0" id="16760321766910021" scenariosection="" step="9">
+				<then commentedout="0" id="16760321766910021" scenariosection="" step="10">
 				
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321766910022" scenariosection="" step="10">
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321766910022" scenariosection="" step="11">
 						<key key1="Tab" />
 						<window />
 					
 					</command>
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321766910023" scenariosection="" step="11">
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321766910023" scenariosection="" step="12">
 						<key key1="Enter" />
 						<window />
 					
 					</command>
 				</then>
-				<else commentedout="0" id="16760321766910024" scenariosection="" step="12">
+				<else commentedout="0" id="16760321766910024" scenariosection="" step="13">
 				
 				</else>
 			</command>
-			<command type="findbitmap" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundSignIn" commentedout="0" id="16760321766910025" scenariosection="" step="13">
+			<command type="findbitmap" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundSignIn" commentedout="0" id="16760321766910025" scenariosection="" step="14">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
 				<bitmapname xpos="500" ypos="304" xsize="14" ysize="10">MS_Logo_SignIn_Office.bmp</bitmapname>
 			
 			</command>
-			<command type="if" expression="%FoundSignIn% ==SUCCESS " showelse="0" commentedout="0" id="16760321766910026" scenariosection="" step="14">
+			<command type="if" expression="%FoundSignIn% ==SUCCESS " showelse="0" commentedout="0" id="16760321766910026" scenariosection="" step="15">
 			
-				<then commentedout="0" id="16760321766910027" scenariosection="" step="15">
+				<then commentedout="0" id="16760321766910027" scenariosection="" step="16">
 				
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321766910028" scenariosection="" step="16">
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321766910028" scenariosection="" step="17">
 						<key key1="Esc" />
 						<window />
 					
 					</command>
 				</then>
-				<else commentedout="0" id="16760321766910029" scenariosection="" step="17">
+				<else commentedout="0" id="16760321766910029" scenariosection="" step="18">
 				
 				</else>
 			</command>
 		</then>
-		<else commentedout="0" id="16760321766910030" scenariosection="" step="18">
+		<else commentedout="0" id="16760321766910030" scenariosection="" step="19">
 		
 		</else>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Drafts" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050004" scenariosection="" step="19">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Drafts" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050004" scenariosection="" step="20">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="24" ypos="245" relative_xpos="23" relative_ypos="244" xsize="42" ysize="17">Drafts(1).bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="15982697670600010" scenariosection="" step="20">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="15982697670600010" scenariosection="" step="21">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Inbox" imagetype="topLabel" objectwidth="220" objectheight="24" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="1" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050005" scenariosection="Inbox" step="21">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Inbox" imagetype="topLabel" objectwidth="220" objectheight="24" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="1" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050005" scenariosection="Inbox" step="22">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="24" ypos="224" relative_xpos="23" relative_ypos="223" xsize="41" ysize="14">Inbox.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16518660228050007" scenariosection="" step="22">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16518660228050007" scenariosection="" step="23">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16518660228050006" scenariosection="" step="23">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16518660228050006" scenariosection="" step="24">
 			<coords x="378" y="237" dx="334" dy="6" />
 		
 		</command>
 	</command>
-	<command type="comment" comment="Skip onto the emails in the inbox" commentedout="0" id="16347567439730008" scenariosection="" step="24">
+	<command type="comment" comment="Skip onto the emails in the inbox" commentedout="0" id="16347567439730008" scenariosection="" step="25">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="loop" iterations="5" onfail="" commentedout="0" id="16347567439730007" scenariosection="" step="25">
+	<command type="loop" iterations="5" onfail="" commentedout="0" id="16347567439730007" scenariosection="" step="26">
 	
-		<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347567439730005" scenariosection="" step="26">
+		<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347567439730005" scenariosection="" step="27">
 			<key key1="Tab" action1="Press" />
 			<window />
 		
 		</command>
 	</command>
-	<command type="comment" comment="Select a random email" commentedout="0" id="16347567439730009" scenariosection="" step="27">
+	<command type="comment" comment="Select a random email" commentedout="0" id="16347567439730009" scenariosection="" step="28">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="setvariable" stylename="rand" variable="RandomLoop" vartype="Number" scope="Script" expression="[1-6] Random Number" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16347567439730023" scenariosection="" step="28">
+	<command type="setvariable" stylename="rand" variable="RandomLoop" vartype="Number" scope="Script" expression="[1-6] Random Number" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16347567439730023" scenariosection="" step="29">
 	
 	</command>
-	<command type="loop" iterations="%RandomLoop%" onfail="" commentedout="0" id="16347567439730010" scenariosection="" step="29">
+	<command type="loop" iterations="%RandomLoop%" onfail="" commentedout="0" id="16347567439730010" scenariosection="" step="30">
 	
-		<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347567439730011" scenariosection="" step="30">
+		<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16347567439730011" scenariosection="" step="31">
 			<key key1="Down" action1="Press" />
 			<window />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="MS Outlook - Reply_Img1" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="1" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050008" scenariosection="MS Outlook - Reply_Img1" step="31">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="MS Outlook - Reply_Img1" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectindex="1" timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050008" scenariosection="MS Outlook - Reply_Img1" step="32">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="295" ypos="104" relative_xpos="294" relative_ypos="103" xsize="31" ysize="22">MS Outlook - Reply_Img1.bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="15982697672220010" scenariosection="" step="32">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="15982697672220010" scenariosection="" step="33">
 			<coords x="386" y="88" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15982697672220011" scenariosection="" step="33">
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15982697672220011" scenariosection="" step="34">
 		<text>Hi, Dorothy,</text>
 		<window />
 		<key />
 	
 	</command>
-	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220012" scenariosection="" step="34">
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220012" scenariosection="" step="35">
 		<key key1="Enter" />
 		<window />
 	
 	</command>
-	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220013" scenariosection="" step="35">
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220013" scenariosection="" step="36">
 		<key key1="Enter" />
 		<window />
 	
 	</command>
-	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15982697672220014" scenariosection="" step="36">
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15982697672220014" scenariosection="" step="37">
 		<text>Thanks for the email.  I agree, there is no place like home.  If only more people would feel this way, we would sell more mortgages!  Hope to hear from you soon.</text>
 		<window />
 		<key />
 	
 	</command>
-	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220015" scenariosection="" step="37">
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220015" scenariosection="" step="38">
 		<key key1="Enter" />
 		<window />
 	
 	</command>
-	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220016" scenariosection="" step="38">
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="15982697672220016" scenariosection="" step="39">
 		<key key1="Enter" />
 		<window />
 	
 	</command>
-	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15982697672220017" scenariosection="" step="39">
+	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15982697672220017" scenariosection="" step="40">
 		<text>Automai Robot</text>
 		<window />
 		<key />
 	
 	</command>
-	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16347567439730012" scenariosection="" step="40">
+	<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16347567439730012" scenariosection="" step="41">
 		<key key1="Ctrl" key2="s" />
 		<window />
 	
 	</command>
-	<command type="comment" comment="Close the email" commentedout="0" id="16347567439730017" scenariosection="" step="41">
+	<command type="comment" comment="Close the email" commentedout="0" id="16347567439730017" scenariosection="" step="42">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Discard" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050009" scenariosection="Discard" step="42">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Discard" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16518660228050009" scenariosection="Discard" step="43">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
 		<bitmapname xpos="815" ypos="143" relative_xpos="814" relative_ypos="142" xsize="70" ysize="18">Discard(1).bmp</bitmapname>
 	
-		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16518660228050010" scenariosection="" step="43">
+		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16518660228050010" scenariosection="" step="44">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="comment" comment="Close Outlook" commentedout="0" id="16347567439730042" scenariosection="" step="44">
+	<command type="comment" comment="Close Outlook" commentedout="0" id="16347567439730042" scenariosection="" step="45">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%CloseOutlook_OnEnd% == 1" showelse="0" commentedout="0" id="16518660228050014" scenariosection="" step="45">
+	<command type="if" expression="%CloseOutlook_OnEnd% == 1" showelse="0" commentedout="0" id="16518660228050014" scenariosection="" step="46">
 	
-		<then commentedout="0" id="16518660228050015" scenariosection="" step="46">
+		<then commentedout="0" id="16518660228050015" scenariosection="" step="47">
 		
-			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16518660228050016" scenariosection="" stepalias="If MS OUTLOOK is Open close it" step="47">
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16518660228050016" scenariosection="" stepalias="If MS OUTLOOK is Open close it" step="48">
 				<variable1 variable="WindowTitle" vartype="String" expression="OUTLOOK"></variable1>
 				<variable2 variable="AppName" vartype="String" expression="OUTLOOK"></variable2>
 				<variable3 vartype="String"></variable3>
@@ -224,7 +227,7 @@
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16518660228050017" scenariosection="" step="48">
+		<else commentedout="0" id="16518660228050017" scenariosection="" step="49">
 		
 		</else>
 	</command>
