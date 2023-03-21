@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Check_app_name.xml" scenariotype="Snippet" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="10/18/2021 01:25:10 PM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 12:48:41 PM" lastusedid="16760355222560004" scenarioid="1676035522256" sbversion="23.3.10" description="Check and App is running" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Check_app_name.xml" scenariotype="Snippet" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="10/18/2021 01:25:10 PM" lastmodifiedby="rloader099" lastmodifieddate="3/20/2023 05:59:18 PM" lastusedid="16793349404270001" scenarioid="1679334940427" sbversion="23.3.10" description="Check and App is running" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="comment" comment="Check if the supplied app is already running or not" commentedout="0" id="16345635105540003" scenariosection="" step="1">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="windowaction" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " isremote="1" timeout="1000" continueonfail="1" statusvariable="AppRunning" anchorx="Left" anchory="Top" commentedout="0" id="16345635103570003" scenariosection="" step="2">
+	<command type="windowaction" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " isremote="1" timeout="2000" continueonfail="1" statusvariable="AppRunning" anchorx="Left" anchory="Top" commentedout="0" id="16345635103570003" scenariosection="" step="2">
 		<window windowsname="%WindowTitle%" processname="%AppName%" />
 		<coords />
 		<size />
@@ -18,35 +18,39 @@
 			<command type="comment" comment="Time Application launch" commentedout="0" id="16345635105540004" scenariosection="" step="5">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="execute" stylename="pshellcommand" powershellcommand="{{Start-Process &quot;&quot;&quot;}}%AppLocation%{{&quot;&quot;&quot; -WindowStyle Normal}}" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16345635105540006" scenariosection="" step="6">
-				<expression expression="" />
+			<command type="execute" stylename="pshellcommand" powershellcommand="{{Start-Process &quot;&quot;&quot;}}%AppLocation%{{&quot;&quot;&quot; -WindowStyle Normal}}" execpolicy="Bypass" isremote="1" timeout="600000" statusvariable="ExecMyComponentStatus" commentedout="1" id="16345635105540006" scenariosection="" step="6">
+				<expression expression="#content#" />
 			
 			</command>
-			<command type="windowaction" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " isremote="1" timeout="5000" continueonfail="1" statusvariable="AppRunning" anchorx="Left" anchory="Top" commentedout="0" id="16345635103570004" scenariosection="" step="7">
+			<command type="openapplication" isremote="1" commentedout="0" id="16793349404270001" step="7" scenariosection="">
+				<application>%AppLocation%</application>
+			
+			</command>
+			<command type="windowaction" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " isremote="1" timeout="60000" continueonfail="0" statusvariable="AppRunning" anchorx="Left" anchory="Top" commentedout="0" id="16345635103570004" scenariosection="" step="8">
 				<window windowsname="%WindowTitle%" processname="%AppName%" />
 				<coords />
 				<size />
 			
 			</command>
-			<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\\Automai\content\Set-Window.ps1&quot;&quot;&quot; -ProcessName }}%AppName% -X 0 -Y 0 -Width %AppWidth% -Height %AppHeight%" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16760355222560004" scenariosection="" stepalias="Windows Resize and Move" step="8">
-				<expression expression="" />
+			<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\\Automai\content\Set-Window.ps1&quot;&quot;&quot; -ProcessName }}%AppName% -X 0 -Y 0 -Width %AppWidth% -Height %AppHeight%" execpolicy="Bypass" isremote="1" timeout="600000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16760355222560004" scenariosection="" stepalias="Windows Resize and Move" step="9">
+				<expression expression="#content#" />
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16345635105540016" scenariosection="" step="9">
+		<else commentedout="0" id="16345635105540016" scenariosection="" step="10">
 		
-			<command type="if" expression="%BrowserApp% == 1" showelse="0" commentedout="0" id="16345635109230005" scenariosection="" step="10">
+			<command type="if" expression="%BrowserApp% == 1" showelse="0" commentedout="0" id="16345635109230005" scenariosection="" step="11">
 			
-				<then commentedout="0" id="16345635109230006" scenariosection="" step="11">
+				<then commentedout="0" id="16345635109230006" scenariosection="" step="12">
 				
-					<command type="windowaction" action="Focus" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " isremote="1" timeout="10000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16345635109230004" scenariosection="" step="12">
+					<command type="windowaction" action="Focus" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " isremote="1" timeout="60000" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16345635109230004" scenariosection="" step="13">
 						<window windowsname="%WindowTitle%" processname="%AppName%" />
 						<coords />
 						<size />
 					
 					</command>
 				</then>
-				<else commentedout="0" id="16345635109230007" scenariosection="" step="13">
+				<else commentedout="0" id="16345635109230007" scenariosection="" step="14">
 				
 				</else>
 			</command>

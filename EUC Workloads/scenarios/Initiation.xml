@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Initiation.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="6/21/2021 06:34:05 PM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 10:59:06 AM" lastusedid="16790507232820001" scenarioid="1679050723282" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Preparation for all settings relevant to the testing scenario" step="0">
+<commandcontainer type="scenario" name="Initiation.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="6/21/2021 06:34:05 PM" lastmodifiedby="rloader099" lastmodifieddate="3/20/2023 05:57:36 PM" lastusedid="16793210566130000" scenarioid="1679321056613" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Preparation for all settings relevant to the testing scenario" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="Wait" millisecs="30000" commentedout="1" id="16294009791790001" scenariosection="" step="1">
@@ -16,13 +16,14 @@
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
-	</command>
-	<command type="findbitmap" stringtofind="" imagetype="button" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectwidth="709" objectheight="22" timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Parent" statusvariable="StartOpened" commentedout="0" id="16739864990650002" scenariosection="" step="4">
-		<searcharea dx="0" dy="0" />
-		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
-		<coordvars />
-		<bitmapname xpos="167" ypos="965" xsize="26" ysize="14">Start_Profile_Img.bmp</bitmapname>
-	
+		<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="" imagetype="button" objectwidth="709" objectheight="22" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="StartOpened" usecurrentwindow="1" commentedout="0" id="16739864990650002" scenariosection="" step="4">
+			<searcharea dx="" dy="" />
+			<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+			<coordvars />
+			<window />
+			<bitmapname xpos="167" ypos="965" xsize="26" ysize="14">Start_Profile_Img.bmp</bitmapname>
+		
+		</command>
 	</command>
 	<command type="comment" comment="Try the start menu multiple times if it does not work the first time on initial login" commentedout="0" id="16739864990650013" scenariosection="" step="5">
 		<color r="128" g="128" b="128" a="128" />
@@ -46,10 +47,11 @@
 			
 			</command>
 		</command>
-		<command type="findbitmap" stringtofind="" imagetype="button" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " objectwidth="709" objectheight="22" timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Parent" statusvariable="StartOpened" commentedout="0" id="16739864990650012" scenariosection="" step="10">
+		<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="" imagetype="button" objectwidth="709" objectheight="22" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="StartOpened" usecurrentwindow="1" commentedout="0" id="16739864990650012" scenariosection="" step="10">
 			<searcharea dx="0" dy="0" />
 			<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 			<coordvars />
+			<window />
 			<bitmapname xpos="167" ypos="965" xsize="26" ysize="14">Start_Profile_Img.bmp</bitmapname>
 		
 		</command>
@@ -65,7 +67,7 @@
 		<window />
 	
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" timeout="10000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16243056391120030" scenariosection="" stepalias="Click on the powershell window that just opened" step="13">
+	<command type="findbitmap" stylename="find_image_in_active_window" timeout="60000" continueonfail="" percentlinetolerance="10" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16243056391120030" scenariosection="" stepalias="Click on the powershell window that just opened" step="13">
 		<searcharea xstart="" ystart="" xend="" yend="" dx="" dy="" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
@@ -92,17 +94,20 @@
 			<size />
 		
 		</command>
-		<command type="execute" stylename="pshellcommand" powershellcommand="{{New-Item $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -ItemType Directory -Force}}" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900005" scenariosection="" step="18">
+		<command type="execute" stylename="pshellcommand" powershellcommand="{{New-Item $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -ItemType Directory -Force}}" execpolicy="Bypass" isremote="1" timeout="600000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900005" scenariosection="" step="18">
+			<expression expression="#output#" />
 		
 		</command>
-		<command type="execute" stylename="pshellcommand" powershellcommand="{{Expand-Archive -Path &quot;&quot;&quot;}}%Content_Zip%{{&quot;&quot;&quot; -DestinationPath $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -Force}}" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16790507232820001" scenariosection="" step="19">
+		<command type="execute" stylename="pshellcommand" powershellcommand="{{Expand-Archive -Path &quot;&quot;&quot;}}%Content_Zip%{{&quot;&quot;&quot; -DestinationPath $(&quot;&quot;&quot;$env:userprofile\Automai&quot;&quot;&quot;) -Force}}" execpolicy="Bypass" isremote="1" timeout="600000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16790507232820001" scenariosection="" step="19">
+			<expression expression="#output#" />
 		
 		</command>
 		<command type="if" expression="%Outlook_Mode% == O365" showelse="0" commentedout="0" id="16354377511120001" scenariosection="" stepalias="If the environment type set matches the environment type of the command run it" step="20">
 		
 			<then commentedout="0" id="16354377511120002" scenariosection="" step="21">
 			
-				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLO365.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" isremote="1" timeout="30000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900019" scenariosection="" step="22">
+				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLO365.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" isremote="1" timeout="600000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900019" scenariosection="" step="22">
+					<expression expression="#output#" />
 				
 				</command>
 			</then>
@@ -114,8 +119,8 @@
 		
 			<then commentedout="0" id="16354377511120013" scenariosection="" step="25">
 			
-				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLPST.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" isremote="1" timeout="30000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900020" scenariosection="" step="26">
-					<expression expression="#result#" />
+				<command type="execute" stylename="pshellcommand" powershellcommand="{{&amp; &quot;&quot;&quot;$($env:userprofile)\Automai\content\ALLPST.ps1&quot;&quot;&quot;}}" execpolicy="Bypass" workingfolder="" isremote="1" timeout="600000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16511416275900020" scenariosection="" step="26">
+					<expression expression="#output#" />
 				
 				</command>
 			</then>

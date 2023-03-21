@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="EUC_Main.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" csvfilename="Citrix Logons.csv" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="7/30/2021 11:54:25 AM" lastmodifiedby="rloader099" lastmodifieddate="3/17/2023 01:00:14 PM" lastusedid="16782921535940003" scenarioid="1678292153594" sbversion="23.3.10" description="Main Initiation Script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="EUC_Main.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" csvfilename="Citrix Logons.csv" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="7/30/2021 11:54:25 AM" lastmodifiedby="rloader099" lastmodifieddate="3/20/2023 04:17:31 PM" lastusedid="16793290510140000" scenarioid="1679329051014" sbversion="23.3.10" description="Main Initiation Script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="comment" comment="Configure applications and environment  in scope for workload run" commentedout="0" id="16353616662210001" scenariosection="" step="1">
@@ -96,13 +96,13 @@
 	<command type="setvariable" variable="Word_Location" expression="C:\Program Files\Microsoft Office\root\Office16\winword.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16353616662210028" scenariosection="" stepalias="Location of Word executable" step="31">
 	
 	</command>
-	<command type="comment" comment="CHANGING APP WIDTH AND HEIGHT MAY BREAK WORKLOADS" commentedout="0" id="16782921535940003" step="32" scenariosection="">
+	<command type="comment" comment="CHANGING APP WIDTH AND HEIGHT MAY BREAK WORKLOADS" commentedout="0" id="16782921535940003" scenariosection="" step="32">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="setvariable" stylename="rand" variable="AppWidth" vartype="number" scope="Script" expression="1200" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16782921535940001" step="33" scenariosection="">
+	<command type="setvariable" stylename="rand" variable="AppWidth" vartype="number" scope="Script" expression="1200" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16782921535940001" scenariosection="" step="33">
 	
 	</command>
-	<command type="setvariable" stylename="rand" variable="AppHeight" vartype="number" scope="Script" expression="1000" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16782921535940002" step="34" scenariosection="">
+	<command type="setvariable" stylename="rand" variable="AppHeight" vartype="number" scope="Script" expression="1000" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16782921535940002" scenariosection="" step="34">
 	
 	</command>
 	<command type="filler" commentedout="0" id="16353616662210029" scenariosection="" step="35">
@@ -540,7 +540,7 @@
 		<color r="128" g="0" b="128" a="255" />
 	
 	</command>
-	<onfail rexp="0" commentedout="0" id="16353616662210131" scenariosection="" step="178">
+	<onfail rexp="1" commentedout="0" id="16353616662210131" scenariosection="" step="178">
 	
 		<command type="if" expression="%Logoff_On_Failure% != 0" showelse="0" commentedout="0" id="16353616662210130" scenariosection="" step="179">
 		

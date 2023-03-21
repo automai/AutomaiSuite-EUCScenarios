@@ -26,15 +26,15 @@
   <scenario name="Browser_Bouncing.xml" scenariotype="Process" />
   <scenario name="Browser - Video1.xml" scenariotype="Process" />
   <scenario name="Browser - Video2.xml" scenariotype="Process" />
-  <scenario name="Test.xml" scenariotype="Process" />
-  <scenario name="Initiation.xml" scenariotype="Process" />
   <scenario name="MS Outlook - Reply.xml" scenariotype="Process" />
-  <scenario name="MS Outlook - New.xml" scenariotype="Process" />
   <scenario name="MS Powerpoint.xml" scenariotype="Process" />
   <scenario name="MS Word.xml" scenariotype="Process" />
-  <scenario name="Check_app_name.xml" scenariotype="Snippet" />
   <scenario name="MS Excel.xml" scenariotype="Process" />
-  <scenario name="EUC_Main.xml" scenariotype="Process" />
-  <scenario name="Browser_Base.xml" scenariotype="Process" />
   <scenario name="Browser_External.xml" scenariotype="Snippet" />
+  <scenario name="EUC_Main.xml" scenariotype="Process" />
+  <scenario name="MS Outlook - New.xml" scenariotype="Process" />
+  <scenario name="Test.xml" scenariotype="Process" />
+  <scenario name="Browser_Base.xml" scenariotype="Process" />
+  <scenario name="Initiation.xml" scenariotype="Process" />
+  <scenario name="Check_app_name.xml" scenariotype="Snippet" />
 </project>

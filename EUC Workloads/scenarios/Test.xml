@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Test.xml" scenariotype="Process" screenwidth="1634" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="3/16/2023 12:41:47 PM" lastmodifiedby="rloader099" lastmodifieddate="3/16/2023 04:30:16 PM" lastusedid="16789705427530038" scenarioid="1678970542753" sbversion="23.3.10" description="Test" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Test.xml" scenariotype="Process" screenwidth="1634" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="3/16/2023 12:41:47 PM" lastmodifiedby="rloader099" lastmodifieddate="3/20/2023 05:40:57 PM" lastusedid="16789705427530050" scenarioid="1678970542753" sbversion="23.3.10" description="Test" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
-	<command type="aichannel" ctype="CITRIX FULL SCREEN" cpath="\\automai-01.ctxlab.local\automai\aichannel" remoteinitid="rloader099" timeout="10000" commentedout="0" id="16789705427530036" step="1" scenariosection="">
+	<command type="keyboardcombo" cleanup="1" timeout="10000" commentedout="0" id="16789705427530050" step="1" scenariosection="">
+		<key key1="Alt" action1="Down" key2="f" action2="Press" />
+		<window />
 	
 	</command>
 
