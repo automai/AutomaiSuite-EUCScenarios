@@ -35,6 +35,6 @@
   <scenario name="MS Outlook - New.xml" scenariotype="Process" />
   <scenario name="Test.xml" scenariotype="Process" />
   <scenario name="Browser_Base.xml" scenariotype="Process" />
-  <scenario name="Initiation.xml" scenariotype="Process" />
   <scenario name="Check_app_name.xml" scenariotype="Snippet" />
+  <scenario name="Initiation.xml" scenariotype="Process" />
 </project>
