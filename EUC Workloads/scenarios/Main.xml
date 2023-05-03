@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Main.xml" scenariotype="Global" screenwidth="1626" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="4/20/2023 03:36:25 PM" lastmodifiedby="rloader099" lastmodifieddate="4/20/2023 03:40:54 PM" lastusedid="16820050058680004" scenarioid="1682005005868" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" step="0" scenariosection="">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="setvariable" variable="EmailAddress" expression="ljeffries@automai.com" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16820050058680001" step="1" scenariosection="">
+	
+	</command>
+	<command type="setvariable" variable="Password" expression="98B0B7676CFD35CED796B86E3C505F33" scope="Global" encrypted="1" vartype="string" commentedout="0" id="16820050058680002" step="2" scenariosection="">
+	
+	</command>
+	<command type="playscenario" scenariotype="All" filename="Login.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16820050058680003" step="3" scenariosection="">
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Main.xml" ReferenceTime="1"><command type="setvariable" variable="EmailAddress" expression="ljeffries@automai.com" /><command type="setvariable" variable="Password" expression="Password100" /></commandcontainer></Usage></commandcontainer>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Citrix Login.xml" scenariotype="Process" colordepth="32" lockinput="0" csvfilename="" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="9/7/2020 10:32:17 AM" lastmodifiedby="rloader099" lastmodifieddate="2/10/2023 12:21:34 PM" lastusedid="15942907371990015" scenarioid="1594290737199" sbversion="23.1.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Connect to Citrix" step="0">
+<commandcontainer type="scenario" name="Citrix Login.xml" scenariotype="Process" colordepth="32" lockinput="0" csvfilename="" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="9/7/2020 10:32:17 AM" lastmodifiedby="rloader099" lastmodifieddate="3/21/2023 09:08:48 PM" lastusedid="15942907374040000" scenarioid="1594290737404" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Connect to Citrix" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="citrixlogin" name="LAB" url="%Citrix_URL%" timeout="10000" citrixusername="%user_name%" citrixpassword="%user_password%" citrixdomain="%user_domain%" continueonfail="0" commentedout="0" id="15942907372520003" scenariosection="" step="1">
@@ -10,13 +10,13 @@
 	</command>
 	<command type="foreach" tmpvar="Automai" listvar="CTXDT" onfail="exit" commentedout="0" id="15942907372520008" scenariosection="" step="3">
 	
-		<command type="transaction" name="Logon" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="15942907371990002" step="4" scenariosection="">
+		<command type="transaction" name="Logon" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="15942907371990002" scenariosection="" step="4">
 		
 		</command>
 		<command type="citrixlaunch" name="LAB" timeout="360000" resourcevar="Automai" commentedout="0" id="15942907372520005" scenariosection="" step="5">
 		
 		</command>
-		<command type="comment" comment="Citrix Login Time Detection. You are only logged in when the desktop is accessible and working." commentedout="0" id="15942907371990012" step="6" scenariosection="">
+		<command type="comment" comment="Citrix Login Time Detection. You are only logged in when the desktop is accessible and working." commentedout="0" id="15942907371990012" scenariosection="" step="6">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
 		<command type="findbitmap" stylename="find_image_in_active_window" timeout="360000" continueonfail="" percentlinetolerance="6" colortolerance="0" anchorx="Center" anchory="Center" repaction="" repwait="1" reptimes="0" sleeptime="1000" balloon="0" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="15942907371990003" scenariosection="" stepalias="Find the start button and click it" step="7">
@@ -68,14 +68,14 @@
 			
 			</command>
 		</command>
-		<command type="transaction" name="Logon" end="1" referencetime="" report="" uflag="U" commentedout="0" id="15942907371990013" step="16" scenariosection="">
+		<command type="transaction" name="Logon" end="1" referencetime="" report="" uflag="U" commentedout="0" id="15942907371990013" scenariosection="" step="16">
 		
 		</command>
 		<command type="comment" comment="Click away from the start menu so the test resumes as normal" commentedout="0" id="15942907371990015" scenariosection="" step="17">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="moveclickmouse" useanchor="None" mousedrag="0" button="Left" action="Click" commentedout="0" id="15942907371990014" step="18" scenariosection="">
-			<coords x="800" y="800" dx="0" dy="0" />
+		<command type="moveclickmouse" useanchor="None" mousedrag="0" button="Left" action="Click" commentedout="0" id="15942907371990014" scenariosection="" step="18">
+			<coords x="800" y="600" dx="0" dy="0" />
 		
 		</command>
 	</command>

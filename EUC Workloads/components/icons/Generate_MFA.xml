@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Generate_MFA.xml" scenariotype="Snippet" screenwidth="1626" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="TEMP" createdby="rloader099" creationdate="4/21/2023 04:29:13 PM" lastmodifiedby="rloader099" lastmodifieddate="4/24/2023 05:53:09 PM" lastusedid="16823579758540017" scenarioid="1682357975854" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="if" expression="%SecretKey%  != EMPTY" showelse="0" commentedout="0" id="16823579758540001" step="1" scenariosection="">
+	
+		<then commentedout="0" id="16823579758540002" step="2" scenariosection="">
+		
+			<command type="execexternal" stylename="mfa" externaltype="batch" externalfilename="sb_actions.exe" param1="pgm=mfa" appendparam2="secret_key=" param2="%SecretKey%" appendparam3="QR=" param3="" appendparam4="interval=" param4="30" appendparam5="offset=" param5="0" variable="MFACodeGen" timeout="10000" commentedout="0" id="16823579758540009" scenariosection="" step="3">
+			
+			</command>
+			<command type="setvariable" variable="MFACode" expression="%MFACodeGen%" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16823579758540010" scenariosection="" step="4">
+			
+			</command>
+			<command type="writetoeventlog" eventtype="Information" continueonfail="1" commentedout="0" id="16823579758540015" step="5" scenariosection="">
+				<text>Secret Key was used to generate the MFA Code - %MFACode%</text>
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16823579758540003" step="6" scenariosection="">
+		
+		</else>
+	</command>
+	<command type="if" expression="%QRLocation%  != EMPTY" showelse="0" commentedout="0" id="16823579758540004" scenariosection="" step="7">
+	
+		<then commentedout="0" id="16823579758540005" scenariosection="" step="8">
+		
+			<command type="execexternal" stylename="mfa" externaltype="batch" externalfilename="sb_actions.exe" param1="pgm=mfa" appendparam2="secret_key=" appendparam3="QR=" param3="%QRLocation%" appendparam4="interval=" param4="30" appendparam5="offset=" param5="0" variable="MFACodeGen" timeout="10000" commentedout="0" id="16820945664820001" scenariosection="" step="9">
+			
+			</command>
+			<command type="setvariable" variable="MFACode" expression="%MFACodeGen%" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16820945664820002" scenariosection="" step="10">
+			
+			</command>
+			<command type="writetoeventlog" eventtype="Information" continueonfail="1" commentedout="0" id="16823579758540016" scenariosection="" step="11">
+				<text>QR Code was used to generate the MFA Code - %MFACode%</text>
+			
+			</command>
+		</then>
+		<else commentedout="0" id="16823579758540006" scenariosection="" step="12">
+		
+		</else>
+	</command>
+	<command type="if" expression="(%SecretKey%  == EMPTY) AND (%QRLocation% == EMPTY)" showelse="0" commentedout="0" id="16823579758540011" step="13" scenariosection="">
+	
+		<then commentedout="0" id="16823579758540012" step="14" scenariosection="">
+		
+			<command type="writetoeventlog" eventtype="Warning" continueonfail="1" commentedout="0" id="16823579758540017" scenariosection="" step="15">
+				<text>The MFA Scenario was called but there was no secret key or QR code supplied to generate a code. Please make sure to add this in the CSV.</text>
+			
+			</command>
+			<command type="exit" container="Automation" exittype="1" exitmsg="The MFA Scenario was called but there was no secret key or QR code supplied to generate a code. Please make sure to add this in the CSV." commentedout="0" id="16823579758540014" step="16" scenariosection="">
+			</command>
+		</then>
+		<else commentedout="0" id="16823579758540013" step="17" scenariosection="">
+		
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="MFACode.xml" /></Usage></commandcontainer>

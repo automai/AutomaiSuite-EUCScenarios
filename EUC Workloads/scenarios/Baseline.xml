@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="Baseline.xml" scenariotype="Process" screenwidth="1626" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="5/2/2023 02:13:34 PM" lastmodifiedby="rloader099" lastmodifieddate="5/2/2023 02:22:58 PM" lastusedid="16756064140510008" scenarioid="1675606414051" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" step="0" scenariosection="">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="transaction" name="Start Word" begin="1" baseline="1" referencetime="" report="" uflag="U" commentedout="0" id="16756064140510001" scenariosection="" step="1">
+	
+	</command>
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16756064140510002" scenariosection="" stepalias="Check if MS WORD is running and launch it" step="2">
+		<variable1 variable="WindowTitle" vartype="String" expression="Word"></variable1>
+		<variable2 variable="AppName" vartype="String" expression="WINWORD"></variable2>
+		<variable3 variable="AppLocation" vartype="String" expression="%Word_Location%"></variable3>
+		<variable4 variable="TaskbarImage" vartype="Image" xsize="24" ysize="12">Word_Taskbar_Icon.bmp</variable4>
+		<variable5 vartype="Image"></variable5>
+		<variable6 vartype="Image"></variable6>
+		<variable7 vartype="String"></variable7>
+		<variable8 vartype="String"></variable8>
+		<variable9 vartype="String"></variable9>
+		<variable10 vartype="Image"></variable10>
+	
+	</command>
+	<command type="transaction" name="Start Word" end="1" baseline="1" referencetime="" report="" uflag="U" commentedout="0" id="16756064140510003" scenariosection="" step="3">
+	
+	</command>
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16756064140510004" scenariosection="" stepalias="Close WORD" step="4">
+		<variable1 variable="WindowTitle" vartype="String" expression="Word"></variable1>
+		<variable2 variable="AppName" vartype="String" expression="WINWORD"></variable2>
+		<variable3 vartype="String"></variable3>
+		<variable4 variable="" vartype="Image" xsize="24" ysize="12"></variable4>
+		<variable5 variable="DontSaveButton" vartype="Image" xpos="477" ypos="388" xsize="60" ysize="16">MS Word_Img1(1).bmp</variable5>
+		<variable6 vartype="Image"></variable6>
+		<variable7 vartype="String"></variable7>
+		<variable8 vartype="String"></variable8>
+		<variable9 vartype="String"></variable9>
+		<variable10 vartype="Image"></variable10>
+	
+	</command>
+	<command type="transaction" name="Start Excel" begin="1" baseline="1" referencetime="" report="" uflag="U" commentedout="0" id="16756064140510005" scenariosection="" step="5">
+	
+	</command>
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="16756064140510006" scenariosection="" stepalias="Check if EXCEL is running and launch it" step="6">
+		<variable1 variable="WindowTitle" vartype="String" expression="Excel"></variable1>
+		<variable2 variable="AppName" vartype="String" expression="EXCEL"></variable2>
+		<variable3 variable="AppLocation" vartype="String" expression="%Excel_Location%"></variable3>
+		<variable4 variable="" vartype="Image" xsize="23" ysize="13"></variable4>
+		<variable5 vartype="Image"></variable5>
+		<variable6 vartype="Image"></variable6>
+		<variable7 vartype="String"></variable7>
+		<variable8 vartype="String"></variable8>
+		<variable9 vartype="String"></variable9>
+		<variable10 vartype="Image"></variable10>
+	
+	</command>
+	<command type="transaction" name="Start Excel" end="1" baseline="1" referencetime="" report="" uflag="U" commentedout="0" id="16756064140510007" scenariosection="" step="7">
+	
+	</command>
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Close_App_Name.xml" continueonfail="" statusvariable="App_Closed" commentedout="0" id="16756064140510008" scenariosection="" stepalias="If EXCEL is open close it" step="8">
+		<variable1 variable="WindowTitle" vartype="String" expression="EXCEL"></variable1>
+		<variable2 variable="AppName" vartype="String" expression="EXCEL"></variable2>
+		<variable3 vartype="String"></variable3>
+		<variable4 variable="" vartype="Image" xsize="23" ysize="13"></variable4>
+		<variable5 variable="DontSaveButton" vartype="Image" xsize="71" ysize="20">Dont Save(1).bmp</variable5>
+		<variable6 vartype="Image"></variable6>
+		<variable7 vartype="String"></variable7>
+		<variable8 vartype="String"></variable8>
+		<variable9 vartype="String"></variable9>
+		<variable10 vartype="Image"></variable10>
+	
+	</command>
+
+<Usage><commandcontainer type="scenario" name="Baseline.xml" ReferenceTime="1"><command type="transaction" name="Start Word"><commandcontainer type="scenario" name="Check_app_name.xml" ReferenceTime="1"><command type="setvariable" variable="trx_name" expression="Launch %AppName%" /><command type="transaction" name="%trx_name%" /></commandcontainer></command><commandcontainer type="scenario" name="Close_App_Name.xml" ReferenceTime="1"><command type="findbitmap"><bitmapname>%DontSaveButton%</bitmapname></command><command type="findbitmap"><bitmapname>%DontSaveButton%</bitmapname></command></commandcontainer></commandcontainer></Usage></commandcontainer>

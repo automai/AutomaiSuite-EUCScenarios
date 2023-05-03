@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<commandcontainer type="scenario" name="AVD Login.xml" scenariotype="Process" screenwidth="1626" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="TEMP" createdby="rloader099" creationdate="4/21/2023 02:47:00 PM" lastmodifiedby="rloader099" lastmodifieddate="4/24/2023 05:53:35 PM" lastusedid="16823516334040003" scenarioid="1682351633404" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
+
+	<command type="setvariable" variable="AVD_Desktop_Name" expression="MyDesktop" scope="Internal" encrypted="0" vartype="string" commentedout="0" id="16820884234000028" scenariosection="" step="1">
+	
+	</command>
+	<command type="setvariable" variable="AVD_Client_Location" expression="C:\Program Files\Remote Desktop\msrdcw.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16820884234000007" scenariosection="" step="2">
+	
+	</command>
+	<command type="setvariable" variable="EmailAddress" expression="leee.jeffries@leeejeffries.com" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16820884234000003" scenariosection="" step="3">
+	
+	</command>
+	<command type="setvariable" variable="UserPassword" expression="2A1F9FC0355629A199404E437FCA4726" scope="Global" encrypted="1" vartype="string" commentedout="0" id="16820884234000004" scenariosection="" step="4">
+	
+	</command>
+	<command type="setvariable" variable="MFAQRLocation" expression="C:\Users\rloader099\Desktop\LJ_MFAQRCODE.png" scope="Script" encrypted="0" vartype="string" commentedout="1" id="16820884234000005" scenariosection="" step="5">
+	
+	</command>
+	<command type="setvariable" variable="MFASecretKey" expression="NJ3GMZDRONVGIMDHMFITMR2GMZYEK4DR" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16823516334040001" step="6" scenariosection="">
+	
+	</command>
+	<command type="openapplication" commentedout="0" id="16820884234000008" scenariosection="" step="7">
+		<application>%AVD_Client_Location%</application>
+	
+	</command>
+	<command type="windowaction" action="Waitwindow" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="30000" statusvariable="AVDOpen" anchorx="Left" anchory="Top" commentedout="0" id="16820884234000013" scenariosection="" step="8">
+		<window windowsname="Remote Desktop" processname="msrdcw" x="104" y="104" width="1100" height="700" />
+		<coords />
+		<size width="1100" height="700" />
+	
+	</command>
+	<command type="windowaction" action="Focus" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="30000" statusvariable="AVDOpen" anchorx="Left" anchory="Top" commentedout="0" id="16820884234000058" scenariosection="" step="9">
+		<window windowsname="Remote Desktop" processname="msrdcw" x="104" y="104" width="1100" height="700" />
+		<coords />
+		<size width="1100" height="700" />
+	
+	</command>
+	<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="AVDNotSubscribe" usecurrentwindow="1" commentedout="0" id="16820884234000009" scenariosection="" step="10">
+		<searcharea dx="0" dy="0" />
+		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+		<coordvars />
+		<window />
+		<bitmapname xpos="128" ypos="307" relative_xpos="24" relative_ypos="203" xsize="108" ysize="44">AVD_Client_Subscribe.bmp</bitmapname>
+	
+	</command>
+	<command type="if" expression="%AVDNotSubscribe%  == SUCCESS" showelse="1" commentedout="0" id="16820884234000024" scenariosection="" step="11">
+	
+		<then commentedout="0" id="16820884234000025" scenariosection="" step="12">
+		
+			<command type="findbitmap" stylename="find_image_in_active_window" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="5000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="AVDNotSubscribe" usecurrentwindow="1" commentedout="0" id="16820884234000040" scenariosection="" step="13">
+				<searcharea dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<window />
+				<bitmapname xpos="128" ypos="307" relative_xpos="24" relative_ypos="203" xsize="108" ysize="44">AVD_Client_Subscribe.bmp</bitmapname>
+			
+				<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16820884234000041" scenariosection="" step="14">
+					<coords x="0" y="0" dx="0" dy="0" />
+				
+				</command>
+			</command>
+			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Use another account" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16820884234000031" scenariosection="Use another account" step="15">
+				<searcharea dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<window />
+				<bitmapname xpos="619" ypos="512" relative_xpos="210" relative_ypos="354" xsize="153" ysize="57">Use another account.bmp</bitmapname>
+			
+				<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16820884234000042" scenariosection="" step="16">
+					<coords x="0" y="0" dx="0" dy="0" />
+				
+				</command>
+				<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000043" scenariosection="" step="17">
+					<text>%EmailAddress%</text>
+					<window />
+					<key />
+				
+				</command>
+				<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000044" scenariosection="" step="18">
+					<key key1="Enter" />
+					<window />
+				
+				</command>
+				<command type="Wait" millisecs="2000" commentedout="0" id="16820884234000046" scenariosection="" step="19">
+				
+				</command>
+				<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000045" scenariosection="" step="20">
+					<text>%UserPassword%</text>
+					<window />
+					<key />
+				
+				</command>
+				<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000047" scenariosection="" step="21">
+					<key key1="Enter" />
+					<window />
+				
+				</command>
+				<command type="Wait" millisecs="2000" commentedout="0" id="16820884234000048" scenariosection="" step="22">
+				
+				</command>
+				<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Generate_MFA.xml" continueonfail="" statusvariable="MFACodeRun" commentedout="0" id="16820884234000060" scenariosection="" step="23">
+					<variable1 variable="QRLocation" vartype="String" expression="%MFAQRLocation%"></variable1>
+					<variable2 variable="SecretKey" vartype="String" expression="%MFASecretKey%"></variable2>
+					<variable3 vartype="String"></variable3>
+					<variable4 vartype="Image"></variable4>
+					<variable5 vartype="Image"></variable5>
+					<variable6 vartype="Image"></variable6>
+					<variable7 vartype="String"></variable7>
+					<variable8 vartype="String"></variable8>
+					<variable9 vartype="String"></variable9>
+					<variable10 vartype="Image"></variable10>
+				
+				</command>
+				<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000050" scenariosection="" step="24">
+					<text>%MFACode%</text>
+					<window />
+					<key />
+				
+				</command>
+				<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000051" scenariosection="" step="25">
+					<key key1="Enter" />
+					<window />
+				
+				</command>
+				<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="MyDesktop" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16820884234000027" scenariosection="SessionDesktop" step="26">
+					<searcharea dx="0" dy="0" />
+					<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+					<coordvars />
+					<window />
+					<bitmapname xpos="132" ypos="247" relative_xpos="28" relative_ypos="143" xsize="70" ysize="83">SessionDesktop.bmp</bitmapname>
+				
+					<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="DoubleClick" commentedout="0" id="16820884234000052" scenariosection="" step="27">
+						<coords x="0" y="0" dx="0" dy="0" />
+					
+					</command>
+				</command>
+			</command>
+			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Enter your credentials" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="CredentialsPrompt" usecurrentwindow="1" commentedout="0" id="16820884234000061" scenariosection="Enter your credentials" step="28">
+				<searcharea dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<window />
+				<bitmapname xpos="596" ypos="391" relative_xpos="11" relative_ypos="28" xsize="218" ysize="41">AVD_Enter your credentials.bmp</bitmapname>
+			
+			</command>
+			<command type="if" expression="%CredentialsPrompt%  == SUCCESS" showelse="0" commentedout="0" id="16820884234000062" scenariosection="" step="29">
+			
+				<then commentedout="0" id="16820884234000063" scenariosection="" step="30">
+				
+					<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000065" scenariosection="" step="31">
+						<text>%UserPassword%</text>
+						<window />
+						<key />
+					
+					</command>
+					<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000066" scenariosection="" step="32">
+						<key key1="Enter" />
+						<window />
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16820884234000064" scenariosection="" step="33">
+				
+				</else>
+			</command>
+		</then>
+		<else commentedout="0" id="16820884234000026" scenariosection="" step="34">
+		
+			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="MyDesktop" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16820884234000086" scenariosection="SessionDesktop" step="35">
+				<searcharea dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<window />
+				<bitmapname xpos="132" ypos="247" relative_xpos="28" relative_ypos="143" xsize="41" ysize="39">AVD_Desktop(1).bmp</bitmapname>
+				<bitmapname xpos="198" ypos="302" relative_xpos="42" relative_ypos="146" xsize="39" ysize="38">AVD_Desktop(2).bmp</bitmapname>
+			
+				<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="DoubleClick" commentedout="0" id="16820884234000087" scenariosection="" step="36">
+					<coords x="0" y="0" dx="0" dy="0" />
+				
+				</command>
+			</command>
+			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Enter your credentials" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="CredentialsPrompt" usecurrentwindow="1" commentedout="0" id="16820884234000080" scenariosection="Enter your credentials" step="37">
+				<searcharea dx="0" dy="0" />
+				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
+				<coordvars />
+				<window />
+				<bitmapname xpos="596" ypos="391" relative_xpos="11" relative_ypos="28" xsize="218" ysize="41">AVD_Enter your credentials.bmp</bitmapname>
+			
+			</command>
+			<command type="if" expression="%CredentialsPrompt%  == SUCCESS" showelse="0" commentedout="0" id="16820884234000081" scenariosection="" step="38">
+			
+				<then commentedout="0" id="16820884234000082" scenariosection="" step="39">
+				
+					<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000083" scenariosection="" step="40">
+						<text>%UserPassword%</text>
+						<window />
+						<key />
+					
+					</command>
+					<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000084" scenariosection="" step="41">
+						<key key1="Enter" />
+						<window />
+					
+					</command>
+				</then>
+				<else commentedout="0" id="16820884234000085" scenariosection="" step="42">
+				
+				</else>
+			</command>
+		</else>
+	</command>
+
+<Usage><commandcontainer type="scenario" name="AVD.xml" /></Usage></commandcontainer>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Close_App_Name.xml" scenariotype="Snippet" screenwidth="1280" screenheight="768" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads v1.2" createdby="ScriptingBot" creationdate="11/7/2022 01:31:40 PM" lastmodifiedby="rloader001" lastmodifieddate="1/4/2023 12:16:10 PM" lastusedid="16678279009930003" scenarioid="1667827900993" sbversion="22.12.1" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Close_App_Name.xml" scenariotype="Snippet" screenwidth="1280" screenheight="768" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ScriptingBot" creationdate="11/7/2022 01:31:40 PM" lastmodifiedby="rloader099" lastmodifieddate="3/27/2023 06:45:56 PM" lastusedid="16575463007050000" scenarioid="1657546300705" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="comment" comment="Check if app is running" commentedout="0" id="16678279007450001" scenariosection="" step="1">
@@ -15,17 +15,13 @@
 	
 		<then commentedout="0" id="16678279007450004" scenariosection="" step="4">
 		
-			<command type="windowaction" action="Close" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " advancedfind="0" isremote="1" timeout="10000" continueonfail="1" statusvariable="ExecMyWindowStatus" anchorx="Left" anchory="Top" commentedout="0" id="16678279007450005" scenariosection="" step="5">
+			<command type="windowaction" action="Close" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " advancedfind="0" isremote="1" timeout="10000" continueonfail="1" statusvariable="AppClosed" anchorx="Left" anchory="Top" commentedout="0" id="16678279007450005" scenariosection="" step="5">
 				<window windowsname="%WindowTitle%" processname="%appName%" x="-8" y="-8" width="1296" height="1000" />
 				<coords />
 				<size />
 			
 			</command>
-			<command type="execute" commandline="taskkill -f -im %AppName%.exe " timeout="10000" statusvariable="ExecMyComponentStatus" isremote="1" continueonfail="1" commentedout="0" id="16678279009930003" scenariosection="" step="6">
-				<expression expression="" />
-			
-			</command>
-			<command type="findbitmap" stylename="find_image_in_active_window" timeout="2000" onfaillabel="Next Action" continueonfail="1" percentlinetolerance="0" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="DontSaveDialog" usecurrentwindow="1" commentedout="0" id="16678279007450007" scenariosection="" step="7">
+			<command type="findbitmap" stylename="find_image_in_active_window" timeout="2000" onfaillabel="Next Action" continueonfail="1" percentlinetolerance="0" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="DontSaveDialog" usecurrentwindow="1" commentedout="0" id="16678279007450007" scenariosection="" step="6">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
@@ -33,31 +29,35 @@
 				<bitmapname>%DontSaveButton%</bitmapname>
 			
 			</command>
-			<command type="if" expression="%DontSaveDialog% == SUCCESS" showelse="0" commentedout="0" id="16678279007450008" scenariosection="" step="8">
+			<command type="if" expression="%DontSaveDialog% == SUCCESS" showelse="0" commentedout="0" id="16678279007450008" scenariosection="" step="7">
 			
-				<then commentedout="0" id="16678279007450009" scenariosection="" step="9">
+				<then commentedout="0" id="16678279007450009" scenariosection="" step="8">
 				
-					<command type="findbitmap" stylename="find_image_in_active_window" timeout="5000" onfaillabel="Next Action" continueonfail="1" percentlinetolerance="0" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="DontSaveDialog" usecurrentwindow="1" commentedout="0" id="16678279007450010" scenariosection="" step="10">
+					<command type="findbitmap" stylename="find_image_in_active_window" timeout="5000" onfaillabel="Next Action" continueonfail="1" percentlinetolerance="0" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="DontSaveDialog" usecurrentwindow="1" commentedout="0" id="16678279007450010" scenariosection="" step="9">
 						<searcharea dx="0" dy="0" />
 						<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 						<coordvars />
 						<window />
 						<bitmapname>%DontSaveButton%</bitmapname>
 					
-						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16678279007450011" scenariosection="" step="11">
+						<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16678279007450011" scenariosection="" step="10">
 							<coords x="0" y="0" dx="0" dy="0" />
 						
 						</command>
 					</command>
 				</then>
-				<else commentedout="0" id="16678279007450012" scenariosection="" step="12">
+				<else commentedout="0" id="16678279007450012" scenariosection="" step="11">
 				
 				</else>
+			</command>
+			<command type="execute" commandline="taskkill -f -im %AppName%.exe " timeout="10000" statusvariable="ExecMyComponentStatus" isremote="1" continueonfail="1" skipexpression="%AppClosed%  == SUCCESS" commentedout="0" id="16678279009930003" scenariosection="" step="12">
+				<expression expression="" />
+			
 			</command>
 		</then>
 		<else commentedout="0" id="16678279007450013" scenariosection="" step="13">
 		
-			<command type="execute" commandline="taskkill -f -im %AppName%.exe " timeout="10000" statusvariable="ExecMyComponentStatus" isremote="1" continueonfail="1" commentedout="0" id="16678279009930002" step="14" scenariosection="">
+			<command type="execute" commandline="taskkill -f -im %AppName%.exe " timeout="10000" statusvariable="ExecMyComponentStatus" isremote="1" continueonfail="1" commentedout="0" id="16678279009930002" scenariosection="" step="14">
 				<expression expression="" />
 			
 			</command>

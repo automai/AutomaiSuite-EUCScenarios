@@ -1,14 +1,11 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="MS Outlook - New.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="8/24/2020 01:22:10 PM" lastmodifiedby="rloader099" lastmodifieddate="3/20/2023 05:40:34 PM" lastusedid="16793340343400000" scenarioid="1679334034340" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="MS Outlook - New.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="8/24/2020 01:22:10 PM" lastmodifiedby="rloader099" lastmodifieddate="3/28/2023 07:47:54 PM" lastusedid="16800328744970000" scenarioid="1680032874497" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="comment" comment="WORKLOAD USES POINT OF REFERENCE AND APP MUST BE RESIZED" commentedout="0" id="16760321582660033" scenariosection="" step="1">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="transaction" name="Start Outlook" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16760321582660001" scenariosection="" step="2">
-	
-	</command>
-	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="15982753305040001" scenariosection="" stepalias="Check if MS OUTLOOK is running and launch it" step="3">
+	<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Check_app_name.xml" continueonfail="" statusvariable="Is_App_Running" commentedout="0" id="15982753305040001" scenariosection="" stepalias="Check if MS OUTLOOK is running and launch it" step="2">
 		<variable1 variable="WindowTitle" vartype="String" expression="OUTLOOK"></variable1>
 		<variable2 variable="AppName" vartype="String" expression="OUTLOOK"></variable2>
 		<variable3 variable="AppLocation" vartype="String" expression="%Outlook_Location%"></variable3>
@@ -21,48 +18,53 @@
 		<variable10 vartype="Image"></variable10>
 	
 	</command>
-	<command type="transaction" name="Start Outlook" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16760321582660002" scenariosection="" step="4">
-	
-	</command>
-	<command type="comment" comment="If office is in test mode we need to skip the sign-in dialog" commentedout="0" id="15982753307860001" scenariosection="" step="5">
+	<command type="comment" comment="If office is in test mode we need to skip the sign-in dialog" commentedout="0" id="15982753307860001" scenariosection="" step="3">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%Office_In_Test_Mode% == 1" showelse="0" commentedout="0" id="16760321582660017" scenariosection="" step="6">
+	<command type="if" expression="%Office_In_Test_Mode% == 1" showelse="0" commentedout="0" id="16760321582660017" scenariosection="" step="4">
 	
-		<then commentedout="0" id="16760321582660018" scenariosection="" step="7">
+		<then commentedout="0" id="16760321582660018" scenariosection="" step="5">
 		
-			<command type="findbitmap" stringtofind="Account Issue" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundActivation" commentedout="0" id="16760321582660019" scenariosection="" step="8">
+			<command type="findbitmap" stringtofind="Account Issue" imagetype="topLabel" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundActivation" commentedout="0" id="16760321582660019" scenariosection="" step="6">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
 				<bitmapname xpos="591" ypos="418" xsize="82" ysize="17">MS_Logo_Activation.bmp</bitmapname>
 			
-			</command>
-			<command type="if" expression="%FoundActivation% ==SUCCESS " showelse="0" commentedout="0" id="16760321582660020" scenariosection="" step="9">
-			
-				<then commentedout="0" id="16760321582660021" scenariosection="" step="10">
+				<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16793340343400001" scenariosection="" step="7">
+					<coords x="0" y="0" dx="0" dy="0" />
 				
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321582660022" scenariosection="" step="11">
+				</command>
+			</command>
+			<command type="if" expression="%FoundActivation% ==SUCCESS " showelse="0" commentedout="0" id="16760321582660020" scenariosection="" step="8">
+			
+				<then commentedout="0" id="16760321582660021" scenariosection="" step="9">
+				
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321582660022" scenariosection="" step="10">
 						<key key1="Tab" />
 						<window />
 					
 					</command>
-					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321582660023" scenariosection="" step="12">
+					<command type="keyboardkey" action="Press" isremote="0" timeout="10000" commentedout="0" id="16760321582660023" scenariosection="" step="11">
 						<key key1="Enter" />
 						<window />
 					
 					</command>
 				</then>
-				<else commentedout="0" id="16760321582660024" scenariosection="" step="13">
+				<else commentedout="0" id="16760321582660024" scenariosection="" step="12">
 				
 				</else>
 			</command>
-			<command type="findbitmap" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundSignIn" commentedout="0" id="16760321582660025" scenariosection="" step="14">
+			<command type="findbitmap" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="FoundSignIn" commentedout="0" id="16760321582660025" scenariosection="" step="13">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
 				<bitmapname xpos="500" ypos="304" xsize="14" ysize="10">MS_Logo_SignIn_Office.bmp</bitmapname>
 			
+				<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16793340343400002" scenariosection="" step="14">
+					<coords x="0" y="0" dx="0" dy="0" />
+				
+				</command>
 			</command>
 			<command type="if" expression="%FoundSignIn% ==SUCCESS " showelse="0" commentedout="0" id="16760321582660026" scenariosection="" step="15">
 			
