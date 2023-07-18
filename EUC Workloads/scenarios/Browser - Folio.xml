@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Browser - Folio.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="8/20/2020 01:44:49 PM" lastmodifiedby="rloader099" lastmodifieddate="3/27/2023 07:39:42 PM" lastusedid="16799455783010000" scenarioid="1679945578301" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Browser - Folio.xml" scenariotype="Process" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="8/20/2020 01:44:49 PM" lastmodifiedby="rloader099" lastmodifieddate="6/13/2023 03:36:16 PM" lastusedid="16866691839300000" scenarioid="1686669183930" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="15979310897890039" scenariosection="" step="1">
@@ -58,60 +58,60 @@
 	<command type="mousewheel" scrollup="0" scrolldown="3" commentedout="0" id="15979310897890009" scenariosection="" step="15">
 	
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Mockups" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710003" scenariosection="Mockups" step="16">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Mockups" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710003" scenariosection="Mockups" step="16">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
-		<bitmapname xpos="415" ypos="602" relative_xpos="414" relative_ypos="601" xsize="71" ysize="17">Mockups(1)(1).bmp</bitmapname>
+		<bitmapname xpos="656" ypos="395" relative_xpos="655" relative_ypos="394" xsize="72" ysize="22">Mockups(1)(1).bmp</bitmapname>
 	
 		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710004" scenariosection="" step="17">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Ui Kits" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710005" scenariosection="Ui Kits" step="18">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Ui Kits" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710005" scenariosection="Ui Kits" step="18">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
-		<bitmapname xpos="523" ypos="596" relative_xpos="522" relative_ypos="595" xsize="52" ysize="24">Ui Kits(1)(1).bmp</bitmapname>
+		<bitmapname xpos="759" ypos="397" relative_xpos="758" relative_ypos="396" xsize="58" ysize="18">Ui Kits(1)(1).bmp</bitmapname>
 	
 		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710006" scenariosection="" step="19">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Web Design" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710007" scenariosection="Web Design" step="20">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Web Design" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710007" scenariosection="Web Design" step="20">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
-		<bitmapname xpos="606" ypos="600" relative_xpos="605" relative_ypos="599" xsize="90" ysize="20">Web Design(1).bmp</bitmapname>
+		<bitmapname xpos="839" ypos="397" relative_xpos="838" relative_ypos="396" xsize="111" ysize="20">Web Design(1).bmp</bitmapname>
 	
 		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710008" scenariosection="" step="21">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Photography" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710009" scenariosection="Photography" step="22">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Photography" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710009" scenariosection="Photography" step="22">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
-		<bitmapname xpos="732" ypos="598" relative_xpos="731" relative_ypos="597" xsize="107" ysize="22">Photography(1).bmp</bitmapname>
+		<bitmapname xpos="970" ypos="391" relative_xpos="969" relative_ypos="390" xsize="107" ysize="27">Photography.bmp</bitmapname>
 	
 		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710010" scenariosection="" step="23">
 			<coords x="0" y="0" dx="0" dy="0" />
 		
 		</command>
 	</command>
-	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="All" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710011" scenariosection="All" step="24">
+	<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="All" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16354219635710011" scenariosection="All" step="24">
 		<searcharea dx="0" dy="0" />
 		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 		<coordvars />
 		<window />
-		<bitmapname xpos="249" ypos="600" relative_xpos="248" relative_ypos="599" xsize="30" ysize="18">All(1).bmp</bitmapname>
+		<bitmapname xpos="492" ypos="397" relative_xpos="491" relative_ypos="396" xsize="28" ysize="17">All.bmp</bitmapname>
 	
 		<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="Click" commentedout="0" id="16354219635710012" scenariosection="" step="25">
 			<coords x="0" y="0" dx="0" dy="0" />

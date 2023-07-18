@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Browser_Base.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="10/27/2021 02:26:35 PM" lastmodifiedby="rloader099" lastmodifieddate="3/28/2023 07:29:45 PM" lastusedid="16793348521570008" scenarioid="1679334852157" sbversion="23.3.10" description="Browser controller script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Browser_Base.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="10/27/2021 02:26:35 PM" lastmodifiedby="rloader099" lastmodifieddate="5/25/2023 12:23:46 PM" lastusedid="16850174267480000" scenarioid="1685017426748" sbversion="23.3.10" description="Browser controller script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="filler" commentedout="0" id="16730053799150001" scenariosection="" stepalias="Decide which browser is being used" step="1">
@@ -9,7 +9,7 @@
 	<command type="comment" comment="Decide which browser is being worked with and launch it" commentedout="0" id="16730053799150002" scenariosection="" step="2">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%Browser_Choice% == Chrome" showelse="0" commentedout="0" id="16730053799150015" scenariosection="" stepalias="If the Browser is Chrome work with it" step="3">
+	<command type="if" expression="%Browser_Choice% == chrome" showelse="0" commentedout="0" id="16730053799150015" scenariosection="" stepalias="If the Browser is Chrome work with it" step="3">
 	
 		<then commentedout="0" id="16730053799150013" scenariosection="" step="4">
 		
@@ -76,7 +76,7 @@
 		
 		</else>
 	</command>
-	<command type="if" expression="%Browser_Choice% == MSEdge" showelse="0" commentedout="0" id="16730053799150028" scenariosection="" stepalias="If the Browser is Edge work with it" step="16">
+	<command type="if" expression="%Browser_Choice% == msedge" showelse="0" commentedout="0" id="16730053799150028" scenariosection="" stepalias="If the Browser is Edge work with it" step="16">
 	
 		<then commentedout="0" id="16730053799150026" scenariosection="" step="17">
 		
@@ -143,7 +143,7 @@
 		
 		</else>
 	</command>
-	<command type="if" expression="%Browser_Choice% == IE" showelse="0" commentedout="0" id="16730053799150041" scenariosection="" stepalias="If the Browser is IE work with it" step="29">
+	<command type="if" expression="%Browser_Choice% == iexplore" showelse="0" commentedout="0" id="16730053799150041" scenariosection="" stepalias="If the Browser is IE work with it" step="29">
 	
 		<then commentedout="0" id="16730053799150039" scenariosection="" step="30">
 		
@@ -210,7 +210,7 @@
 		
 		</else>
 	</command>
-	<command type="if" expression="%Browser_Choice% == Firefox" showelse="0" commentedout="0" id="16730053799150056" scenariosection="" stepalias="If the Browser is Firefox work with it" step="42">
+	<command type="if" expression="%Browser_Choice% == firefox" showelse="0" commentedout="0" id="16730053799150056" scenariosection="" stepalias="If the Browser is Firefox work with it" step="42">
 	
 		<then commentedout="0" id="16730053799150054" scenariosection="" step="43">
 		

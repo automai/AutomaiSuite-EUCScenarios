@@ -1,22 +1,15 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Logoff User.xml" scenariotype="Snippet" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="9/16/2021 10:40:32 AM" lastmodifiedby="rloader099" lastmodifieddate="4/13/2023 05:56:44 PM" lastusedid="16814086046220000" scenarioid="1681408604622" sbversion="23.3.10" description="Logoff User on Failure" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="Logoff User.xml" scenariotype="Snippet" colordepth="32" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader001" creationdate="9/16/2021 10:40:32 AM" lastmodifiedby="rloader099" lastmodifieddate="6/19/2023 06:58:10 PM" lastusedid="16814086046220001" scenarioid="1681408604622" sbversion="23.3.10" description="Logoff User on Failure" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="transaction" name="Logoff" begin="1" referencetime="" report="" uflag="U" commentedout="0" id="16317889223540010" scenariosection="" step="1">
 	
 	</command>
-	<command type="execute" stylename="pshellcommand" powershellcommand="logoff" execpolicy="Bypass" isremote="1" timeout="10000" statusvariable="ExecMyComponentStatus" commentedout="0" id="16317889223540009" scenariosection="" step="2">
+	<command type="execute" stylename="pshellcommand" powershellcommand="logoff" execpolicy="Bypass" isremote="1" timeout="120000" statusvariable="ExecMyComponentStatus" continueonfail="1" commentedout="0" id="16317889223540009" scenariosection="" step="2">
 		<expression expression="" />
 	
 	</command>
-	<command type="findbitmap" stylename="wait_image_to_disappear" timeout="30000" continueonfail="1" percentlinetolerance="0" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" waittodisappear="1" statusvariable="ExecMyImageStatus" commentedout="0" id="16317889223540014" scenariosection="" step="3">
-		<searcharea dx="0" dy="0" />
-		<excludearea xstart="0" ystart="0" xend="0" yend="0" />
-		<window />
-		<bitmapname xsize="38" ysize="32">Initiation_Img5_alt2.bmp</bitmapname>
-	
-	</command>
-	<command type="transaction" name="Logoff" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16317889223540015" scenariosection="" step="4">
+	<command type="transaction" name="Logoff" end="1" referencetime="" report="" uflag="U" commentedout="0" id="16317889223540015" scenariosection="" step="3">
 	
 	</command>
 

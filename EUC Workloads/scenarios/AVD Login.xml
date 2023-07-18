@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="AVD Login.xml" scenariotype="Global" screenwidth="1626" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="4/21/2023 02:47:00 PM" lastmodifiedby="rloader099" lastmodifieddate="4/27/2023 02:19:16 PM" lastusedid="16823643192600000" scenarioid="1682364319260" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="AVD Login.xml" scenariotype="Global" screenwidth="1626" screenheight="1123" colordepth="32" fontsmoothing="On" fontsmoothinggamma="0" fontsmoothingorientation="RGB" fontsmoothingtype="ClearType" lockinput="0" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="rloader099" creationdate="4/21/2023 02:47:00 PM" lastmodifiedby="rloader099" lastmodifieddate="6/7/2023 03:59:47 PM" lastusedid="16861529375310000" scenarioid="1686152937531" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="openapplication" commentedout="0" id="16820884234000008" scenariosection="" step="1">
@@ -42,7 +42,7 @@
 				
 				</command>
 			</command>
-			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Use another account" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16820884234000031" scenariosection="Use another account" step="9">
+			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Use another account" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16820884234000031" scenariosection="Use another account" step="9">
 				<searcharea dx="0" dy="0" />
 				<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 				<coordvars />
@@ -53,70 +53,70 @@
 					<coords x="0" y="0" dx="0" dy="0" />
 				
 				</command>
-				<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000043" scenariosection="" step="11">
-					<text>%email_address%</text>
-					<window />
-					<key />
-				
-				</command>
-				<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000044" scenariosection="" step="12">
-					<key key1="Enter" />
-					<window />
-				
-				</command>
-				<command type="Wait" millisecs="2000" commentedout="0" id="16820884234000046" scenariosection="" step="13">
-				
-				</command>
-				<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000045" scenariosection="" step="14">
-					<text>%user_password%</text>
-					<window />
-					<key />
-				
-				</command>
-				<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000047" scenariosection="" step="15">
-					<key key1="Enter" />
-					<window />
-				
-				</command>
-				<command type="Wait" millisecs="2000" commentedout="0" id="16820884234000048" scenariosection="" step="16">
-				
-				</command>
-				<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Generate_MFA.xml" continueonfail="" statusvariable="MFACodeRun" commentedout="0" id="16820884234000060" scenariosection="" step="17">
-					<variable1 variable="QRLocation" vartype="String" expression="%qrlocation%"></variable1>
-					<variable2 variable="SecretKey" vartype="String" expression="%secretkey%"></variable2>
-					<variable3 vartype="String"></variable3>
-					<variable4 vartype="Image"></variable4>
-					<variable5 vartype="Image"></variable5>
-					<variable6 vartype="Image"></variable6>
-					<variable7 vartype="String"></variable7>
-					<variable8 vartype="String"></variable8>
-					<variable9 vartype="String"></variable9>
-					<variable10 vartype="Image"></variable10>
-				
-				</command>
-				<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000050" scenariosection="" step="18">
-					<text>%MFACode%</text>
-					<window />
-					<key />
-				
-				</command>
-				<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000051" scenariosection="" step="19">
-					<key key1="Enter" />
-					<window />
-				
-				</command>
-				<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="MyDesktop" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16820884234000027" scenariosection="SessionDesktop" step="20">
+				<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="MyDesktop" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 0 " timeout="10000" continueonfail="" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="Window" waittodisappear="0" statusvariable="ExecMyImageStatus" usecurrentwindow="1" commentedout="0" id="16820884234000027" scenariosection="SessionDesktop" step="11">
 					<searcharea dx="0" dy="0" />
 					<excludearea xstart="0" ystart="0" xend="0" yend="0" />
 					<coordvars />
 					<window />
 					<bitmapname xpos="132" ypos="247" relative_xpos="28" relative_ypos="143" xsize="41" ysize="39">AVD_Desktop(1).bmp</bitmapname>
 				
-					<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="DoubleClick" commentedout="0" id="16820884234000052" scenariosection="" step="21">
+					<command type="moveclickmouse" useanchor="Parent" mousedrag="0" button="Left" action="DoubleClick" commentedout="0" id="16820884234000052" scenariosection="" step="12">
 						<coords x="0" y="0" dx="0" dy="0" />
 					
 					</command>
 				</command>
+			</command>
+			<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000043" scenariosection="" step="13">
+				<text>%email_address%</text>
+				<window />
+				<key />
+			
+			</command>
+			<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000044" scenariosection="" step="14">
+				<key key1="Enter" />
+				<window />
+			
+			</command>
+			<command type="Wait" millisecs="2000" commentedout="0" id="16820884234000046" scenariosection="" step="15">
+			
+			</command>
+			<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000045" scenariosection="" step="16">
+				<text>%user_password%</text>
+				<window />
+				<key />
+			
+			</command>
+			<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000047" scenariosection="" step="17">
+				<key key1="Enter" />
+				<window />
+			
+			</command>
+			<command type="Wait" millisecs="2000" commentedout="0" id="16820884234000048" scenariosection="" step="18">
+			
+			</command>
+			<command type="playscenario" stylename="playsnippet" scenariotype="Snippet" filename="Generate_MFA.xml" continueonfail="" statusvariable="MFACodeRun" commentedout="0" id="16820884234000060" scenariosection="" step="19">
+				<variable1 variable="QRLocation" vartype="String" expression="%qrlocation%"></variable1>
+				<variable2 variable="SecretKey" vartype="String" expression="%secretkey%"></variable2>
+				<variable3 vartype="String"></variable3>
+				<variable4 vartype="Image"></variable4>
+				<variable5 vartype="Image"></variable5>
+				<variable6 vartype="Image"></variable6>
+				<variable7 vartype="String"></variable7>
+				<variable8 vartype="String"></variable8>
+				<variable9 vartype="String"></variable9>
+				<variable10 vartype="Image"></variable10>
+			
+			</command>
+			<command type="keyboardtypetext" encrypted="" timeout="" advancedfind="" delay="" cleanup="1" commentedout="0" id="16820884234000050" scenariosection="" step="20">
+				<text>%MFACode%</text>
+				<window />
+				<key />
+			
+			</command>
+			<command type="keyboardkey" action="Press" timeout="10000" commentedout="0" id="16820884234000051" scenariosection="" step="21">
+				<key key1="Enter" />
+				<window />
+			
 			</command>
 			<command type="findbitmap" stylename="find_image_in_active_window" stringtofind="Enter your credentials" ocrconfig="0 8 65 32 16 512 128 4 5 50 3 20 15 10 0.85 0 5 15 eng 3 40 300 11 1 1 20 1 " timeout="5000" continueonfail="1" percentlinetolerance="5" colortolerance="0" anchorx="Center" anchory="Center" repaction="Page Down" repwait="1" reptimes="0" sleeptime="1000" useanchor="None" statusvariable="CredentialsPrompt" usecurrentwindow="1" commentedout="0" id="16820884234000061" scenariosection="Enter your credentials" step="22">
 				<searcharea dx="0" dy="0" />

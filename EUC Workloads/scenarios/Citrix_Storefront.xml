@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="Citrix Login.xml" scenariotype="Process" colordepth="32" lockinput="0" csvfilename="" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="9/7/2020 10:32:17 AM" lastmodifiedby="rloader099" lastmodifieddate="3/21/2023 09:08:48 PM" lastusedid="15942907374040000" scenarioid="1594290737404" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Connect to Citrix" step="0">
+<commandcontainer type="scenario" name="Citrix_Storefront.xml" scenariotype="Process" colordepth="32" lockinput="0" csvfilename="" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="ssun" creationdate="9/7/2020 10:32:17 AM" lastmodifiedby="rloader099" lastmodifieddate="5/25/2023 12:10:09 PM" lastusedid="15942907377290000" scenarioid="1594290737729" sbversion="23.3.10" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" stepalias="Connect to Citrix" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
-	<command type="citrixlogin" name="LAB" url="%Citrix_URL%" timeout="10000" citrixusername="%user_name%" citrixpassword="%user_password%" citrixdomain="%user_domain%" continueonfail="0" commentedout="0" id="15942907372520003" scenariosection="" step="1">
+	<command type="citrixlogin" name="LAB" url="%Citrix_Storefront_URL%" timeout="10000" citrixusername="%user_name%" citrixpassword="%user_password%" citrixdomain="%user_domain%" continueonfail="0" commentedout="0" id="15942907372520003" scenariosection="" step="1">
 	
 	</command>
 	<command type="citrixlist" name="LAB" timeout="10000" filter="%Citrix_Desktop_Name%" variable="CTXDT" commentedout="0" id="15942907372520004" scenariosection="" step="2">

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<commandcontainer type="scenario" name="EUC_Main.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" csvfilename="Logons.csv" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="7/30/2021 11:54:25 AM" lastmodifiedby="rloader099" lastmodifieddate="5/3/2023 10:36:59 AM" lastusedid="16831102191050000" scenarioid="1683110219105" sbversion="23.3.10" description="Main Initiation Script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
+<commandcontainer type="scenario" name="EUC_Main.xml" scenariotype="Process" screenwidth="1280" screenheight="1024" colordepth="32" lockinput="0" csvfilename="Logons.csv" report="1" commandwaittime="1000" excludecommandwaittime="0" referencetime="1000" imgtolerance="0" errorsize="15" projectname="euc workloads" createdby="automai1" creationdate="7/30/2021 11:54:25 AM" lastmodifiedby="rloader099" lastmodifieddate="7/18/2023 11:59:42 AM" lastusedid="16896814735970000" scenarioid="1689681473597" sbversion="23.4.14" description="Main Initiation Script" donotcloseopenedprocesses="1" usecv="0" excelheadersstartrow="1" excelheadersendrow="1" exceldelimiter=":" commentedout="0" id="0" scenariosection="" step="0">
 	<errormessage message="%_scenario% Failed at the step number %_step% %_action% %_warning% iteration: %_iteration%" />
 
 	<command type="comment" comment="Configure applications and environment  in scope for workload run by editing items in the tabs" commentedout="0" id="16353616662210001" scenariosection="" step="1">
@@ -49,7 +49,7 @@
 			<command type="comment" comment="If its a Citrix Environment, connect using the Citrix Script." commentedout="0" id="16353616662210050" scenariosection="" step="15">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Citrix Login.xml" continueonfail="0" statusvariable="Login_Result" description="Play Scenario Item" commentedout="0" id="16353616662210051" scenariosection="" step="16">
+			<command type="playscenario" scenariotype="All" filename="Citrix_Storefront.xml" continueonfail="0" statusvariable="Login_Result" description="Play Scenario Item" commentedout="0" id="16353616662210051" scenariosection="" step="16">
 			
 			</command>
 		</then>
@@ -76,552 +76,564 @@
 	
 		<then commentedout="0" id="16728339618090005" scenariosection="" step="24">
 		
-			<command type="comment" comment="If its a Citrix Cloud Environment, connect using the Citrix CloudScript." commentedout="0" id="16728339618090007" scenariosection="" step="25">
+			<command type="comment" comment="Open a plain browser window" commentedout="0" id="16850159909960005" scenariosection="" step="25">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="playscenario" scenariotype="All" filename="CTX Login.xml" continueonfail="0" statusvariable="Login_Result" description="Play Scenario Item" commentedout="1" id="16728339618090008" scenariosection="" step="26">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16850159909960004" scenariosection="" step="26">
+			
+			</command>
+			<command type="comment" comment="If its a Citrix Cloud Environment, connect using the Citrix CloudScript." commentedout="0" id="16728339618090007" scenariosection="" step="27">
+				<color r="128" g="128" b="128" a="128" />
+			</command>
+			<command type="playscenario" scenariotype="All" filename="Citrix_Cloud.xml" continueonfail="0" statusvariable="Login_Result" description="Play Scenario Item" commentedout="1" id="16728339618090008" scenariosection="" step="28">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16728339618090006" scenariosection="" step="27">
+		<else commentedout="0" id="16728339618090006" scenariosection="" step="29">
 		
 		</else>
 	</command>
-	<command type="filler" commentedout="0" id="16353616662210055" scenariosection="" step="28">
+	<command type="filler" commentedout="0" id="16353616662210055" scenariosection="" step="30">
 		<color r="0" g="128" b="128" a="255" />
 	
 	</command>
-	<command type="comment" comment="Plays the initiation script to input all settings into the user session" commentedout="0" id="16353616662210056" scenariosection="" step="29">
+	<command type="comment" comment="Plays the initiation script to input all settings into the user session" commentedout="0" id="16353616662210056" scenariosection="" step="31">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%Login_Result% != FAILURE" showelse="1" commentedout="0" id="16760286953850006" scenariosection="" step="30">
+	<command type="if" expression="%Login_Result% != FAILURE" showelse="1" commentedout="0" id="16760286953850006" scenariosection="" step="32">
 	
-		<then commentedout="0" id="16760286953850007" scenariosection="" step="31">
+		<then commentedout="0" id="16760286953850007" scenariosection="" step="33">
 		
-			<command type="playscenario" scenariotype="All" filename="Initiation.xml" continueonfail="" statusvariable="Initiation_Result" description="Play Scenario Item" commentedout="0" id="16353616662210057" scenariosection="" step="32">
+			<command type="playscenario" scenariotype="All" filename="Initiation.xml" continueonfail="" statusvariable="Initiation_Result" description="Play Scenario Item" commentedout="0" id="16353616662210057" scenariosection="" step="34">
 			
 			</command>
-			<command type="if" expression="%Initiation_Result% == FAILURE" showelse="0" commentedout="0" id="16760286953850001" scenariosection="" step="33">
+			<command type="if" expression="%Initiation_Result% == FAILURE" showelse="0" commentedout="0" id="16760286953850001" scenariosection="" step="35">
 			
-				<then commentedout="0" id="16760286953850002" scenariosection="" step="34">
+				<then commentedout="0" id="16760286953850002" scenariosection="" step="36">
 				
-					<command type="exit" container="Scenario" exittype="1" exitmsg="An error occured during the initiation phase of the test that prepares the environment. The test cannot continue. Check AI Channel and the Content zip file locations are correct." commentedout="0" id="16760286953850010" scenariosection="" step="35">
+					<command type="exit" container="Scenario" exittype="1" exitmsg="An error occured during the initiation phase of the test that prepares the environment. The test cannot continue. Check AI Channel and the Content zip file locations are correct." commentedout="0" id="16760286953850010" scenariosection="" step="37">
 					</command>
 				</then>
-				<else commentedout="0" id="16760286953850003" scenariosection="" step="36">
+				<else commentedout="0" id="16760286953850003" scenariosection="" step="38">
 				
 				</else>
 			</command>
 		</then>
-		<else commentedout="0" id="16760286953850008" scenariosection="" step="37">
+		<else commentedout="0" id="16760286953850008" scenariosection="" step="39">
 		
-			<command type="exit" container="Scenario" exittype="1" exitmsg="An error occured during the logon phase, check your virtual desktop environment." commentedout="0" id="16760286953850009" scenariosection="" step="38">
+			<command type="exit" container="Scenario" exittype="1" exitmsg="An error occured during the logon phase, check your virtual desktop environment." commentedout="0" id="16760286953850009" scenariosection="" step="40">
 			</command>
 		</else>
 	</command>
-	<command type="filler" commentedout="0" id="16353616662210058" scenariosection="" step="39">
+	<command type="filler" commentedout="0" id="16353616662210058" scenariosection="" step="41">
 		<color r="0" g="128" b="128" a="255" />
 	
 	</command>
-	<command type="filler" commentedout="0" id="16353616662210059" scenariosection="" step="40">
+	<command type="filler" commentedout="0" id="16353616662210059" scenariosection="" step="42">
 		<color r="128" g="0" b="128" a="255" />
 	
 	</command>
-	<command type="comment" comment="Run Baseline Scenario" commentedout="0" id="16793290510140003" scenariosection="" step="41">
+	<command type="comment" comment="Run Baseline Scenario" commentedout="0" id="16793290510140003" scenariosection="" step="43">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%Run_Baseline%  != 0" showelse="0" commentedout="0" id="16793290510140004" scenariosection="" step="42">
+	<command type="if" expression="%Run_Baseline%  != 0" showelse="0" commentedout="0" id="16793290510140004" scenariosection="" step="44">
 	
-		<then commentedout="0" id="16793290510140005" scenariosection="" step="43">
+		<then commentedout="0" id="16793290510140005" scenariosection="" step="45">
 		
 		</then>
-		<else commentedout="0" id="16793290510140006" scenariosection="" step="44">
+		<else commentedout="0" id="16793290510140006" scenariosection="" step="46">
 		
 		</else>
 	</command>
-	<command type="comment" comment="Main workload scripts" commentedout="0" id="16353616662210060" scenariosection="" step="45">
+	<command type="comment" comment="Main workload scripts" commentedout="0" id="16353616662210060" scenariosection="" step="47">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16760286953850020" scenariosection="" stepalias="Browser External2 Workload" step="46">
+	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16760286953850020" scenariosection="" stepalias="Browser External2 Workload" step="48">
 	
-		<then commentedout="0" id="16760286953850021" scenariosection="" step="47">
+		<then commentedout="0" id="16760286953850021" scenariosection="" step="49">
 		
-			<command type="comment" comment="BBC - Play a Browser workload" commentedout="0" id="16760286953850022" scenariosection="" step="48">
+			<command type="comment" comment="BBC - Play a Browser workload" commentedout="0" id="16760286953850022" scenariosection="" step="50">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850023" scenariosection="" step="49">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850023" scenariosection="" step="51">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="External2" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16760286953850024" scenariosection="" step="50">
+			<command type="setvariable" variable="BrowserWorkload" expression="External2" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16760286953850024" scenariosection="" step="52">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16760286953850025" scenariosection="" step="51">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16760286953850025" scenariosection="" step="53">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16760286953850026" scenariosection="" step="52">
+		<else commentedout="0" id="16760286953850026" scenariosection="" step="54">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunOutlook% != 0" showelse="0" commentedout="0" id="16353616662210065" scenariosection="" stepalias="Outlook New Mail Workload" step="53">
+	<command type="if" expression="%RunOutlook% != 0" showelse="0" commentedout="0" id="16353616662210065" scenariosection="" stepalias="Outlook New Mail Workload" step="55">
 	
-		<then commentedout="0" id="16353616662210063" scenariosection="" step="54">
+		<then commentedout="0" id="16353616662210063" scenariosection="" step="56">
 		
-			<command type="comment" comment="Outlook - New Mail" commentedout="0" id="16353616662210061" scenariosection="" step="55">
+			<command type="comment" comment="Outlook - New Mail" commentedout="0" id="16353616662210061" scenariosection="" step="57">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="playscenario" scenariotype="All" filename="MS Outlook - New.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210062" scenariosection="" step="56">
+			<command type="playscenario" scenariotype="All" filename="MS Outlook - New.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210062" scenariosection="" step="58">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210064" scenariosection="" step="57">
+		<else commentedout="0" id="16353616662210064" scenariosection="" step="59">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210072" scenariosection="" stepalias="Video 2 Workload" step="58">
+	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210072" scenariosection="" stepalias="Video 2 Workload" step="60">
 	
-		<then commentedout="0" id="16353616662210070" scenariosection="" step="59">
+		<then commentedout="0" id="16353616662210070" scenariosection="" step="61">
 		
-			<command type="comment" comment="Video2 - Play a Browser workload" commentedout="0" id="16353616662210066" scenariosection="" step="60">
+			<command type="comment" comment="Video2 - Play a Browser workload" commentedout="0" id="16353616662210066" scenariosection="" step="62">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850031" scenariosection="" step="61">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850031" scenariosection="" step="63">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="Video2" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210068" scenariosection="" step="62">
+			<command type="setvariable" variable="BrowserWorkload" expression="Video2" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210068" scenariosection="" step="64">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210069" scenariosection="" step="63">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210069" scenariosection="" step="65">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210071" scenariosection="" step="64">
+		<else commentedout="0" id="16353616662210071" scenariosection="" step="66">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210079" scenariosection="" stepalias="Browser Bouncing Balls Workload" step="65">
+	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210079" scenariosection="" stepalias="Browser Bouncing Balls Workload" step="67">
 	
-		<then commentedout="0" id="16353616662210077" scenariosection="" step="66">
+		<then commentedout="0" id="16353616662210077" scenariosection="" step="68">
 		
-			<command type="comment" comment="Bouncing - Play a Browser workload" commentedout="0" id="16353616662210073" scenariosection="" step="67">
+			<command type="comment" comment="Bouncing - Play a Browser workload" commentedout="0" id="16353616662210073" scenariosection="" step="69">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850032" scenariosection="" step="68">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850032" scenariosection="" step="70">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="Bouncing" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210075" scenariosection="" step="69">
+			<command type="setvariable" variable="BrowserWorkload" expression="Bouncing" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210075" scenariosection="" step="71">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210076" scenariosection="" step="70">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210076" scenariosection="" step="72">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210078" scenariosection="" step="71">
+		<else commentedout="0" id="16353616662210078" scenariosection="" step="73">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunPDF% != 0" showelse="0" commentedout="0" id="16728339618090009" scenariosection="" stepalias="Browser PDF Workload" step="72">
+	<command type="if" expression="%RunPDF% != 0" showelse="0" commentedout="0" id="16728339618090009" scenariosection="" stepalias="Browser PDF Workload" step="74">
 	
-		<then commentedout="0" id="16728339618090010" scenariosection="" step="73">
+		<then commentedout="0" id="16728339618090010" scenariosection="" step="75">
 		
-			<command type="comment" comment="Play PDF Workload in Browser" commentedout="0" id="16728339618090011" scenariosection="" step="74">
+			<command type="comment" comment="Play PDF Workload in Browser" commentedout="0" id="16728339618090011" scenariosection="" step="76">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850033" scenariosection="" step="75">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850033" scenariosection="" step="77">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="PDF" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16728339618090013" scenariosection="" step="76">
+			<command type="setvariable" variable="BrowserWorkload" expression="PDF" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16728339618090013" scenariosection="" step="78">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16728339618090014" scenariosection="" step="77">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16728339618090014" scenariosection="" step="79">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16728339618090015" scenariosection="" step="78">
+		<else commentedout="0" id="16728339618090015" scenariosection="" step="80">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunExcel% != 0" showelse="0" commentedout="0" id="16353616662210084" scenariosection="" stepalias="Excel Sales Workload" step="79">
+	<command type="if" expression="%RunExcel% != 0" showelse="0" commentedout="0" id="16353616662210084" scenariosection="" stepalias="Excel Sales Workload" step="81">
 	
-		<then commentedout="0" id="16353616662210082" scenariosection="" step="80">
+		<then commentedout="0" id="16353616662210082" scenariosection="" step="82">
 		
-			<command type="comment" comment="Excel - Sales Workload" commentedout="0" id="16353616662210080" scenariosection="" step="81">
+			<command type="comment" comment="Excel - Sales Workload" commentedout="0" id="16353616662210080" scenariosection="" step="83">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="playscenario" scenariotype="All" filename="MS Excel.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210081" scenariosection="" step="82">
+			<command type="playscenario" scenariotype="All" filename="MS Excel.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210081" scenariosection="" step="84">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210083" scenariosection="" step="83">
+		<else commentedout="0" id="16353616662210083" scenariosection="" step="85">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210091" scenariosection="" stepalias="Browser Folio Workload" step="84">
+	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210091" scenariosection="" stepalias="Browser Folio Workload" step="86">
 	
-		<then commentedout="0" id="16353616662210089" scenariosection="" step="85">
+		<then commentedout="0" id="16353616662210089" scenariosection="" step="87">
 		
-			<command type="comment" comment="Folio - Play a Browser workload" commentedout="0" id="16353616662210085" scenariosection="" step="86">
+			<command type="comment" comment="Folio - Play a Browser workload" commentedout="0" id="16353616662210085" scenariosection="" step="88">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850034" scenariosection="" step="87">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850034" scenariosection="" step="89">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="Folio" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210087" scenariosection="" step="88">
+			<command type="setvariable" variable="BrowserWorkload" expression="Folio" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210087" scenariosection="" step="90">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210088" scenariosection="" step="89">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210088" scenariosection="" step="91">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210090" scenariosection="" step="90">
+		<else commentedout="0" id="16353616662210090" scenariosection="" step="92">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunPowerPoint% != 0" showelse="0" commentedout="0" id="16353616662210095" scenariosection="" stepalias="PowerPoint Workload" step="91">
+	<command type="if" expression="%RunPowerPoint% != 0" showelse="0" commentedout="0" id="16353616662210095" scenariosection="" stepalias="PowerPoint Workload" step="93">
 	
-		<then commentedout="0" id="16353616662210093" scenariosection="" step="92">
+		<then commentedout="0" id="16353616662210093" scenariosection="" step="94">
 		
-			<command type="playscenario" scenariotype="All" filename="MS Powerpoint.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210092" scenariosection="" step="93">
+			<command type="playscenario" scenariotype="All" filename="MS Powerpoint.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210092" scenariosection="" step="95">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210094" scenariosection="" step="94">
+		<else commentedout="0" id="16353616662210094" scenariosection="" step="96">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210102" scenariosection="" stepalias="Browser Cyber Workload" step="95">
+	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210102" scenariosection="" stepalias="Browser Cyber Workload" step="97">
 	
-		<then commentedout="0" id="16353616662210100" scenariosection="" step="96">
+		<then commentedout="0" id="16353616662210100" scenariosection="" step="98">
 		
-			<command type="comment" comment="Cyber - Play a Browser workload" commentedout="0" id="16353616662210096" scenariosection="" step="97">
+			<command type="comment" comment="Cyber - Play a Browser workload" commentedout="0" id="16353616662210096" scenariosection="" step="99">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850035" scenariosection="" step="98">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850035" scenariosection="" step="100">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="Cyber" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210098" scenariosection="" step="99">
+			<command type="setvariable" variable="BrowserWorkload" expression="Cyber" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210098" scenariosection="" step="101">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210099" scenariosection="" step="100">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210099" scenariosection="" step="102">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210101" scenariosection="" step="101">
+		<else commentedout="0" id="16353616662210101" scenariosection="" step="103">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunPDF% != 0" showelse="0" commentedout="0" id="16728339618090016" scenariosection="" stepalias="Browser PDF Workload" step="102">
+	<command type="if" expression="%RunPDF% != 0" showelse="0" commentedout="0" id="16728339618090016" scenariosection="" stepalias="Browser PDF Workload" step="104">
 	
-		<then commentedout="0" id="16728339618090017" scenariosection="" step="103">
+		<then commentedout="0" id="16728339618090017" scenariosection="" step="105">
 		
-			<command type="comment" comment="Play PDF Workload in Browser" commentedout="0" id="16728339618090018" scenariosection="" step="104">
+			<command type="comment" comment="Play PDF Workload in Browser" commentedout="0" id="16728339618090018" scenariosection="" step="106">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850036" scenariosection="" step="105">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850036" scenariosection="" step="107">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="PDF" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16728339618090020" scenariosection="" step="106">
+			<command type="setvariable" variable="BrowserWorkload" expression="PDF" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16728339618090020" scenariosection="" step="108">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16728339618090021" scenariosection="" step="107">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16728339618090021" scenariosection="" step="109">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16728339618090022" scenariosection="" step="108">
+		<else commentedout="0" id="16728339618090022" scenariosection="" step="110">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunOutlook% != 0" showelse="0" commentedout="0" id="16353616662210106" scenariosection="" stepalias="Outlook Reply Workload" step="109">
+	<command type="if" expression="%RunOutlook% != 0" showelse="0" commentedout="0" id="16353616662210106" scenariosection="" stepalias="Outlook Reply Workload" step="111">
 	
-		<then commentedout="0" id="16353616662210104" scenariosection="" step="110">
+		<then commentedout="0" id="16353616662210104" scenariosection="" step="112">
 		
-			<command type="playscenario" scenariotype="All" filename="MS Outlook - Reply.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210103" scenariosection="" step="111">
+			<command type="playscenario" scenariotype="All" filename="MS Outlook - Reply.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210103" scenariosection="" step="113">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210105" scenariosection="" step="112">
+		<else commentedout="0" id="16353616662210105" scenariosection="" step="114">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210113" scenariosection="" stepalias="Browser Video1 Workload" step="113">
+	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16353616662210113" scenariosection="" stepalias="Browser Video1 Workload" step="115">
 	
-		<then commentedout="0" id="16353616662210111" scenariosection="" step="114">
+		<then commentedout="0" id="16353616662210111" scenariosection="" step="116">
 		
-			<command type="comment" comment="Video1 - Play a Browser workload" commentedout="0" id="16353616662210107" scenariosection="" step="115">
+			<command type="comment" comment="Video1 - Play a Browser workload" commentedout="0" id="16353616662210107" scenariosection="" step="117">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850037" scenariosection="" step="116">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850037" scenariosection="" step="118">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="Video1" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210109" scenariosection="" step="117">
+			<command type="setvariable" variable="BrowserWorkload" expression="Video1" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16353616662210109" scenariosection="" step="119">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210110" scenariosection="" step="118">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16353616662210110" scenariosection="" step="120">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210112" scenariosection="" step="119">
+		<else commentedout="0" id="16353616662210112" scenariosection="" step="121">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunWord% != 0" showelse="0" commentedout="0" id="16353616662210117" scenariosection="" stepalias="Word New Document Workload" step="120">
+	<command type="if" expression="%RunWord% != 0" showelse="0" commentedout="0" id="16353616662210117" scenariosection="" stepalias="Word New Document Workload" step="122">
 	
-		<then commentedout="0" id="16353616662210115" scenariosection="" step="121">
+		<then commentedout="0" id="16353616662210115" scenariosection="" step="123">
 		
-			<command type="playscenario" scenariotype="All" filename="MS Word.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210114" scenariosection="" step="122">
+			<command type="playscenario" scenariotype="All" filename="MS Word.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210114" scenariosection="" step="124">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210116" scenariosection="" step="123">
+		<else commentedout="0" id="16353616662210116" scenariosection="" step="125">
 		
 		</else>
 	</command>
-	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16760286953850013" scenariosection="" stepalias="Browser External Workload" step="124">
+	<command type="if" expression="%RunBrowser% != 0" showelse="0" commentedout="0" id="16760286953850013" scenariosection="" stepalias="Browser External Workload" step="126">
 	
-		<then commentedout="0" id="16760286953850014" scenariosection="" step="125">
+		<then commentedout="0" id="16760286953850014" scenariosection="" step="127">
 		
-			<command type="comment" comment="External Site - Play a Browser workload" commentedout="0" id="16760286953850015" scenariosection="" step="126">
+			<command type="comment" comment="External Site - Play a Browser workload" commentedout="0" id="16760286953850015" scenariosection="" step="128">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850038" scenariosection="" step="127">
+			<command type="comment" comment="Set the browser workload, Cyber, Folio, Video1, Video2, Bouncing, External1, External2, PDF" commentedout="0" id="16760286953850038" scenariosection="" step="129">
 				<color r="128" g="128" b="128" a="128" />
 			</command>
-			<command type="setvariable" variable="BrowserWorkload" expression="External1" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16760286953850017" scenariosection="" step="128">
+			<command type="setvariable" variable="BrowserWorkload" expression="External1" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16760286953850017" scenariosection="" step="130">
 			
 			</command>
-			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16760286953850018" scenariosection="" step="129">
+			<command type="playscenario" scenariotype="All" filename="Browser_Base.xml" continueonfail="" statusvariable="BrowserResult" description="Play Scenario Item" commentedout="0" id="16760286953850018" scenariosection="" step="131">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16760286953850019" scenariosection="" step="130">
+		<else commentedout="0" id="16760286953850019" scenariosection="" step="132">
 		
 		</else>
 	</command>
-	<command type="filler" commentedout="0" id="16353616662210118" scenariosection="" step="131">
+	<command type="filler" commentedout="0" id="16353616662210118" scenariosection="" step="133">
 		<color r="255" g="128" b="255" a="255" />
 	
 	</command>
-	<command type="comment" comment="All workloads complete, log the user off" commentedout="0" id="16353616662210119" scenariosection="" step="132">
+	<command type="comment" comment="All workloads complete, log the user off" commentedout="0" id="16353616662210119" scenariosection="" step="134">
 		<color r="128" g="128" b="128" a="128" />
 	</command>
-	<command type="if" expression="%Logoff_On_Complete% != 0" showelse="0" commentedout="0" id="16353616662210125" scenariosection="" step="133">
+	<command type="if" expression="%Logoff_On_Complete% != 0" showelse="0" commentedout="0" id="16353616662210125" scenariosection="" step="135">
 	
-		<then commentedout="0" id="16353616662210123" scenariosection="" step="134">
+		<then commentedout="0" id="16353616662210123" scenariosection="" step="136">
 		
-			<command type="playscenario" scenariotype="All" filename="Logoff User.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210122" scenariosection="" step="135">
+			<command type="playscenario" scenariotype="All" filename="Logoff User.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210122" scenariosection="" step="137">
 			
 			</command>
 		</then>
-		<else commentedout="0" id="16353616662210124" scenariosection="" step="136">
+		<else commentedout="0" id="16353616662210124" scenariosection="" step="138">
 		
 		</else>
 	</command>
-	<command type="filler" commentedout="0" id="16353616662210121" scenariosection="" step="137">
+	<command type="filler" commentedout="0" id="16353616662210121" scenariosection="" step="139">
 		<color r="128" g="0" b="128" a="255" />
 	
 	</command>
-	<onfail rexp="1" commentedout="0" id="16353616662210131" scenariosection="" step="138">
+	<onfail rexp="1" commentedout="0" id="16353616662210131" scenariosection="" step="140">
 	
-		<command type="if" expression="%Logoff_On_Failure% != 0" showelse="0" commentedout="0" id="16353616662210130" scenariosection="" step="139">
+		<command type="if" expression="%Logoff_On_Failure% != 0" showelse="0" commentedout="0" id="16353616662210130" scenariosection="" step="141">
 		
-			<then commentedout="0" id="16353616662210127" scenariosection="" step="140">
+			<then commentedout="0" id="16353616662210127" scenariosection="" step="142">
 			
-				<command type="playscenario" scenariotype="All" filename="Logoff User.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210126" scenariosection="" step="141">
+				<command type="playscenario" scenariotype="All" filename="Logoff User.xml" continueonfail="" statusvariable="ExecMyScenarioStatus" description="Play Scenario Item" commentedout="0" id="16353616662210126" scenariosection="" step="143">
 				
 				</command>
 			</then>
-			<else commentedout="0" id="16353616662210129" scenariosection="" step="142">
+			<else commentedout="0" id="16353616662210129" scenariosection="" step="144">
 			
 			</else>
 		</command>
 	</onfail>
 
-	<commandcontainer type="block" name="Workload_Behaviour" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="143">
+	<commandcontainer type="block" name="Workload_Behaviour" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="145">
 	
-		<command type="comment" comment="Configure the environment type being connected to - Citrix, VMWare, RDSH" commentedout="0" id="16793290510140076" scenariosection="" step="144">
+		<command type="comment" comment="Configure the environment type being connected to - Citrix, VMWare, RDSH" commentedout="0" id="16793290510140076" scenariosection="" step="146">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Environment_Type" expression="Citrix" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140077" scenariosection="" stepalias="Type of virtual environment being connected to Citrix, AVD" step="145">
+		<command type="setvariable" variable="Environment_Type" expression="Citrix" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140077" scenariosection="" stepalias="Type of virtual environment being connected to Citrix, AVD" step="147">
 		
 		</command>
-		<command type="comment" comment="Configure if the baseline test should run" commentedout="0" id="16793290510140022" scenariosection="" step="146">
+		<command type="comment" comment="Configure if the baseline test should run" commentedout="0" id="16793290510140022" scenariosection="" step="148">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" stylename="rand" variable="Run_Baseline" vartype="number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140023" scenariosection="" step="147">
+		<command type="setvariable" stylename="rand" variable="Run_Baseline" vartype="number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140023" scenariosection="" step="149">
 		
 		</command>
-		<command type="comment" comment="Configure if the user should be logged off on failure" commentedout="0" id="16793290510140024" scenariosection="" step="148">
+		<command type="comment" comment="Configure if the user should be logged off on failure" commentedout="0" id="16793290510140024" scenariosection="" step="150">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" stylename="rand" variable="Logoff_On_Failure" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140025" scenariosection="" stepalias="Log the user off on failure or not 1/0" step="149">
+		<command type="setvariable" stylename="rand" variable="Logoff_On_Failure" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140025" scenariosection="" stepalias="Log the user off on failure or not 1/0" step="151">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="Logoff_On_Complete" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140026" scenariosection="" stepalias="Log the user off on completion of the workload 1/0" step="150">
+		<command type="setvariable" stylename="rand" variable="Logoff_On_Complete" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140026" scenariosection="" stepalias="Log the user off on completion of the workload 1/0" step="152">
 		
 		</command>
-		<command type="comment" comment="Configure application workload behaviour" commentedout="0" id="16793290510140027" scenariosection="" step="151">
+		<command type="comment" comment="Configure application workload behaviour" commentedout="0" id="16793290510140027" scenariosection="" step="153">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" stylename="rand" variable="CloseBrowser_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140028" scenariosection="" stepalias="Close Browser on workload completion or not 1/0" step="152">
+		<command type="setvariable" stylename="rand" variable="CloseBrowser_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140028" scenariosection="" stepalias="Close Browser on workload completion or not 1/0" step="154">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="CloseExcel_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140029" scenariosection="" stepalias="Close Excel on workload completion or not 1/0" step="153">
+		<command type="setvariable" stylename="rand" variable="CloseExcel_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140029" scenariosection="" stepalias="Close Excel on workload completion or not 1/0" step="155">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="CloseOutlook_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140030" scenariosection="" stepalias="Close Outlook on workload completion or not 1/0" step="154">
+		<command type="setvariable" stylename="rand" variable="CloseOutlook_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140030" scenariosection="" stepalias="Close Outlook on workload completion or not 1/0" step="156">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="ClosePowerPoint_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140031" scenariosection="" stepalias="Close PowerPoint on workload completion or not 1/0" step="155">
+		<command type="setvariable" stylename="rand" variable="ClosePowerPoint_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140031" scenariosection="" stepalias="Close PowerPoint on workload completion or not 1/0" step="157">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="CloseWord_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140032" scenariosection="" stepalias="Close Word on workload completion or not 1/0" step="156">
+		<command type="setvariable" stylename="rand" variable="CloseWord_OnEnd" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140032" scenariosection="" stepalias="Close Word on workload completion or not 1/0" step="158">
 		
 		</command>
-		<command type="comment" comment="Configure which applications will run - 1 for yes, 0 for no" commentedout="0" id="16793290510140033" scenariosection="" step="157">
+		<command type="comment" comment="Configure which applications will run - 1 for yes, 0 for no" commentedout="0" id="16793290510140033" scenariosection="" step="159">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" stylename="rand" variable="RunExcel" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140034" scenariosection="" stepalias="Run Excel or not 1/0" step="158">
+		<command type="setvariable" stylename="rand" variable="RunExcel" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140034" scenariosection="" stepalias="Run Excel or not 1/0" step="160">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="RunOutlook" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140035" scenariosection="" stepalias="Run Outlook or not 1/0" step="159">
+		<command type="setvariable" stylename="rand" variable="RunOutlook" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140035" scenariosection="" stepalias="Run Outlook or not 1/0" step="161">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="RunPowerPoint" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140036" scenariosection="" stepalias="Run PowerPoint or not 1/0" step="160">
+		<command type="setvariable" stylename="rand" variable="RunPowerPoint" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140036" scenariosection="" stepalias="Run PowerPoint or not 1/0" step="162">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="RunWord" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140037" scenariosection="" stepalias="Run Word or not 1/0" step="161">
+		<command type="setvariable" stylename="rand" variable="RunWord" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140037" scenariosection="" stepalias="Run Word or not 1/0" step="163">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="RunPDF" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140038" scenariosection="" stepalias="Run PDF or not 1/0" step="162">
+		<command type="setvariable" stylename="rand" variable="RunPDF" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140038" scenariosection="" stepalias="Run PDF or not 1/0" step="164">
 		
 		</command>
-		<command type="comment" comment="Browser choice selection for web workloads - choices are Chrome, MSEdge and IE" commentedout="0" id="16793290510140039" scenariosection="" step="163">
+		<command type="comment" comment="Browser choice selection for web workloads - choices are chrome, firefox, msedge and iexplore" commentedout="0" id="16793290510140039" scenariosection="" step="165">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" stylename="rand" variable="RunBrowser" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140040" scenariosection="" stepalias="Run the browser workloads or not" step="164">
+		<command type="setvariable" stylename="rand" variable="RunBrowser" vartype="Number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140040" scenariosection="" stepalias="Run the browser workloads or not" step="166">
 		
 		</command>
-		<command type="setvariable" variable="Browser_Choice" expression="Chrome" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140041" scenariosection="" stepalias="Choose your browser that will be used in workloads, Chrome, MSEdge, IE or Firefox" step="165">
+		<command type="setvariable" variable="Browser_Choice" expression="Chrome" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140041" scenariosection="" stepalias="Choose your browser that will be used in workloads, Chrome, MSEdge, IE or Firefox" step="167">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="Reuse_Browser_Tab" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140042" scenariosection="" stepalias="Start up additional tabs for each site or reuse the existing one 1/0" step="166">
+		<command type="setvariable" stylename="rand" variable="Reuse_Browser_Tab" vartype="Number" scope="Global" expression="0" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140042" scenariosection="" stepalias="Start up additional tabs for each site or reuse the existing one 1/0" step="168">
 		
 		</command>
-		<command type="setvariable" variable="Browser_Video" expression="1" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140043" scenariosection="" stepalias="Select to add video to the browser workload or not" step="167">
+		<command type="setvariable" variable="Browser_Video" expression="1" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140043" scenariosection="" stepalias="Select to add video to the browser workload or not" step="169">
 		
 		</command>
-		<command type="comment" comment="CHANGING APP WIDTH AND HEIGHT MAY BREAK WORKLOADS" commentedout="0" id="16793290510140054" scenariosection="" step="168">
+		<command type="comment" comment="CHANGING APP WIDTH AND HEIGHT MAY BREAK WORKLOADS" commentedout="0" id="16793290510140054" scenariosection="" step="170">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" stylename="rand" variable="AppWidth" vartype="number" scope="Script" expression="1200" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140055" scenariosection="" step="169">
+		<command type="setvariable" stylename="rand" variable="AppWidth" vartype="number" scope="Script" expression="1200" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140055" scenariosection="" step="171">
 		
 		</command>
-		<command type="setvariable" stylename="rand" variable="AppHeight" vartype="number" scope="Script" expression="1000" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140056" scenariosection="" step="170">
+		<command type="setvariable" stylename="rand" variable="AppHeight" vartype="number" scope="Script" expression="1000" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140056" scenariosection="" step="172">
 		
 		</command>
-		<command type="comment" comment="Configure if Outlook is launching in Online mode or not, PST - Offline, O365 - Online" commentedout="0" id="16793290510140071" scenariosection="" step="171">
+		<command type="comment" comment="Configure if Outlook is launching in Online mode or not, PST - Offline, O365 - Online" commentedout="0" id="16793290510140071" scenariosection="" step="173">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Outlook_Mode" expression="PST" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140064" scenariosection="" stepalias="Specify the outlook mode, O365 or PST" step="172">
+		<command type="setvariable" variable="Outlook_Mode" expression="PST" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140064" scenariosection="" stepalias="Specify the outlook mode, O365 or PST" step="174">
 		
 		</command>
-		<command type="comment" comment="Configure if Office should be placed in a test mode or not" commentedout="0" id="16793290510140065" scenariosection="" step="173">
+		<command type="comment" comment="Configure if Office should be placed in a test mode or not" commentedout="0" id="16793290510140065" scenariosection="" step="175">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" stylename="rand" variable="Office_In_Test_Mode" vartype="number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140066" scenariosection="" step="174">
+		<command type="setvariable" stylename="rand" variable="Office_In_Test_Mode" vartype="number" scope="Global" expression="1" no_of_decimals="0" digits_grouping="3" decimals_separator="." encrypted="0" commentedout="0" id="16793290510140066" scenariosection="" step="176">
 		
 		</command>
-		<command type="comment" comment="Configure the network location of the content zip file" commentedout="0" id="16793290510140067" scenariosection="" step="175">
+		<command type="comment" comment="Configure the network location of the content zip file" commentedout="0" id="16793290510140067" scenariosection="" step="177">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Content_Zip" expression="\\automai-01.domain.local\Automai\Content.zip" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140068" scenariosection="" stepalias="Location of the Automai content.zip file" step="176">
+		<command type="setvariable" variable="Content_Zip" expression="\\automai-01.domain.local\Automai\Content.zip" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140068" scenariosection="" stepalias="Location of the Automai content.zip file" step="178">
 		
 		</command>
-		<command type="comment" comment="AI Channel Folder Share" commentedout="0" id="16793290510140069" scenariosection="" step="177">
+		<command type="comment" comment="AI Channel Folder Share" commentedout="0" id="16793290510140069" scenariosection="" step="179">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="AIChannel_Folder" expression="\\automai-01.domain.local\Automai\AIChannel" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140070" scenariosection="" stepalias="Location of the AIChannel Folder" step="178">
+		<command type="setvariable" variable="AIChannel_Folder" expression="\\automai-01.domain.local\Automai\AIChannel" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140070" scenariosection="" stepalias="Location of the AIChannel Folder" step="180">
 		
 		</command>
 	</commandcontainer>
-	<commandcontainer type="block" name="AVD_Config" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="179">
+	<commandcontainer type="block" name="AVD_Config" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="181">
 	
-		<command type="comment" comment="Configure the name of the AVD Desktop to be launched" commentedout="0" id="16793290510140018" scenariosection="" step="180">
+		<command type="comment" comment="Configure the name of the AVD Desktop to be launched" commentedout="0" id="16793290510140018" scenariosection="" step="182">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="AVD_Desktop_Name" expression="MyDesktop" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140012" scenariosection="" step="181">
+		<command type="setvariable" variable="AVD_Desktop_Name" expression="MyDesktop" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140012" scenariosection="" step="183">
 		
 		</command>
 	</commandcontainer>
-	<commandcontainer type="block" name="Citrix_Config" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="182">
+	<commandcontainer type="block" name="Citrix_Config" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="184">
 	
-		<command type="comment" comment="Configure the URL of the Storefront server for the Citrix login" commentedout="0" id="16793290510140014" scenariosection="" step="183">
+		<command type="comment" comment="Configure the URL of the Storefront server for the Citrix login" commentedout="0" id="16793290510140014" scenariosection="" step="185">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Citrix_URL" expression="https://storefront.ctxlab.local/citrix/storeweb" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140015" scenariosection="" stepalias="Citrix Storeweb address" step="184">
+		<command type="setvariable" variable="Citrix_Storefront_URL" expression="https://storefront.domain.local/citrix/storeweb" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140015" scenariosection="" stepalias="Citrix Storeweb address" step="186">
 		
 		</command>
-		<command type="comment" comment="Configure the name of the Citrix Desktop to be launched" commentedout="0" id="16793290510140016" scenariosection="" step="185">
+		<command type="comment" comment="Configure the URL for Citrix Cloud for the Citrix login" commentedout="0" id="16850159909960001" scenariosection="" step="187">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Citrix_Desktop_Name" expression="Automai" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140017" scenariosection="" step="186">
+		<command type="setvariable" variable="Citrix_Cloud_URL" expression="https://company.cloud.com" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16850159909960002" scenariosection="" stepalias="Citrix Storeweb address" step="188">
+		
+		</command>
+		<command type="comment" comment="Configure the name of the Citrix Desktop to be launched" commentedout="0" id="16793290510140016" scenariosection="" step="189">
+			<color r="128" g="128" b="128" a="128" />
+		</command>
+		<command type="setvariable" variable="Citrix_Desktop_Name" expression="Automai" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140017" scenariosection="" step="190">
 		
 		</command>
 	</commandcontainer>
-	<commandcontainer type="block" name="Executable_Locations" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="187">
+	<commandcontainer type="block" name="Executable_Locations" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="191">
 	
-		<command type="comment" comment="Configure locations of executables" commentedout="0" id="16793290510140044" scenariosection="" step="188">
+		<command type="comment" comment="Configure locations of executables" commentedout="0" id="16793290510140044" scenariosection="" step="192">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Chrome_Location" expression="C:\Program Files (x86)\Google\Chrome\Application\Chrome.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140045" scenariosection="" stepalias="Location of Chrome executable" step="189">
+		<command type="setvariable" variable="Chrome_Location" expression="C:\Program Files (x86)\Google\Chrome\Application\Chrome.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140045" scenariosection="" stepalias="Location of Chrome executable" step="193">
 		
 		</command>
-		<command type="setvariable" variable="IE_Location" expression="C:\Program Files\internet explorer\iexplore.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140046" scenariosection="" stepalias="Location of IE executable" step="190">
+		<command type="setvariable" variable="IE_Location" expression="C:\Program Files\internet explorer\iexplore.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140046" scenariosection="" stepalias="Location of IE executable" step="194">
 		
 		</command>
-		<command type="setvariable" variable="MSEdge_Location" expression="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140047" scenariosection="" stepalias="Location of Edge executable" step="191">
+		<command type="setvariable" variable="MSEdge_Location" expression="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140047" scenariosection="" stepalias="Location of Edge executable" step="195">
 		
 		</command>
-		<command type="setvariable" variable="FireFox_Location" expression="C:\Program Files\Mozilla Firefox\firefox.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140048" scenariosection="" step="192">
+		<command type="setvariable" variable="FireFox_Location" expression="C:\Program Files\Mozilla Firefox\firefox.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140048" scenariosection="" step="196">
 		
 		</command>
-		<command type="setvariable" variable="Excel_Location" expression="C:\Program Files\Microsoft Office\root\Office16\excel.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140049" scenariosection="" stepalias="Location of Excel executable" step="193">
+		<command type="setvariable" variable="Excel_Location" expression="C:\Program Files\Microsoft Office\root\Office16\excel.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140049" scenariosection="" stepalias="Location of Excel executable" step="197">
 		
 		</command>
-		<command type="setvariable" variable="Outlook_Location" expression="C:\Program Files\Microsoft Office\root\office16\outlook.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140050" scenariosection="" stepalias="Location of Outlook executable" step="194">
+		<command type="setvariable" variable="Outlook_Location" expression="C:\Program Files\Microsoft Office\root\office16\outlook.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140050" scenariosection="" stepalias="Location of Outlook executable" step="198">
 		
 		</command>
-		<command type="setvariable" variable="PowerPoint_Location" expression="C:\Program Files\Microsoft Office\root\Office16\powerpnt.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140051" scenariosection="" stepalias="Location of PowerPoint executable" step="195">
+		<command type="setvariable" variable="PowerPoint_Location" expression="C:\Program Files\Microsoft Office\root\Office16\powerpnt.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140051" scenariosection="" stepalias="Location of PowerPoint executable" step="199">
 		
 		</command>
-		<command type="setvariable" variable="Word_Location" expression="C:\Program Files\Microsoft Office\root\Office16\winword.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140052" scenariosection="" stepalias="Location of Word executable" step="196">
+		<command type="setvariable" variable="Word_Location" expression="C:\Program Files\Microsoft Office\root\Office16\winword.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140052" scenariosection="" stepalias="Location of Word executable" step="200">
 		
 		</command>
-		<command type="comment" comment="Configure PowerShell command - DO NOT CHANGE" commentedout="0" id="16793290510140072" scenariosection="" step="197">
+		<command type="comment" comment="Configure PowerShell command - DO NOT CHANGE" commentedout="0" id="16793290510140072" scenariosection="" step="201">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Powershell_Path" expression="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16793290510140073" scenariosection="" stepalias="Set the variable for running powershell and bypassing the execution policy" step="198">
+		<command type="setvariable" variable="Powershell_Path" expression="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16793290510140073" scenariosection="" stepalias="Set the variable for running powershell and bypassing the execution policy" step="202">
 		
 		</command>
-		<command type="comment" comment="Configure the location of the AVD client to be launched" commentedout="0" id="16793290510140074" scenariosection="" step="199">
+		<command type="comment" comment="Configure the location of the AVD client to be launched" commentedout="0" id="16793290510140074" scenariosection="" step="203">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="AVD_Client_Location" expression="C:\Program Files\Remote Desktop\msrdcw.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140075" scenariosection="" step="200">
+		<command type="setvariable" variable="AVD_Client_Location" expression="C:\Program Files\Remote Desktop\msrdcw.exe" scope="Global" encrypted="0" vartype="string" commentedout="0" id="16793290510140075" scenariosection="" step="204">
 		
 		</command>
 	</commandcontainer>
-	<commandcontainer type="block" name="BotManager_Variables" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="201">
+	<commandcontainer type="block" name="BotManager_Variables" report="0" usescenariothinktime="1" commandwaittime="1000" excludecommandwaittime="0" commentedout="0" id="0" scenariosection="" step="205">
 	
-		<command type="comment" comment="Configure varibale for the userprofile" commentedout="0" id="16793290510140059" scenariosection="" step="202">
+		<command type="comment" comment="Configure varibale for the userprofile" commentedout="0" id="16793290510140059" scenariosection="" step="206">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Profile" expression="[Env USERPROFILE]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16793290510140060" scenariosection="" stepalias="Get the user profile of the rloader user" step="203">
+		<command type="setvariable" variable="Profile" expression="[Env USERPROFILE]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16793290510140060" scenariosection="" stepalias="Get the user profile of the rloader user" step="207">
 		
 		</command>
-		<command type="comment" comment="Configure Username variable" commentedout="0" id="16793290510140061" scenariosection="" step="204">
+		<command type="comment" comment="Configure Username variable" commentedout="0" id="16793290510140061" scenariosection="" step="208">
 			<color r="128" g="128" b="128" a="128" />
 		</command>
-		<command type="setvariable" variable="Username" expression="[Env USERNAME]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16793290510140062" scenariosection="" stepalias="Get the username of the rloder user" step="205">
+		<command type="setvariable" variable="Username" expression="[Env USERNAME]" scope="Script" encrypted="0" vartype="string" commentedout="0" id="16793290510140062" scenariosection="" stepalias="Get the username of the rloder user" step="209">
 		
 		</command>
 	</commandcontainer>
